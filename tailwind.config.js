@@ -8,8 +8,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        'bd': '#D9D9D9',
+      },
+      fontFamily: {
+        pirata: ['Pirata One', 'sans-serif'],
       },
     },
   },
