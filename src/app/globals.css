@@ -2,6 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    background-color: black;
+@font-face {
+    font-family: 'font';
+    src: url('/src/app/fonts/navfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.macondo-swash-caps-regular {
+    font-family: "Macondo Swash Caps", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pirata-one-regular {
+    font-family: "Pirata One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.island-moments-regular {
+    font-family: "Island Moments", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name
+ <weight>: Use a value from 100 to 900 */
+
+.inter{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.abhaya-libre-regular {
+    font-family: "Abhaya Libre", serif;
+    font-weight: 900;
+    font-style: normal;
+  }  
+
+.navfont {
+    font-family: 'font';
+}
+
+body {
+    background-color: rgb(17, 25, 44);
+    color: white;
 }
