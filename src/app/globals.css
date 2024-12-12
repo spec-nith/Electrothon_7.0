@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+
+
+
+/* Global styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    height: 100vh;
+
+}
+
+body {
     background-color: black;
+    color: white;
+
+}
+
+img {
+    background-color: transparent;
 }
