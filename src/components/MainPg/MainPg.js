@@ -10,7 +10,7 @@ import hourglass from '@/assets/hourglass.png'
 const MainPg = () => {
 
   return (
-    <div className='bg-cover w-full h-screen bg-center -z-0' style={{ backgroundImage: `url(${bg.src})`, height: '100vh' }}>
+    <div className='bg-cover w-full h-screen bg-center -z-0' >
       <Navbar />
       <div className='flex items-center justify-center lg:space-y-12 space-y-20 h-[89.9%] flex-col'>
         <div className='flex w-full flex-col items-center justify-center'>

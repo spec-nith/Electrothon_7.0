@@ -1,6 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url(https://db.onlinewebfonts.com/c/f70b18e78f0c256d3aa0ecb00daf64c9?family=Linotype+Humanistika+W01);
+
+
+
+@font-face {
+    font-family: "Linotype Humanistika W01";
+    src: url("https://db.onlinewebfonts.com/t/f70b18e78f0c256d3aa0ecb00daf64c9.eot");
+    src: url("https://db.onlinewebfonts.com/t/f70b18e78f0c256d3aa0ecb00daf64c9.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/f70b18e78f0c256d3aa0ecb00daf64c9.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/f70b18e78f0c256d3aa0ecb00daf64c9.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/f70b18e78f0c256d3aa0ecb00daf64c9.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/f70b18e78f0c256d3aa0ecb00daf64c9.svg#Linotype Humanistika W01")format("svg");
+}
 
 @font-face {
     font-family: 'font';
