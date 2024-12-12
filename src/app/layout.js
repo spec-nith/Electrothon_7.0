@@ -29,6 +29,10 @@ export default function RootLayout({ children }) {
             href="https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap"
             rel="stylesheet"
           />
+          <link
+  href="https://fonts.googleapis.com/css2?family=Afacad&display=swap"
+  rel="stylesheet"
+/>
         </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

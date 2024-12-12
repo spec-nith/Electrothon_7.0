@@ -1,5 +1,6 @@
 import Sponsors1 from "@/components/Sponsors/Sponsers1";
 import Sponsors2 from "@/components/Sponsors/Sponsors2";
+import Slider from "@/components/Testimonials/slider";
 import React from "react";
 import bg from "../assets/backgroundimg.jpg"
 
@@ -16,6 +17,7 @@ export default function Home() {
     {/* <section className="min-h-screen flex flex-col items-center  bg-transparent"> */}
     <Sponsors1 />
     <Sponsors2 />
+    <Slider />
     {/* </section>
      */}
    

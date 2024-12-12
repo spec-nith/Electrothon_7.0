@@ -13,6 +13,10 @@ module.exports = {
       fontFamily: {
         pirata: ['Pirata One', 'sans-serif'],
       },
+      screens: {
+        xs: '360px', 
+      },
+
     },
   },
   plugins: [],
