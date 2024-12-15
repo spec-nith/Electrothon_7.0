@@ -1,7 +1,7 @@
 'use client';
 
 import React from "react";
-import { useForm } from "@formspree/react";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faTwitter, faLinkedin, faInstagram, faDiscord } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
@@ -11,22 +11,83 @@ import styles from "../Tracks_new/style";
 import "./footer.css";
 import bg from '@/assets/background.png'
 import speclogo from '@/assets/speclogo.png'
+import emailjs from 'emailjs-com';
 
 export default function Footer() {
-  const [state, handleSubmit] = useForm("mzbodbrg");
 
-  const BottomFooter = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setSuccess("");
+    setError("");
+
+    if (!email) {
+      setError("Email cannot be empty");
+      return;
+    }
+    if (!validateEmail(email)) {
+      setError("Please enter a valid email address");
+      return;
+    }
+    if (!message) {
+      setError("Please enter your message");
+      return;
+    }
+
+    const templateParams = {
+      from_name: name,
+      to_name: "Prajualit Tickoo",
+      message,
+    };
+
+    setIsLoading(true);
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? "",
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? "",
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+      )
+      .then(
+        () => {
+          setEmail("");
+          setName("");
+          setMessage("");
+          setIsLoading(false);
+          setSuccess("Your message has been sent successfully!");
+        },
+        (error) => {
+          setError("Something went wrong, please try again later");
+          console.error(error);
+          setIsLoading(false);
+        }
+      );
+  };
+  function BottomFooter() {
+
     return (
       <React.Fragment>
         <div className="md:flex justify-center gap-5 lg:gap-40 mt-5 font-['Gugi']">
           <div className="flex justify-center mb-2 md:visible">
             <a href="https://spec.nith.ac.in/" target="_blank" rel="noopener noreferrer" className="text-sm text-white md:text-lg md:font-bold hover:text-gray-300">
               <picture>
-              <img
-  className="w-16 md:w-32"
-  src="/asset/speclogo.png" // Public path reference
-  alt="spec_logo"
-/>
+                <img
+                  className="w-16 md:w-32"
+                  src="/asset/speclogo.png" // Public path reference
+                  alt="spec_logo"
+                />
 
               </picture>
             </a>
@@ -88,146 +149,123 @@ export default function Footer() {
       </React.Fragment>
     );
   };
-
-  if (state.succeeded) {
-    return (
-      <footer id="contact" className="flex justify-center px-4 text-gray-800 shadow-lg font-['Gugi']" style={{ backgroundColor: "rgba(34, 30, 30, 1)" }}>
-        <div className="container py-6">
-          <div className="grid max-w-screen-xl grid-cols-1 px-8 mx-auto text-gray-900 md:mt-4 gap-x-24 gap-y-8 md:grid-cols-2 md:px-12 lg:px-16 xl:px-24 md:pt-16 pb:10 md:pb-6 bg-black">
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              animate="show"
-              className="max-w-[500px] mx-auto mb-10 md:mb-0"
-            >
-              <TitleText title="Thanks for Your Query!" />
-              <motion.div
-                variants={staggerContainer}
-                className="mb-8 text-gray-400 md:text-lg text-center"
-              >
-                <p className="text-gray-300">We will get back to you soon.</p>
-              </motion.div>
-            </motion.div>
-          </div>
-        </div>
-      </footer>
-    );
-  }
   return (
-    <footer
-    id="contact"
-    className="flex justify-center px-4 mt-10 -mb-6 text-gray-800 shadow-lg md:mt-20"
-  >
-    <div className="container flex flex-col justify-center py-6 m-2 text-center">
-      <motion.div
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
-        className={`${styles.innerWidth} mx-auto flex flex-col`}
+    <>
+      <footer
+        id="contact"
+        className="flex justify-center px-4 mt-10 -mb-6 text-gray-800 shadow-lg md:mt-20"
       >
-        <TitleText
-          title={
-            <>
-              <span className="looked text-4xl lg:text-6xl font-bold text-[#def200] my-4 lg:my-6 font-[Oswald]">
-                Let's talk about everything!
-              </span>
-            </>
-          }
-          textStyles="text-center"
-        />
-      </motion.div>
-  
-      <div className="flex flex-col items-center justify-center m-4 mt-10 md:mt-4 lg:flex-row lg:space-x-44">
-        {/* Map for Mobile View */}
-        <div className="block md:hidden" style={{ margin: "auto" }}>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3394.2710634274194!2d76.52577699021529!3d31.708489708025382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3904d5487e12c4a1%3A0x395f92d3a202a7d0!2sNational%20Institute%20of%20Technology%2C%20Hamirpur!5e0!3m2!1sen!2sin!4v1674924336344!5m2!1sen!2sin"
-            title="map"
-            width="300"
-            height="200"
-            className="shadow-lg invert-[0.8] rounded-xl"
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-  
-        {/* Map for Desktop View */}
-        <div className="hidden md:block" style={{ margin: "auto" }}>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3394.2710634274194!2d76.52577699021529!3d31.708489708025382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3904d5487e12c4a1%3A0x395f92d3a202a7d0!2sNational%20Institute%20of%20Technology%2C%20Hamirpur!5e0!3m2!1sen!2sin!4v1674924336344!5m2!1sen!2sin"
-            title="map"
-            width="500"
-            height="400"
-            className="shadow-lg invert-[0.8] rounded-3xl"
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-  
-        <div className="flex flex-col justify-center space-y-6" style={{ margin: "auto" }}>
-          {/* Email Section */}
-          <div className="mt-8 text-gray-300 text-center">
-            Hate forms? Send us an email at{" "}
-            <a
-              className="underline hover:text-gray-300"
-              href="mailto:spec@nith.ac.in"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              spec@nith.ac.in
-            </a>{" "}
-            instead.
-          </div>
-  
-          {/* Name Input Section */}
-          <div className="mt-6">
-            <div className="flex justify-center items-center text-sm font-sans md:text-lg text-gray-400 pb-4">
-              <input
-                className="w-80 p-2 rounded-md text-white bg-transparent border-2 border-dashed border-gray-400 focus:outline-none"
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                required
-              />
+        <div className="container flex flex-col justify-center space-y-10 text-center">
+          <span className="text-4xl lg:text-[70px] font-bold my-4 lg:my-6 pirata-one-regular text-white">
+            Let's talk about everything!
+          </span>
+          <div className="flex flex-col items-center justify-center m-4 mt-10 md:mt-4 lg:flex-row lg:space-x-44">
+            {/* Map for Mobile View */}
+            <div className="block md:hidden" style={{ margin: "auto" }}>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3394.2710634274194!2d76.52577699021529!3d31.708489708025382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3904d5487e12c4a1%3A0x395f92d3a202a7d0!2sNational%20Institute%20of%20Technology%2C%20Hamirpur!5e0!3m2!1sen!2sin!4v1674924336344!5m2!1sen!2sin"
+                title="map"
+                width="300"
+                height="200"
+                className="shadow-lg invert-[0.8] rounded-xl"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+
+            {/* Map for Desktop View */}
+            <div className="hidden md:block" style={{ margin: "auto" }}>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3394.2710634274194!2d76.52577699021529!3d31.708489708025382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3904d5487e12c4a1%3A0x395f92d3a202a7d0!2sNational%20Institute%20of%20Technology%2C%20Hamirpur!5e0!3m2!1sen!2sin!4v1674924336344!5m2!1sen!2sin"
+                title="map"
+                width="500"
+                height="400"
+                className="shadow-lg invert-[0.8] rounded-3xl"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+
+            <div className="flex flex-col justify-center space-y-6" style={{ margin: "auto" }}>
+              {/* Email Section */}
+              <div className="mt-8 text-gray-300 text-center">
+                Hate forms? Send us an email at{" "}
+                <a
+                  className="underline hover:text-gray-300"
+                  href="mailto:spec@nith.ac.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  spec@nith.ac.in
+                </a>{" "}
+                instead.
+              </div>
+
+              {/* Name Input Section */}
+              <div className="mt-6">
+                <div className="flex justify-center items-center text-sm font-sans md:text-lg text-gray-400 pb-4">
+                  <input
+                    className="w-80 p-2 rounded-md text-white bg-transparent border-2 border-dashed border-gray-400 focus:outline-none"
+                    type="text"
+                    name="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+              </div>
+
+              {/* Email Input Section */}
+              <div className="flex justify-center items-center text-sm font-sans md:text-lg text-gray-400 pb-4">
+                <input
+                  className="w-80 p-2 rounded-md text-white bg-transparent border-2 border-dashed border-gray-400 focus:outline-none"
+                  type="email"
+                  name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+
+              {/* Message Textarea Section */}
+              <div className="flex justify-center items-center text-sm font-sans md:text-lg text-gray-400 pb-4">
+                <textarea
+                  className="w-80 p-2 rounded-md text-white bg-transparent border-2 border-dashed border-gray-400 focus:outline-none"
+                  name="message"
+                  rows="4"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder="Your Message"
+                  required
+                />
+              </div>
+              {error && <div className="text-red-500">{error}</div>}
+              {success && <div className="text-[#38c051]">{success}</div>}
+
+              {/* Submit Button */}
+              <div className="flex justify-center items-center ">
+                {isLoading ? (
+                  <div className="w-10 h-10 border-[4px] border-white rounded-full animate-spin"></div>
+                ) : (
+                  <button
+                    type="submit"
+                    onClick={sendEmail}
+                    disabled={isLoading}
+                    className="bg-primary px-6 py-2 border-2 border-dashed rounded-md text-white">
+                    Send Message
+                  </button>
+                )}
+              </div>
             </div>
           </div>
-  
-          {/* Email Input Section */}
-          <div className="flex justify-center items-center text-sm font-sans md:text-lg text-gray-400 pb-4">
-            <input
-              className="w-80 p-2 rounded-md text-white bg-transparent border-2 border-dashed border-gray-400 focus:outline-none"
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              required
-            />
-          </div>
-  
-          {/* Message Textarea Section */}
-          <div className="flex justify-center items-center text-sm font-sans md:text-lg text-gray-400 pb-4">
-            <textarea
-              className="w-80 p-2 rounded-md text-white bg-transparent border-2 border-dashed border-gray-400 focus:outline-none"
-              name="message"
-              rows="4"
-              placeholder="Your Message"
-              required
-            />
-          </div>
-  
-          {/* Submit Button */}
-          <div className="flex justify-center items-center">
-            <button type="submit" className="bg-primary px-6 py-2 rounded-md text-white">
-              Send Message
-            </button>
-          </div>
+
+          <BottomFooter />
         </div>
-      </div>
-  
-      <BottomFooter />
-    </div>
-  </footer>
+      </footer>
+    </>
   );
-}  
+}
