@@ -3,10 +3,8 @@ import React from "react";
 import bg from "@/assets/background.png";
 import Image from "next/image";
 import Navbar from "@/components/MainPg/Navbar";
-import Devfolio_Button from "./devfolio_button";
-import logo from "@/assets/speclogo.png";
-import "@/app/globals.css";
-import register from "@/assets/registericon.png";
+import Devfolio_Button from "./devfolio_button"; 
+import "@/app/globals.css"; 
 import hourglass from "@/assets/hourglass.png";
 
 const MainPg = () => {
