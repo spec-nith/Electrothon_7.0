@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm install --include=optional sharp && next build",
+    "postinstall": "npm install --include=optional sharp",
     "start": "next start",
     "lint": "next lint"
   },
@@ -22,7 +23,8 @@
     "gsap": "^3.12.5",
     "next": "15.0.4",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
