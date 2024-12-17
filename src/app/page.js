@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import MainPg from '@/components/MainPg/MainPg.js'
+import MainPg from '../components/Mainpg.js'
 
 export default function Home() {
   return (
