@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm install --include=optional sharp && next build",
+    "build":  "next build",
     "postinstall": "npm install --include=optional sharp",
     "start": "next start",
     "lint": "next lint"
