@@ -22,7 +22,7 @@
     border-radius: 10px;
     border: 2px solid gray;
     max-width: 100%;
-    /* Yellow border */
+
 }
 
 .image {
@@ -75,7 +75,7 @@
     }
 }
 
-/* Tablet View (≤1024px) */
+
 @media (min-width: 768px) and (max-width: 1024px) {
     .slider {
         max-width: 90%;
@@ -92,7 +92,7 @@
     }
 }
 
-/* Mobile View (≤768px) */
+
 @media (max-width: 767px) {
     .dualSlider {
         gap: 10px;
@@ -109,7 +109,7 @@
     .image {
         width: 100%;
         height: auto;
-        /* Maintain aspect ratio */
+
     }
 
     .swiper-slide {

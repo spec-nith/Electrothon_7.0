@@ -11,7 +11,7 @@ import styles from "./slider.module.css";
 const Slider = ({ images }) => {
     return (
         <Swiper
-            slidesPerView={4} // Default: 4 images per row
+            slidesPerView={4}
             spaceBetween={20}
             navigation={true}
             autoplay={{
@@ -21,11 +21,11 @@ const Slider = ({ images }) => {
             modules={[Navigation, Autoplay]}
             breakpoints={{
                 1025: {
-                    slidesPerView: 4, // Tablet: 3 images per row
+                    slidesPerView: 4,
                     spaceBetween: 20,
                 },
                 768: {
-                    slidesPerView: 3, // Mobile: 1 image per row
+                    slidesPerView: 3,
                     spaceBetween: 15,
                 },
                 0: {
@@ -40,12 +40,11 @@ const Slider = ({ images }) => {
                     <Image
                         src={image}
                         alt={`Image ${index + 1}`}
-
                         style={{ objectFit: "cover" }}
                         width={400}
                         height={400}
                         className={styles.image}
-                        priority // Ensures fast loading for critical images
+                        priority
                     />
                 </SwiperSlide>
             ))}
