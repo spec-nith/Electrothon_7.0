@@ -11,7 +11,7 @@ import styles from "./slider.module.css";
 const Slider = ({ images }) => {
     return (
         <Swiper
-            slidesPerView={4}
+            slidesPerView={4} // Default: 4 images per row
             spaceBetween={20}
             navigation={true}
             autoplay={{
@@ -19,6 +19,20 @@ const Slider = ({ images }) => {
                 disableOnInteraction: false,
             }}
             modules={[Navigation, Autoplay]}
+            breakpoints={{
+                1025: {
+                    slidesPerView: 4, // Tablet: 3 images per row
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 3, // Mobile: 1 image per row
+                    spaceBetween: 15,
+                },
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+            }}
             className={styles.slider}
         >
             {images.map((image, index) => (
@@ -26,9 +40,12 @@ const Slider = ({ images }) => {
                     <Image
                         src={image}
                         alt={`Image ${index + 1}`}
+
+                        style={{ objectFit: "cover" }}
                         width={400}
                         height={400}
                         className={styles.image}
+                        priority // Ensures fast loading for critical images
                     />
                 </SwiperSlide>
             ))}
@@ -37,7 +54,6 @@ const Slider = ({ images }) => {
 };
 
 const DualSlider = () => {
-    // Images for each row
     const row1Images = [
         "/images/1.jpg", "/images/2.jpg", "/images/3.jpg",
         "/images/4.jpg", "/images/5.jpg", "/images/6.jpg",
@@ -52,9 +68,7 @@ const DualSlider = () => {
 
     return (
         <div className={styles.dualSlider}>
-            {/* First Slider */}
             <Slider images={row1Images} />
-            {/* Second Slider */}
             <Slider images={row2Images} />
         </div>
     );

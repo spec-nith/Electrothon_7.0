@@ -1,26 +1,18 @@
 .dualSlider {
     display: flex;
     flex-direction: column;
-    gap: 80px;
-    margin: 0;
+    gap: 20px;
+    margin: 0 auto;
     padding: 0;
-    height: 100vh;
-    box-sizing: border-box;
     justify-content: center;
     align-items: center;
+    margin-bottom: 80px;
+    width: 100%;
 }
-
-.row {
-    margin-bottom: 10px;
-
-}
-
-
 
 .slider {
     width: 100%;
     max-width: 1200px;
-    height: auto;
     position: relative;
 }
 
@@ -28,19 +20,29 @@
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    height: auto;
-    border: 1px solid #ddd;
+    border: 2px solid gray;
+    max-width: 100%;
+    /* Yellow border */
 }
 
 .image {
-    width: 110%;
-    height: 110%;
+    width: 100%;
+    height: auto;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
 }
 
 .image:hover {
     transform: scale(1.1);
+}
+
+.swiper-slide {
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    flex-shrink: 0;
 }
 
 .swiper-button-next,
@@ -58,45 +60,45 @@
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.swiper-button-next {
-    right: 10px;
-}
-
-.swiper-button-prev {
-    left: 10px;
-}
-
-
-@media (max-width: 1024px) {
-    .dualSlider {
-        gap: 15px;
-        margin: 10px 15px;
+@media (min-width: 1025px) {
+    .slider {
+        max-width: 1200px;
     }
 
-    .slider {
+    .imageWrapper {
+        border-radius: 10px;
+    }
+
+    .image {
+        width: 100%;
         height: auto;
-        max-width: 100%;
+    }
+}
+
+/* Tablet View (≤1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .slider {
+        max-width: 90%;
     }
 
     .imageWrapper {
         border-radius: 8px;
     }
 
-
     .swiper-button-next,
     .swiper-button-prev {
         padding: 8px;
+        font-size: 12px;
     }
 }
 
-@media (max-width: 768px) {
+/* Mobile View (≤768px) */
+@media (max-width: 767px) {
     .dualSlider {
         gap: 10px;
-        margin: 5px 10px;
     }
 
     .slider {
-        height: auto;
         max-width: 100%;
     }
 
@@ -104,14 +106,19 @@
         border-radius: 6px;
     }
 
+    .image {
+        width: 100%;
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    .swiper-slide {
+        width: 100%;
+    }
 
     .swiper-button-next,
     .swiper-button-prev {
         padding: 6px;
-    }
-
-
-    .image {
-        object-fit: contain;
+        font-size: 10px;
     }
 }
