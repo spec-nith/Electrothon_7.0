@@ -11,6 +11,7 @@ import Sponsors2 from "@/components/Sponsors/Sponsors2";
 import SliderT from "@/components/Testimonials/slider";
 
 import bg from "../assets/backgroundimg.jpg"
+import Footer from "@/components/contact_us/Footer";
 
 export default function Home() {
   
@@ -28,6 +29,7 @@ export default function Home() {
     <Sponsors2 />
     <SliderT /> 
       <Faqs/> 
+      <Footer/>
    
   </div>
   
