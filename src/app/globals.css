@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 @import url(https://db.onlinewebfonts.com/c/f70b18e78f0c256d3aa0ecb00daf64c9?family=Linotype+Humanistika+W01);
-
+*{
+    box-sizing: border-box;
+    
+}
 
 
 @font-face {
@@ -80,3 +83,14 @@ body {
 img {
     background-color: transparent;
 }
+
+img.lazy {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  img.lazy.loaded {
+    opacity: 1;
+  }
+
+  

@@ -5,6 +5,9 @@ import styles from './page.module.css'; // Import CSS module
 import Slider from '@/components/last_electrothon/slider.js';
 import Sponsors1 from "@/components/Sponsors/Sponsers1";
 import Sponsors2 from "@/components/Sponsors/Sponsors2";
+
+import SliderT from "@/components/Testimonials/slider";
+
 import bg from "../assets/backgroundimg.jpg"
 
 export default function Home() {
@@ -20,8 +23,8 @@ export default function Home() {
     <Slider />
     <Sponsors1 />
     <Sponsors2 />
-    
-    
+    <SliderT />
+ 
    
   </div>
   
