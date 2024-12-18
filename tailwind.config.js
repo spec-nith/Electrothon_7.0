@@ -8,8 +8,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        'bd': '#D9D9D9',
+      },
+      fontFamily: {
+        pirata: ['Pirata One', 'sans-serif'],
       },
       fontFamily: {
         pirata: ['"Pirata One"', 'cursive'],
@@ -19,6 +21,10 @@ module.exports = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(circle, var(--tw-gradient-stops))',
       },
+      screens: {
+        xs: '360px', 
+      },
+
     },
   },
   plugins: [],

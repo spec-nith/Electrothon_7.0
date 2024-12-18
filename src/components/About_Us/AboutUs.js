@@ -1,7 +1,7 @@
 "use client"; // Add this line at the top of your file
 
 import React, { useEffect, useRef } from 'react';
-import bg from '@/assets/background.png';
+import bg from '@/assets/backgroundimg.jpg';
 import Image from 'next/image';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
