@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Navigation, Autoplay } from "swiper";
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -14,7 +14,11 @@ const Slider = ({ images }) => {
             slidesPerView={4}
             spaceBetween={20}
             navigation={true}
-            modules={[Navigation]}
+            autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+            }}
+            modules={[Navigation, Autoplay]}
             className={styles.slider}
         >
             {images.map((image, index) => (
