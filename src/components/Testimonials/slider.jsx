@@ -1,14 +1,14 @@
 'use client';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules'; // Import from swiper/modules
-import { Autoplay } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper'
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Data from "../../assets/testimonails_data/testimonies.js";
 import Heading from "../Sponsors/Heading.jsx";
 
-const Slider = () => {
+
+const SliderT = () => {
   return (
     <div className="container  w-screen h-screen mx-auto bg-transparent text-white mb-5 xs:mt-10">
       <Heading children={"Testimonials"} />
@@ -97,6 +97,6 @@ const Slider = () => {
     </div>
   );
 };
-export default Slider;
+export default SliderT;
 
 
