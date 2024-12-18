@@ -60,7 +60,23 @@
     font-family: 'font';
 }
 
+/* Global styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    height: 100vh;
+
+}
+
 body {
-    background-color: rgb(17, 25, 44);
+    background-color: black;
     color: white;
+
+}
+
+img {
+    background-color: transparent;
 }

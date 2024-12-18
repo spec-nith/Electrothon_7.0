@@ -1,0 +1,111 @@
+.dualSlider {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0  ; 
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    position: relative;
+}
+
+.imageWrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: auto;
+    border: 1px solid #ddd;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image:hover {
+    transform: scale(1.05);
+}
+
+/* Swiper Arrows Customization */
+.swiper-button-next,
+.swiper-button-prev {
+    color: gray; /* Set arrow color to gray */
+    background-color: rgba(255, 255, 255, 0.7); /* Optional background for better visibility */
+    border-radius: 50%;
+    padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: #333; /* Darken arrow color on hover */
+    background-color: rgba(0, 0, 0, 0.1); /* Subtle hover effect */
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+/* Mobile and Tablet Responsive Design */
+@media (max-width: 1024px) {
+    .dualSlider {
+        gap: 15px;
+        margin: 10px 15px; /* Slightly smaller margin for tablets */
+    }
+
+    .slider {
+        height: auto;
+        max-width: 100%; /* Ensure the slider width is responsive */
+    }
+
+    .imageWrapper {
+        border-radius: 8px;
+    }
+
+    /* Adjust arrow size and placement for tablets */
+    .swiper-button-next,
+    .swiper-button-prev {
+        padding: 8px; /* Slightly smaller arrows on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .dualSlider {
+        gap: 10px;
+        margin: 5px 10px; /* Reduce margin for mobile */
+    }
+
+    .slider {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .imageWrapper {
+        border-radius: 6px;
+    }
+
+    /* Adjust arrow size and placement for mobile */
+    .swiper-button-next,
+    .swiper-button-prev {
+        padding: 6px; /* Even smaller arrows on mobile */
+    }
+
+    /* Optionally adjust image behavior on mobile */
+    .image {
+        object-fit: contain; /* Ensure images fit within the screen without overflowing */
+    }
+}
