@@ -3,10 +3,10 @@
 import React, { useEffect, useRef } from 'react';
 import bg from '@/assets/backgroundimg.jpg';
 import Image from 'next/image';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import { gsap } from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 const AboutUs = () => {
     const titleRef = useRef(null);
@@ -14,6 +14,8 @@ const AboutUs = () => {
     const paragraphRef = useRef(null);
 
     useEffect(() => {
+        // Commenting out GSAP animations
+        /*
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: titleRef.current,
@@ -32,6 +34,7 @@ const AboutUs = () => {
             // Clean up ScrollTrigger instances on unmount
             ScrollTrigger.getAll().forEach(trigger => trigger.kill());
         };
+        */
     }, []);
 
     return (
