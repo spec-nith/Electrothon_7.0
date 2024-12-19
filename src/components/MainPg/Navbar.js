@@ -2,6 +2,7 @@ import React from 'react'
 import logo from '@/assets/speclogo.png'
 import mlh from '@/assets/mlhlogo.png'
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 const Navbar = () => {
@@ -144,25 +145,46 @@ const Navbar = () => {
         </svg>
     );
 
+    const aboutIcon = () => (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          role="img"
+          color="white"
+        >
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M9.60499 3.60985C8.05278 4.45845 7 6.10628 7 8C7 9.0141 7.3019 9.95769 7.82074 10.7458C5.83291 10.6522 4.25 9.01097 4.25 7C4.25 4.92893 5.92893 3.25 8 3.25C8.5743 3.25 9.11844 3.3791 9.60499 3.60985ZM8.28058 12.25C5.8048 12.9893 4 15.2839 4 18V19.75H2C1.58579 19.75 1.25 19.4142 1.25 19V17C1.25 14.3766 3.37665 12.25 6 12.25H8.28058ZM12 4.25C9.92893 4.25 8.25 5.92893 8.25 8C8.25 10.0711 9.92893 11.75 12 11.75C14.0711 11.75 15.75 10.0711 15.75 8C15.75 5.92893 14.0711 4.25 12 4.25ZM10 13.25C7.37665 13.25 5.25 15.3766 5.25 18V20C5.25 20.4142 5.58579 20.75 6 20.75H18C18.4142 20.75 18.75 20.4142 18.75 20V18C18.75 15.3766 16.6234 13.25 14 13.25H10ZM19.75 7C19.75 9.01097 18.1671 10.6522 16.1793 10.7458C16.6981 9.95769 17 9.0141 17 8C17 6.10628 15.9472 4.45845 14.395 3.60985C14.8816 3.3791 15.4257 3.25 16 3.25C18.0711 3.25 19.75 4.92893 19.75 7ZM22 19.75H20V18C20 15.2839 18.1952 12.9893 15.7194 12.25H18C20.6234 12.25 22.75 14.3766 22.75 17V19C22.75 19.4142 22.4142 19.75 22 19.75Z"
+            fill="white"
+          />
+        </svg>
+      );
+
     return (
         <div className='flex justify-center h-[80px] items-center'>
             <Image className='absolute max-lg:top-0 left-0 max-lg:w-[100px]' width={150} height={119} src={logo} alt="" />
-            <div className='h-[57px] max-lg:hidden max-xl:scale-90 macondo-swash-caps-regular fixed bg-[#37393b95] w-[800px] rounded-[40px] shadow-sm shadow-white flex items-center justify-around'>
-                <button className='text-[18px]'>Schedule</button>
-                <button className='text-[18px]'>Sponsors</button>
-                <button className='text-[18px]'>Theme</button>
-                <button className='text-[18px]'>Prizes</button>
-                <button className='text-[18px]'>FAQs</button>
-                <button className='text-[18px]'>Contact Us</button>
+            <div className='z-50 h-[57px] max-lg:hidden max-xl:scale-90 macondo-swash-caps-regular fixed bg-[#37393b95] w-[800px] rounded-[40px] shadow-sm shadow-white flex items-center justify-around'>
+                <Link href='/#schedule' scroll={true} className='text-[18px]'>Schedule</Link>
+                <Link href='/#about' scroll={true} className='text-[18px]'>About us</Link>
+                <Link href='/#sponsors' scroll={true} className='text-[18px]'>Sponsors</Link>
+                <Link href='/#theme' scroll={true} className='text-[18px]'>Theme</Link>
+                <Link href='/#prizes' scroll={true} className='text-[18px]'>Prizes</Link>
+                <Link href='/#faq' scroll={true} className='text-[18px]'>FAQs</Link>
+                <Link href='/#contact' scroll={true} className='text-[18px]'>Contact Us</Link>
             </div>
             <Image className='absolute right-2 top-0 max-lg:w-[60px]' width={100} src={mlh} alt="" />
             <div className='py-3 lg:hidden macondo-swash-caps-regular fixed bottom-2 z-50 bg-[#2b3846] w-[98%] rounded-2xl flex items-center justify-around'>
-                <button className='text-[20px]'>{scheduleIcon()}</button>
-                <button className='text-[20px]'>{sponsorIcon()}</button>
-                <button className='text-[20px]'>{themeIcon()}</button>
-                <button className='text-[20px]'>{prizeIcon()}</button>
-                <button className='text-[20px]'>{faqIcon()}</button>
-                <button className='text-[20px]'>{ContactIcon()}</button>
+                <Link href='/#schedule' scroll={true} className='text-[20px]'>{scheduleIcon()}</Link>
+                <Link href='/#about' scroll={true} className='text-[20px]'>{aboutIcon()}</Link>
+                <Link href='/#sponsors' scroll={true} className='text-[20px]'>{sponsorIcon()}</Link>
+                <Link href='/#theme' scroll={true} className='text-[20px]'>{themeIcon()}</Link>
+                <Link href='/#prizes' scroll={true} className='text-[20px]'>{prizeIcon()}</Link>
+                <Link href='/#faq' scroll={true} className='text-[20px]'>{faqIcon()}</Link>
+                <Link href='/#contact' scroll={true} className='text-[20px]'>{ContactIcon()}</Link>
             </div>
         </div>
     )
