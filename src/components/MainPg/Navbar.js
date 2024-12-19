@@ -150,7 +150,7 @@ const Navbar = () => {
             <div className='h-[57px] max-lg:hidden max-xl:scale-90 macondo-swash-caps-regular fixed bg-[#37393b95] w-[800px] rounded-[40px] shadow-sm shadow-white flex items-center justify-around'>
                 <button className='text-[18px]'>Schedule</button>
                 <button className='text-[18px]'>Sponsors</button>
-                <button className='text-[18px]'>Themes</button>
+                <button className='text-[18px]'>Theme</button>
                 <button className='text-[18px]'>Prizes</button>
                 <button className='text-[18px]'>FAQs</button>
                 <button className='text-[18px]'>Contact Us</button>
