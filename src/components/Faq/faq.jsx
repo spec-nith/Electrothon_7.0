@@ -27,14 +27,14 @@ export default function Faqs() {
       {/* FAQ Heading */}
       <div className="py-5">
         <h1
-          className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-7xl font-bold pirata-one-regular"
+          className="text-6xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold pirata-one-regular"
           style={{
             color: "#FFFFFF", // White color for the heading text
             textTransform: "uppercase",
             letterSpacing: "2px",
           }}
         >
-          Frequently Asked Questions
+          FAQs
         </h1>
       </div>
 
@@ -43,17 +43,16 @@ export default function Faqs() {
         {/* Render initial questions */}
         <div className="w-full">
           {initialQues.map((faq, index) => (
-            <Accordion key={faq.title + index} open={open === index} className="rounded-lg">
+            <Accordion key={faq.title + index} open={open === index} className="rounded-xl shadow-lg">
               <AccordionHeader
                 style={{
-                  backgroundColor: "#000039", // Dark blue background for questions
+                  background: "linear-gradient(to bottom, rgba(0, 0, 57, 0.7), rgba(2, 29, 59, 0.7))", // Blue gradient with 70% opacity
                   fontFamily: "Jacques Francois",
                   color: "#FFFFFF", // White text for the question
                   borderBottom: open === index ? "2px solid #D2A374" : "none", // Golden border when open
-                  boxShadow: open === index ? "none" : "0 0 10px 2px #D2A374", // Glow when unclicked
-                  transition: "box-shadow 0.3s ease", // Smooth transition for the effect
+                  transition: "border-bottom 0.3s ease", // Smooth transition for the effect
                 }}
-                className="my-4 p-4 text-center rounded-lg text-base font-normal border-none"
+                className="my-4 p-6 text-center rounded-xl text-base font-normal border-none"
                 onClick={() => handleOpen(index)}
               >
                 <h1 className="w-full text-center lg:text-left sm:text-base md:text-lg">
@@ -62,16 +61,16 @@ export default function Faqs() {
               </AccordionHeader>
 
               <AccordionBody
-                className={`text-sm md:text-base h-auto text-justify lg:text-left text-white rounded-xl p-4 transition-all duration-500 ease-in-out ${
+                className={`text-lg md:text-xl h-auto text-justify lg:text-left text-white rounded-xl p-6 transition-all duration-500 ease-in-out ${
                   open === index ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                 }`}
                 style={{
-                  backgroundColor: "#80471C", // Darker brown background for answers
-                  width: "100%",
+                  backgroundColor: "rgba(128, 71, 28, 0.7)", // Dark brown background with 70% opacity
                   fontFamily: "Jacques Francois",
                   color: "#E0D6D1",
                   margin: "auto",
-                  weight: "bold",
+                  width: "100%",
+                  borderRadius: "1rem", // Rounded corners for a nicer shape
                 }}
               >
                 {faq.content}
@@ -87,18 +86,17 @@ export default function Faqs() {
               <Accordion
                 key={faq.title + (index + initialQues.length)}
                 open={open === index + initialQues.length}
-                className="rounded-lg"
+                className="rounded-xl shadow-lg"
               >
                 <AccordionHeader
                   style={{
-                    backgroundColor: "#000039", // Dark blue background for questions
+                    background: "linear-gradient(to bottom, rgba(0, 0, 57, 0.7), rgba(2, 29, 59, 0.7))", // Blue gradient with 70% opacity
                     fontFamily: "Jacques Francois",
                     color: "#FFFFFF", // White text for the question
                     borderBottom: open === index + initialQues.length ? "2px solid #D2A374" : "none", // Golden border when open
-                    boxShadow: open === index + initialQues.length ? "none" : "0 0 10px 2px #D2A374", // Glow when unclicked
-                    transition: "box-shadow 0.3s ease", // Smooth transition for the effect
+                    transition: "border-bottom 0.3s ease", // Smooth transition for the effect
                   }}
-                  className="my-4 p-4 text-center rounded-lg text-base font-normal border-none"
+                  className="my-4 p-6 text-center rounded-xl text-base font-normal border-none"
                   onClick={() => handleOpen(index + initialQues.length)}
                 >
                   <h1 className="w-full text-center lg:text-left sm:text-base md:text-lg">
@@ -107,15 +105,16 @@ export default function Faqs() {
                 </AccordionHeader>
 
                 <AccordionBody
-                  className={`text-sm md:text-base h-auto text-justify lg:text-left text-white rounded-xl p-4 transition-all duration-500 ease-in-out ${
+                  className={`text-lg md:text-xl h-auto text-justify lg:text-left text-white rounded-xl p-6 transition-all duration-500 ease-in-out ${
                     open === index + initialQues.length ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                   }`}
                   style={{
-                    backgroundColor: "#80471C", // Darker brown background for answers
+                    backgroundColor: "rgba(128, 71, 28, 0.7)", // Dark brown background with 70% opacity
                     fontFamily: "Jacques Francois",
                     color: "#E0D6D1",
                     margin: "auto",
                     width: "100%",
+                    borderRadius: "1rem", // Rounded corners for a nicer shape
                   }}
                 >
                   {faq.content}
