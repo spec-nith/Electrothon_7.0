@@ -3,7 +3,7 @@ import MainPg from '@/components/MainPg/MainPg.js'
 import AboutUs from '@/components/About_Us/AboutUs.js' 
 import Faqs from "@/components/Faq/faq";
 import styles from './page.module.css'; // Import CSS module
-import Slider from '@/components/last_electrothon/slider.jsx';
+import Slider from '@/components/last_electrothon/slider.js';
 import Sponsors1 from "@/components/Sponsors/Sponsers1";
 import Sponsors2 from "@/components/Sponsors/Sponsors2";
 import Prize from "@/components/Prizes/Prizes";
