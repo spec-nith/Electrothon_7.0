@@ -8,8 +8,7 @@ import Sponsors1 from "@/components/Sponsors/Sponsers1";
 import Sponsors2 from "@/components/Sponsors/Sponsors2"; 
 import SliderT from "@/components/Testimonials/slider";
 import bg from "../assets/backgroundimg.jpg"
-import Footer from "@/components/contact_us/Footer";
-import JudgesSection from "../components/JudgesSection/JudgesSection.js";
+import Footer from "@/components/contact_us/Footer"; 
 import Image from "next/image";
 export default function Home() {
   return (
@@ -19,8 +18,7 @@ export default function Home() {
     <MainPg />
     <AboutUs />
     <h1 className={styles.title}>Glimpse of Last Electrothon</h1>
-    <DualSlider /> 
-    <JudgesSection /> 
+    <DualSlider />  
     <Sponsors1 />
     <Sponsors2 />
     <SliderT /> 
