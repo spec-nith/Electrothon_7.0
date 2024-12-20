@@ -4,7 +4,7 @@ import MainPg from '@/components/MainPg/MainPg.js'
 import AboutUs from '@/components/About_Us/AboutUs.js' 
 import Faqs from "@/components/Faq/faq";
 import styles from './page.module.css'; // Import CSS module
-import Slider from '@/components/last_electrothon/slider.js';
+import DualSlider from '@/components/last_electrothon/slider';
 import Sponsors1 from "@/components/Sponsors/Sponsers1";
 import Sponsors2 from "@/components/Sponsors/Sponsors2";
 
@@ -24,7 +24,7 @@ export default function Home() {
     <MainPg />
     <AboutUs />
     <h1 className={styles.title}>Glimpse of Last Electrothon</h1>
-    <Slider />
+    <DualSlider />
     <Sponsors1 />
     <Sponsors2 />
     <SliderT /> 
