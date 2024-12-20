@@ -6,7 +6,6 @@ import { Navigation, Autoplay } from "swiper";
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
-import data from "../../assets/last_electrothon_data/images.js";
 import styles from "./slider.module.css";
 
 const Slider = ({ images }) => {
@@ -54,28 +53,22 @@ const Slider = ({ images }) => {
 };
 
 const DualSlider = () => {
+    const row1Images = [
+        "/images/1.jpg", "/images/2.jpg", "/images/3.jpg",
+        "/images/4.jpg", "/images/5.jpg", "/images/6.jpg",
+        "/images/7.jpg", "/images/8.jpg", "/images/9.jpg",
+    ];
+
+    const row2Images = [
+        "/images/10.jpg", "/images/11.jpg", "/images/12.jpg",
+        "/images/13.jpg", "/images/14.jpg", "/images/15.jpg",
+        "/images/16.jpg", "/images/17.jpg", "/images/18.jpg",
+    ];
+
     return (
         <div className={styles.dualSlider}>
-            {data.map((d,index) => {
-                const row1Images = [
-                    d.pic1,d.pic2,d.pic3,
-                    d.pic4,d.pic5,d.pic6,
-                    d.pic7,d.pic8,d.pic9,
-                ];
-        
-                const row2Images = [
-                    d.pic10,d.pic11,d.pic12,
-                    d.pic13,d.pic14,d.pic15,
-                    d.pic16,d.pic17,d.pic18,
-                ];
-        
-                return (
-                    <div key={index} className={styles.sliderContainer}>
-                        <Slider images={row1Images} />
-                        <Slider images={row2Images} />
-                    </div>
-                );
-            })}
+            <Slider images={row1Images} />
+            <Slider images={row2Images} />
         </div>
     );
 };
