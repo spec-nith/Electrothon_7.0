@@ -64,7 +64,7 @@ const initialQues = [
     },
     {
       title: "What do I get from the event?",
-      content: "The winners will be awarded with enchanting monetary prizes. The short-listed students will be given recognition and a chance to show off their skills. Winners of the finest hacks created using the partner firms' APIs and SDKs will receive special prizes.",
+      content: "The winners will be awarded with enchanting monetary prizes.The short-listed students will be given recognition and a chance to show off their skills. Winners of the finest hacks created using the partner firms' APIs and SDKs will receive special prizes.",
     },
     {
       title: "How does Electrothon promote diversity?",
