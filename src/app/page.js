@@ -5,8 +5,7 @@ import Faqs from "@/components/Faq/faq";
 import styles from './page.module.css'; // Import CSS module
 import DualSlider from '@/components/last_electrothon/slider';
 import Sponsors1 from "@/components/Sponsors/Sponsers1";
-import Sponsors2 from "@/components/Sponsors/Sponsors2";
-import Prize from "@/components/Prizes/Prizes";
+import Sponsors2 from "@/components/Sponsors/Sponsors2"; 
 import SliderT from "@/components/Testimonials/slider";
 import bg from "../assets/backgroundimg.jpg"
 import Footer from "@/components/contact_us/Footer";
@@ -21,8 +20,7 @@ export default function Home() {
     <AboutUs />
     <h1 className={styles.title}>Glimpse of Last Electrothon</h1>
     <DualSlider /> 
-    <JudgesSection />
-    <Prize />
+    <JudgesSection /> 
     <Sponsors1 />
     <Sponsors2 />
     <SliderT /> 
