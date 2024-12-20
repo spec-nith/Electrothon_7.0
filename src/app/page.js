@@ -21,7 +21,7 @@ export default function Home() {
     <AboutUs />
     <h1 className={styles.title}>Glimpse of Last Electrothon</h1>
     <DualSlider />
-    <Slider />
+    <SliderT />
     <JudgesSection />
     <Prize />
     <Sponsors1 />
