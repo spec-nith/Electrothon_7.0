@@ -20,8 +20,7 @@ export default function Home() {
     <MainPg />
     <AboutUs />
     <h1 className={styles.title}>Glimpse of Last Electrothon</h1>
-    <DualSlider />
-    <SliderT />
+    <DualSlider /> 
     <JudgesSection />
     <Prize />
     <Sponsors1 />
