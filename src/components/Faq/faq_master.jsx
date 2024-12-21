@@ -39,7 +39,7 @@ const initialQues = [
       content: "The winners will be awarded with lunar monetary prizes. The short-listed students will be given recognition and a chance to show off their skills. Winners of the finest hacks created using the partner firms' APIs and SDKs will receive special prizes.",
     },
     {
-      title: "What is the goal of the Electrothon 6.0?",
+      title: "What is the goal of the Electrothon 7.0?",
       content: "The goal of our voyage is to foster an atmosphere where innovative concepts and technology approaches are welcomed. A gathering spot for engineers, technologists, and designers to collaborate on challenges. We know that Rome was not built in a day, but a weekend is ample time to form teams of good people and begin creating great solutions.",
     },
     {

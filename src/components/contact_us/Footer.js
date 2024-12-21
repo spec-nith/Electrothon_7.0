@@ -123,24 +123,35 @@ export default function Footer() {
               <li className="flex justify-center font-sans text-gray-400 md:text-sm md:justify-start">177005</li>
             </ul>
           </div>
-          <div className="">
-            <div className="flex justify-center pb-2 text-sm font-medium text-white md:justify-start md:text-lg">STAY CONNECTED</div>
-            <div className="flex justify-center mt-1 mb-10 space-x-2 md:space-x-5 md:mt-1 opacity-80">
-              <a href="https://discord.gg/tTra8Ssuh2" rel="noreferrer noopenor" target="_blank">
-                <FontAwesomeIcon className="text-blue-800 fill-current text-1xl md:text-2xl" icon={faDiscord} />
-              </a>
-              <a href="https://www.facebook.com/spec.ece/" rel="noreferrer noopenor" target="_blank">
-                <FontAwesomeIcon className="text-blue-600 fill-current text-1xl md:text-2xl" icon={faFacebook} />
-              </a>
-              <a href="https://twitter.com/electrothon" rel="noreferrer noopenor" target="_blank">
-                <FontAwesomeIcon className="text-blue-300 fill-current text-1xl md:text-2xl" icon={faTwitter} />
-              </a>
-              <a href="https://instagram.com/s.p.e.c_nith?utm_source=ig_profile_share&amp;igshid=1dd01jvv7xk83" rel="noreferrer noopenor" target="_blank">
-                <FontAwesomeIcon className="text-pink-600 fill-current text-1xl md:text-2xl" icon={faInstagram} />
-              </a>
-              <a href="https://www.linkedin.com/in/s-p-e-c-nith-40214b197/" rel="noreferrer noopenor" target="_blank">
-                <FontAwesomeIcon className="text-blue-500 fill-current text-1xl md:text-2xl" icon={faLinkedin} />
-              </a>
+          <div>
+            <div className="">
+              <div className="flex justify-center pb-2 text-sm font-medium text-white md:justify-start md:text-lg">STAY CONNECTED</div>
+              <div className="flex justify-center mt-1 mb-10 space-x-2 md:space-x-5 md:mt-1 opacity-80">
+                <a href="https://discord.gg/tTra8Ssuh2" rel="noreferrer noopenor" target="_blank">
+                  <FontAwesomeIcon className="text-blue-800 fill-current text-1xl md:text-2xl" icon={faDiscord} />
+                </a>
+                <a href="https://www.facebook.com/spec.ece/" rel="noreferrer noopenor" target="_blank">
+                  <FontAwesomeIcon className="text-blue-600 fill-current text-1xl md:text-2xl" icon={faFacebook} />
+                </a>
+                <a href="https://twitter.com/electrothon" rel="noreferrer noopenor" target="_blank">
+                  <FontAwesomeIcon className="text-blue-300 fill-current text-1xl md:text-2xl" icon={faTwitter} />
+                </a>
+                <a href="https://instagram.com/s.p.e.c_nith?utm_source=ig_profile_share&amp;igshid=1dd01jvv7xk83" rel="noreferrer noopenor" target="_blank">
+                  <FontAwesomeIcon className="text-pink-600 fill-current text-1xl md:text-2xl" icon={faInstagram} />
+                </a>
+                <a href="https://www.linkedin.com/in/s-p-e-c-nith-40214b197/" rel="noreferrer noopenor" target="_blank">
+                  <FontAwesomeIcon className="text-blue-500 fill-current text-1xl md:text-2xl" icon={faLinkedin} />
+                </a>
+              </div>
+            </div>
+            <div>
+            <button
+              type="button"
+              onClick={() => window.open('https://electrothon.nith.ac.in/', '_blank')}
+              className="relative px-6 py-3 rounded-full text-white text-xl font-bold bg-gradient-to-r from-purple-700 to-blue-700 hover:from-blue-700 hover:to-purple-700 shadow-lg transition-all duration-300">
+              <span className="absolute inset-0 blur-md opacity-75 bg-gradient-to-r from-purple-700 to-blue-700 rounded-full"></span>
+              <span className="relative">Electrothon 6.0</span>
+            </button>
             </div>
           </div>
         </div>
