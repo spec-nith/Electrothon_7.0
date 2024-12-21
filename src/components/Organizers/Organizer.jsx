@@ -3,16 +3,19 @@ import React from 'react'
 import Image from "next/image"
 import dynamic from 'next/dynamic'
 
+// Importing images
+import stockImage from "../../assets/organizers/stockimage.png";
+
 const OrganizerSlider = dynamic(() => import('./OrganizerSlider'), { ssr: false })
 
 const leadOrganizers = [
   {
-    image: "/stockimage.png",
+    image: stockImage,
     name: "Lead Organizer 1",
     role: "Lead"
   },
   {
-    image: "/stockimage.png",
+    image: stockImage,
     name: "Lead Organizer 2",
     role: "Lead"
   }
@@ -21,15 +24,13 @@ const leadOrganizers = [
 const organizers = Array(40)
   .fill(null)
   .map((_, index) => ({
-    image: "/stockimage.png",
+    image: stockImage,
     name: `Organizer ${index + 1}`,
     role: "Organizer",
   }));
 
-
 export default function Organizers() {
   return (
-      
       <div id='Organizers' className="relative z-10 container mx-auto px-4 py-16">
         {/* Lead Organizers Section */}
         <div className="mb-16">
@@ -95,6 +96,5 @@ export default function Organizers() {
           <OrganizerSlider organizers={organizers} />
         </div>
       </div>
-
   )
 }
