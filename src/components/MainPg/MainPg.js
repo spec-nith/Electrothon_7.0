@@ -12,10 +12,10 @@ const MainPg = () => {
   return (
     <div
       id="home"
-      className="bg-cover w-full h-screen bg-center -z-0"
+      className="bg-cover w-full bg-center -z-0"
     >
       <Navbar />
-      <div className="flex items-center justify-center space-y-12 h-[89.9%] flex-col">
+      <div className="flex items-center justify-center space-y-12 h-full flex-col">
         <div className="flex w-full flex-col items-center justify-center">
           <span className="text-[150px] px-3 pirata-one-regular lg:leading-none max-lg:text-[120px] max-md:text-[80px] max-sm:text-[70px] text-center">
             ELECTROTHON 7.0
