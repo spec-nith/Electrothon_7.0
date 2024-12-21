@@ -18,7 +18,7 @@ export default function Home() {
 
   return (
     <div
-      className="scroll-smooth relative bg-cover bg-center bg-fixed h-full overflow-y-auto overflow-x-hidden"
+      className="scroll-smooth relative bg-cover bg-center bg-fixed h-full overflow-y-auto"
       style={{ backgroundImage: `url(${bg.src})`,
                backgroundPosition:'0px 20px' 
       }}>

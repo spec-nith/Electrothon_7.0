@@ -15,12 +15,12 @@ const MainPg = () => {
       className="bg-cover w-full h-screen bg-center -z-0"
     >
       <Navbar />
-      <div className="flex items-center justify-center lg:space-y-12 sm:space-y-16 space-y-8 h-[89.9%] flex-col">
+      <div className="flex items-center justify-center space-y-12 h-[89.9%] flex-col">
         <div className="flex w-full flex-col items-center justify-center">
-          <span className="text-[150px] px-3 pirata-one-regular lg:leading-none max-lg:text-[120px] max-md:text-[80px] max-sm:text-[60px] text-center">
+          <span className="text-[150px] px-3 pirata-one-regular lg:leading-none max-lg:text-[120px] max-md:text-[80px] max-sm:text-[70px] text-center">
             ELECTROTHON 7.0
           </span>
-          <span className="text-[50px] macondo-swash-caps-regular lg:leading-none max-lg:text-[40px] max-md:text-[30px] max-sm:text-[23px] text-center">
+          <span className="text-[50px] macondo-swash-caps-regular lg:leading-none max-lg:text-[40px] max-md:text-[30px] text-center">
             Collosseum of Code
           </span>
         </div>
