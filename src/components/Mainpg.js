@@ -1,4 +1,3 @@
-
 import React from "react";
 import bg from "@/assets/backgroundimg.jpg";
 import Image from "next/image";
@@ -61,3 +60,5 @@ const MainPg = () => {
 };
 
 export default MainPg;
+
+

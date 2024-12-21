@@ -54,7 +54,7 @@ const AboutUs = () => {
             </div>
 
             {/* Page Content */}
-            <div className="relative">
+            <div id='about' className="relative">
                 <h1 ref={titleRef} className="text-5xl pt-[15vh] pl-[6vw] font-pirata md:text-4xl sm:text-3xl text-center">About Us</h1>
                 <div className="relative mx-[6vw] my-[5vh] flex flex-col items-center">
                     {/* Background Rectangle */}

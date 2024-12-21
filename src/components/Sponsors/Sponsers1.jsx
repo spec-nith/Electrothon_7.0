@@ -6,7 +6,7 @@ import logo from "../../assets/logos/th.jpg";
 
 const Sponsors1 = () => {
   return (
-    <div className="container flex flex-col items-center w-3/4 mx-auto bg-transparent text-white">
+    <div id="sponsors" className="container flex flex-col items-center w-3/4 mx-auto bg-transparent text-white">
       {/* Nest the heading content inside the Heading component */}
       <Heading>OUR SPONSORS</Heading>
       <div className="container flex flex-col items-center bg-transparent">
