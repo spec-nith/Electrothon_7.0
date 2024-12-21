@@ -12,7 +12,7 @@ const MainPg = () => {
   return (
     <div
       id="home"
-      className="bg-cover w-full bg-center -z-0"
+      className="bg-cover w-full lg:h-screen bg-center -z-0"
     >
       <Navbar />
       <div className="flex items-center justify-center space-y-12 h-full flex-col">
