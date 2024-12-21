@@ -11,6 +11,7 @@ import SliderT from "@/components/Testimonials/slider";
 import bg from "../assets/backgroundimg.jpg"
 import Footer from "@/components/contact_us/Footer";
 import JudgesSection from "../components/JudgesSection/JudgesSection.js";
+import Organizers from "@/components/Organizers/Organizer";
 import Image from "next/image";
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
     <Sponsors1 />
     <Sponsors2 />
     <SliderT /> 
+    <Organizers />
       <Faqs/> 
       <Footer/>
    

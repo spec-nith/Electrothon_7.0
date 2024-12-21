@@ -3,7 +3,7 @@ import React from 'react'
 import Image from "next/image"
 import dynamic from 'next/dynamic'
 
-const OrganizerSlider = dynamic(() => import('./organizer-slider'), { ssr: false })
+const OrganizerSlider = dynamic(() => import('./OrganizerSlider'), { ssr: false })
 
 const leadOrganizers = [
   {
@@ -29,20 +29,11 @@ const organizers = Array(40)
 
 export default function Organizers() {
   return (
-    <div className="min-h-screen bg-[#1a2234] bg-gradient-to-b from-[#1a2234] to-[#2a3244] relative overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/background.png')",
-          backgroundAttachment: "fixed"
-        }}
-      />
       
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Lead Organizers Section */}
         <div className="mb-16">
-          <h2 className="text-3xl md:text-5xl text-white text-center mb-6 md:mb-10">
+          <h2 className="text-3xl md:text-5xl text-white text-center mb-6 md:mb-10" style={{ fontFamily: 'Pirata One, sans-serif' }}>
             Lead Organizers
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-3xl mx-auto">
@@ -98,12 +89,12 @@ export default function Organizers() {
 
         {/* Organizers Section */}
         <div>
-          <h2 className="text-3xl md:text-5xl text-white text-center mb-6 md:mb-10">
+          <h2 className="text-3xl md:text-5xl text-white text-center mb-6 md:mb-10" style={{ fontFamily: 'Pirata One, sans-serif' }}>
             Organizers
           </h2>
           <OrganizerSlider organizers={organizers} />
         </div>
       </div>
-    </div>
+
   )
 }

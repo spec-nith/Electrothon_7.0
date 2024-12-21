@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay } from 'swiper/modules'
+import { Autoplay } from 'swiper'
 
 // Import Swiper styles
 import 'swiper/css'
