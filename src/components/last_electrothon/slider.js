@@ -7,6 +7,7 @@ import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
 import styles from "./slider.module.css";
+import data from "@/assets/last_electrothon_data/images";
 
 const Slider = ({ images }) => {
     return (
@@ -53,18 +54,10 @@ const Slider = ({ images }) => {
 };
 
 const DualSlider = () => {
-    const row1Images = [
-        "/images/1.jpg", "/images/2.jpg", "/images/3.jpg",
-        "/images/4.jpg", "/images/5.jpg", "/images/6.jpg",
-        "/images/7.jpg", "/images/8.jpg", "/images/9.jpg",
-    ];
-
-    const row2Images = [
-        "/images/10.jpg", "/images/11.jpg", "/images/12.jpg",
-        "/images/13.jpg", "/images/14.jpg", "/images/15.jpg",
-        "/images/16.jpg", "/images/17.jpg", "/images/18.jpg",
-    ];
-
+    const imagePaths = Object.values(data).map(imagePath => imagePath);
+    const row1Images = imagePaths.slice(0, 9);
+    console.log(row1Images)
+    const row2Images = imagePaths.slice(10,18);
     return (
         <div className={styles.dualSlider}>
             <Slider images={row1Images} />
