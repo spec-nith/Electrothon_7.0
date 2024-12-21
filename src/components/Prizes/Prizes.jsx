@@ -31,7 +31,7 @@ const Prize = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-12 px-4 md:px-6 lg:px-8 w-full max-w-6xl">
           {/* Second Prize */}
           <div
-            className="order-2 md:order-1 flex flex-col items-center justify-center bg-black/70 p-6 md:p-8 lg:p-10"
+            className="order-2 md:order-1 flex flex-col items-center justify-center bg-black/70 p-4 md:p-6 lg:p-10"
             style={{
               border: "3px solid #66B2FF",
               borderRadius: "24px",
@@ -41,8 +41,8 @@ const Prize = () => {
             <Image
               src="/assets/silver.png"
               alt="Second Prize Icon"
-              width={250}
-              height={250}
+              width={200}  // Adjusted for mobile
+              height={200} // Adjusted for mobile
               className="max-w-full"
             />
             <h2 className="text-white text-xl md:text-2xl lg:text-3xl pirata-one-regular font-bold mt-4">
@@ -52,7 +52,7 @@ const Prize = () => {
 
           {/* First Prize */}
           <div
-            className="order-1 md:order-2 flex flex-col items-center justify-center bg-black/70 p-6 md:p-8 lg:p-12"
+            className="order-1 md:order-2 flex flex-col items-center justify-center bg-black/70 p-4 md:p-6 lg:p-12"
             style={{
               border: "3px solid #66CC66",
               borderRadius: "24px",
@@ -60,10 +60,10 @@ const Prize = () => {
             }}
           >
             <Image
-              src="/assets/silver.png"
+              src="/assets/gold.png"
               alt="First Prize Icon"
-              width={300}
-              height={300}
+              width={250}  // Adjusted for mobile
+              height={250} // Adjusted for mobile
               className="max-w-full"
             />
             <h2 className="text-white text-2xl md:text-3xl lg:text-4xl pirata-one-regular font-bold mt-4">
@@ -73,7 +73,7 @@ const Prize = () => {
 
           {/* Third Prize */}
           <div
-            className="order-3 md:order-3 flex flex-col items-center justify-center bg-black/70 p-6 md:p-8 lg:p-10"
+            className="order-3 md:order-3 flex flex-col items-center justify-center bg-black/70 p-4 md:p-6 lg:p-10"
             style={{
               border: "3px solid #FF99CC",
               borderRadius: "24px",
@@ -81,10 +81,10 @@ const Prize = () => {
             }}
           >
             <Image
-              src="/assets/silver.png"
+              src="/assets/bronze.png"
               alt="Third Prize Icon"
-              width={250}
-              height={250}
+              width={200}  // Adjusted for mobile
+              height={200} // Adjusted for mobile
               className="max-w-full"
             />
             <h2 className="text-white text-xl md:text-2xl lg:text-3xl pirata-one-regular font-bold mt-4">
