@@ -187,25 +187,25 @@ const Navbar = () => {
         <div className='flex justify-center h-[80px] items-center'>
             <Image className='absolute max-lg:top-0 left-0 max-lg:w-[100px]' width={150} height={119} src={logo} alt="" />
             <div className='z-50 h-[57px] max-lg:hidden max-xl:w-[800px] max-xl:scale-90 macondo-swash-caps-regular fixed bg-[#37393b95] w-[1000px] rounded-[40px] shadow-sm shadow-white flex items-center justify-around'>
-                <Link href='/#home' scroll={true} className='text-[18px]'>Home</Link>
-                <Link href='/#about' scroll={true} className='text-[18px]'>About us</Link>
-                <Link href='/#judges' scroll={true} className='text-[18px]'>Judges</Link>
-                <Link href='/#prizes' scroll={true} className='text-[18px]'>Prizes</Link>
-                <Link href='/#sponsors' scroll={true} className='text-[18px]'>Sponsors</Link>
-                <Link href='/#Testimonials' scroll={true} className='text-[18px]'>Testimonials</Link>
-                <Link href='/#Organizers' scroll={true} className='text-[18px]'>Organizers</Link>
-                <Link href='/#faq' scroll={true} className='text-[18px]'>FAQs</Link>
-                <Link href='/#contact' scroll={true} className='text-[18px]'>Contact Us</Link>
+                <Link href='#home' className='text-[18px]'>Home</Link>
+                <Link href='#about' className='text-[18px]'>About us</Link>
+                <Link href='#judges' className='text-[18px]'>Judges</Link>
+                <Link href='#prizes' className='text-[18px]'>Prizes</Link>
+                <Link href='#sponsors' className='text-[18px]'>Sponsors</Link>
+                <Link href='#Testimonials' className='text-[18px]'>Testimonials</Link>
+                <Link href='#Organizers' className='text-[18px]'>Organizers</Link>
+                <Link href='#faq' className='text-[18px]'>FAQs</Link>
+                <Link href='#contact' className='text-[18px]'>Contact Us</Link>
             </div>
             <Image className='absolute right-2 top-0 max-lg:w-[60px]' width={100} src={mlh} alt="" />
             <div className='py-3 lg:hidden macondo-swash-caps-regular fixed bottom-2 z-50 bg-[#2b3846] w-[98%] rounded-2xl flex items-center justify-around'>
-                <Link href='/#home' scroll={true} className='text-[20px]'>{homeIcon()}</Link>
-                <Link href='/#about' scroll={true} className='text-[20px]'>{aboutIcon()}</Link>
-                <Link href='/#prizes' scroll={true} className='text-[20px]'>{prizeIcon()}</Link>
-                <Link href='/#sponsors' scroll={true} className='text-[20px]'>{sponsorIcon()}</Link>
-                {/* <Link href='/#theme' scroll={true} className='text-[20px]'>{themeIcon()}</Link> */}
-                <Link href='/#faq' scroll={true} className='text-[20px]'>{faqIcon()}</Link>
-                <Link href='/#contact' scroll={true} className='text-[20px]'>{ContactIcon()}</Link>
+                <Link href='#home' className='text-[20px]'>{homeIcon()}</Link>
+                <Link href='#about' scroll={true} className='text-[20px]'>{aboutIcon()}</Link>
+                <Link href='#prizes' className='text-[20px]'>{prizeIcon()}</Link>
+                <Link href='#sponsors' className='text-[20px]'>{sponsorIcon()}</Link>
+                {/* <Link href='#theme' className='text-[20px]'>{themeIcon()}</Link> */}
+                <Link href='#faq' className='text-[20px]'>{faqIcon()}</Link>
+                <Link href='#contact' className='text-[20px]'>{ContactIcon()}</Link>
             </div>
         </div>
     )

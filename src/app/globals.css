@@ -2,19 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 @import url(https://db.onlinewebfonts.com/c/f70b18e78f0c256d3aa0ecb00daf64c9?family=Linotype+Humanistika+W01);
-*{
+
+* {
     box-sizing: border-box;
-    
+
 }
 
 @font-face {
     font-family: "Linotype Humanistika W01";
     src: url("https://db.onlinewebfonts.com/t/f70b18e78f0c256d3aa0ecb00daf64c9.eot");
     src: url("https://db.onlinewebfonts.com/t/f70b18e78f0c256d3aa0ecb00daf64c9.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/f70b18e78f0c256d3aa0ecb00daf64c9.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/f70b18e78f0c256d3aa0ecb00daf64c9.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/f70b18e78f0c256d3aa0ecb00daf64c9.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/f70b18e78f0c256d3aa0ecb00daf64c9.svg#Linotype Humanistika W01")format("svg"),
+        url("https://db.onlinewebfonts.com/t/f70b18e78f0c256d3aa0ecb00daf64c9.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/f70b18e78f0c256d3aa0ecb00daf64c9.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/f70b18e78f0c256d3aa0ecb00daf64c9.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/f70b18e78f0c256d3aa0ecb00daf64c9.svg#Linotype Humanistika W01")format("svg"),
 
 }
 
@@ -27,10 +28,10 @@
 
 @font-face {
     font-family: 'Colder-Weather-Regular';
-    src:url('/fonts/Colder-Weather-Regular.woff') format('woff'),
+    src: url('/fonts/Colder-Weather-Regular.woff') format('woff'),
         url('/fonts/Colder-Weather-Regular.svg#Colder-Weather-Regular') format('svg'),
         url('/fonts/Colder-Weather-Regular.eot'),
-        url('/fonts/Colder-Weather-Regular.eot?#iefix') format('embedded-opentype'); 
+        url('/fonts/Colder-Weather-Regular.eot?#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -56,7 +57,7 @@
 /* <uniquifier>: Use a unique and descriptive class name
  <weight>: Use a value from 100 to 900 */
 
-.inter{
+.inter {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: bold;
@@ -67,7 +68,7 @@
     font-family: "Abhaya Libre", serif;
     font-weight: 900;
     font-style: normal;
-  }  
+}
 
 .navfont {
     font-family: 'font';
@@ -84,7 +85,6 @@ html {
     padding: 0;
     overflow: hidden;
     height: 100vh;
-    scroll-behavior: smooth;
 }
 
 body {
@@ -100,10 +100,8 @@ img {
 img.lazy {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-  }
-  
-  img.lazy.loaded {
-    opacity: 1;
-  }
+}
 
-  
+img.lazy.loaded {
+    opacity: 1;
+}
