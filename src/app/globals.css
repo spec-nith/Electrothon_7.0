@@ -14,12 +14,23 @@
     url("https://db.onlinewebfonts.com/t/f70b18e78f0c256d3aa0ecb00daf64c9.woff2")format("woff2"),
     url("https://db.onlinewebfonts.com/t/f70b18e78f0c256d3aa0ecb00daf64c9.woff")format("woff"),
     url("https://db.onlinewebfonts.com/t/f70b18e78f0c256d3aa0ecb00daf64c9.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/f70b18e78f0c256d3aa0ecb00daf64c9.svg#Linotype Humanistika W01")format("svg");
+    url("https://db.onlinewebfonts.com/t/f70b18e78f0c256d3aa0ecb00daf64c9.svg#Linotype Humanistika W01")format("svg"),
+
 }
 
 @font-face {
     font-family: 'font';
     src: url('/src/app/fonts/navfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Colder-Weather-Regular';
+    src:url('/fonts/Colder-Weather-Regular.woff') format('woff'),
+        url('/fonts/Colder-Weather-Regular.svg#Colder-Weather-Regular') format('svg'),
+        url('/fonts/Colder-Weather-Regular.eot'),
+        url('/fonts/Colder-Weather-Regular.eot?#iefix') format('embedded-opentype'); 
     font-weight: normal;
     font-style: normal;
 }
@@ -38,7 +49,7 @@
 
 .island-moments-regular {
     font-family: "Island Moments", cursive;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -60,6 +71,10 @@
 
 .navfont {
     font-family: 'font';
+}
+
+.timeLeftToRegister {
+    font-family: 'Colder-Weather-Regular';
 }
 
 /* Global styles */

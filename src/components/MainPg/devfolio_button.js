@@ -18,7 +18,8 @@ const Devfolio_Button=()=>{
           className="apply-button w-[13rem] h-12 md:w-[20rem] "
           data-hackathon-slug="electrothon-7"
           data-button-theme="light"
-        ></div>
+        >
+        </div>
       </div>
     )
 }

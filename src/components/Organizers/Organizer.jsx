@@ -30,7 +30,7 @@ const organizers = Array(40)
 export default function Organizers() {
   return (
       
-      <div className="relative z-10 container mx-auto px-4 py-16">
+      <div id='Organizers' className="relative z-10 container mx-auto px-4 py-16">
         {/* Lead Organizers Section */}
         <div className="mb-16">
           <h2 className="text-3xl md:text-5xl text-white text-center mb-6 md:mb-10" style={{ fontFamily: 'Pirata One, sans-serif' }}>

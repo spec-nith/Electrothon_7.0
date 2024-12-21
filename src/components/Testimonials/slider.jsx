@@ -9,7 +9,7 @@ import Heading from "../Sponsors/Heading.jsx";
 
 const SliderT = () => {
   return (
-    <div className="container w-screen h-screen mx-auto bg-transparent text-white mb-5 xs:mt-10">
+    <div id='Testimonials' className="container w-screen h-screen mx-auto bg-transparent text-white mb-5 xs:mt-10">
       {/* Nest the content inside the Heading component */}
       <Heading>Testimonials</Heading>
       <Swiper

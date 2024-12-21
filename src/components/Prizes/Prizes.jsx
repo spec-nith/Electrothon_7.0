@@ -19,7 +19,7 @@ const Prize = () => {
   const { pic1, pic2, pic3 } = data_prizes[0] || {}; 
 
   return (
-    <div className="prizes-section w-full min-h-screen bg-cover bg-center py-6 md:py-8 lg:py-10">
+    <div id="prizes" className="prizes-section w-full min-h-screen bg-cover bg-center py-6 md:py-8 lg:py-10">
       <motion.div
         variants={staggerContainer}
         initial="hidden"
