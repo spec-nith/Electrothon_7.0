@@ -21,6 +21,10 @@ export default function Home() {
     <MainPg />
     <AboutUs />
     <h1 className={styles.title}>Glimpse of Last Electrothon</h1>
+<<<<<<< HEAD
+=======
+    <DualSlider />
+>>>>>>> 01ba344a149a064a83dd5462b586f18148e17722
     <Slider />
     <JudgesSection />
     <Prize />
