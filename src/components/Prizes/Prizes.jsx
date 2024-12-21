@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import data_prizes from "../../assets/prizes_data/prizes.js";
+import data_prizes from "../../assets/prizes_data/prizes";
 
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -15,8 +15,7 @@ const staggerContainer = {
 };
 
 const Prize = () => {
- 
-  const { pic1, pic2, pic3 } = data_prizes[0] || {}; 
+  const { pic1, pic2, pic3 } = data_prizes[0] || {};
 
   return (
     <div className="prizes-section w-full min-h-screen bg-cover bg-center py-6 md:py-8 lg:py-10">
@@ -44,7 +43,7 @@ const Prize = () => {
           >
             {pic2 ? (
               <Image
-                src={pic2.replace("./", "/")} // Replace './' with '/' for Next.js compatibility
+                src={pic2}
                 alt="Second Prize Icon"
                 width={200}
                 height={200}
@@ -69,7 +68,7 @@ const Prize = () => {
           >
             {pic1 ? (
               <Image
-                src={pic1.replace("./", "/")} // Replace './' with '/' for Next.js compatibility
+                src={pic1}
                 alt="First Prize Icon"
                 width={250}
                 height={250}
@@ -94,7 +93,7 @@ const Prize = () => {
           >
             {pic3 ? (
               <Image
-                src={pic3.replace("./", "/")} // Replace './' with '/' for Next.js compatibility
+                src={pic3}
                 alt="Third Prize Icon"
                 width={200}
                 height={200}
