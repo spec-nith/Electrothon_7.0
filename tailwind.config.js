@@ -14,9 +14,8 @@ module.exports = {
         pirata: ['Pirata One', 'sans-serif'],
       },
       screens: {
-        xs: '360px', 
+        xs: '380px', 
       },
-
     },
   },
   plugins: [],
