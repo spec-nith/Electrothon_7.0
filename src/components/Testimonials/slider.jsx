@@ -10,7 +10,7 @@ import Heading from "../Sponsors/Heading.jsx";
 const SliderT = () => {
   return (
     <div className="container  w-90vw h-100vh mx-auto bg-transparent text-white mb-5 xs:mt-10 ">
-    <Heading children={"Testimonials"} />
+    <Heading>Testimonials</Heading>
     <Swiper
       loop={true}
       navigation={false}
