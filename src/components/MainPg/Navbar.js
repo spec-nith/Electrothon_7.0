@@ -186,7 +186,7 @@ const Navbar = () => {
     return (
         <div className='flex justify-center h-[80px] items-center'>
             <Image className='absolute max-lg:top-0 left-0 max-lg:w-[100px]' width={150} height={119} src={logo} alt="" />
-            <div className='z-50 h-[57px] max-lg:hidden max-xl:w-[800px] max-xl:scale-90 macondo-swash-caps-regular fixed bg-[#37393b95] w-[1000px] rounded-[40px] shadow-sm shadow-white flex items-center justify-around'>
+            <div className='z-50 h-[57px] max-lg:hidden max-xl:w-[800px] max-xl:scale-90 macondo-swash-caps-regular fixed bg-[#37393bd3] w-[1000px] rounded-[40px] shadow-sm shadow-white flex items-center justify-around'>
                 <Link href='#home' className='text-[18px]'>Home</Link>
                 <Link href='#about' className='text-[18px]'>About us</Link>
                 <Link href='#judges' className='text-[18px]'>Judges</Link>
