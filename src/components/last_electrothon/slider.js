@@ -44,7 +44,8 @@ const Slider = ({ images }) => {
                         width={400}
                         height={400}
                         className={styles.image}
-                        priority
+                        //priority
+                        loading="lazy"
                     />
                 </SwiperSlide>
             ))}
@@ -54,15 +55,15 @@ const Slider = ({ images }) => {
 
 const DualSlider = () => {
     const row1Images = [
-        "/images/1.jpg", "/images/2.jpg", "/images/3.jpg",
-        "/images/4.jpg", "/images/5.jpg", "/images/6.jpg",
-        "/images/7.jpg", "/images/8.jpg", "/images/9.jpg",
+        "/images/1.webp", "/images/2.webp", "/images/3.webp",
+        "/images/4.webp", "/images/5.webp", "/images/6.webp",
+        "/images/7.webp", "/images/8.webp", "/images/9.webp",
     ];
 
     const row2Images = [
-        "/images/10.jpg", "/images/11.jpg", "/images/12.jpg",
-        "/images/13.jpg", "/images/14.jpg", "/images/15.jpg",
-        "/images/16.jpg", "/images/17.jpg", "/images/18.jpg",
+        "/images/10.webp", "/images/11.webp", "/images/12.webp",
+        "/images/13.webp", "/images/14.webp", "/images/15.webp",
+        "/images/16.webp", "/images/17.webp", "/images/18.webp",
     ];
 
     return (
