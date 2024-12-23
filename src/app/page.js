@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <div
-    className="relative bg-cover bg-center bg-fixed h-full overflow-y-auto"
+    className="relative scroll-smooth bg-cover bg-center bg-fixed h-full overflow-y-auto"
     style={{ backgroundImage: `url(${bg.src})` }}>
     <MainPg />
     <AboutUs />

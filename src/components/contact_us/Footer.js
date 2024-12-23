@@ -155,7 +155,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center pb-2 text-sm text-gray-400">© 2023, SPEC NITH</div>
+        <div className="flex justify-center pb-2 text-sm text-gray-400">© 2025, SPEC NITH</div>
       </React.Fragment>
     );
   };

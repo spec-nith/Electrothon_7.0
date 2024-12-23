@@ -197,7 +197,7 @@ const Navbar = () => {
                 <Link href='#faq' className='text-[18px]'>FAQs</Link>
                 <Link href='#contact' className='text-[18px]'>Contact Us</Link>
             </div>
-            <Image className='absolute right-2 top-0 max-lg:w-[60px]' width={100} src={mlh} alt="" />
+            {/* <Image className='absolute right-2 top-0 max-lg:w-[60px]' width={100} src={mlh} alt="" /> */}
             <div className='py-3 lg:hidden macondo-swash-caps-regular fixed bottom-2 z-50 bg-[#2b3846] w-[98%] rounded-2xl flex items-center justify-around'>
                 <Link href='#home' className='text-[20px]'>{homeIcon()}</Link>
                 <Link href='#about' scroll={true} className='text-[20px]'>{aboutIcon()}</Link>
