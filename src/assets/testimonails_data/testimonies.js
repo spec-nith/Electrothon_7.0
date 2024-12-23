@@ -24,9 +24,9 @@ const Data = [
       profilepic: "./testimonials/pp3.png",
       date: "5mo",
       content:
-        "Thrilled to have participated in the electrifying Electrothon organized by SPEC_NITH at our college! It was my first hackathon and the experience was exhilarating . 🔥We participated in this prestigious hackathon where Sponsors posed diverse track challenges for participants to integrate into their...",
+        "Thrilled to have participated in the electrifying Electrothon organized by SPEC_NITH at our college! It was my first hackathon and the experience was exhilarating . 🔥We participated in this prestigious hackathon where Sponsors posed diverse track challenges for participants...",
       postpic: "./testimonials/post3.png",
-    },
+    }
     
   ];
   export default Data;

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import data_prizes from "../../assets/prizes_data/prizes";
 
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -14,8 +15,10 @@ const staggerContainer = {
 };
 
 const Prize = () => {
+  const { pic1, pic2, pic3 } = data_prizes[0] || {};
+
   return (
-    <div className="prizes-section w-full min-h-screen bg-cover bg-center py-6 md:py-8 lg:py-10">
+    <div id="prizes" className="prizes-section w-full min-h-screen bg-cover bg-center py-6 md:py-8 lg:py-10">
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -23,7 +26,7 @@ const Prize = () => {
         className="relative z-10 flex flex-col items-center justify-center text-center px-4 md:px-6 lg:px-8"
       >
         {/* Title */}
-        <h1 className="text-white text-6xl md:text-7xl lg:text-9xl pirata-one-regular mb-6 md:mb-8 lg:mb-10 mt-4">
+        <h1 className="text-white text-6xl md:text-7xl lg:text-8xl pirata-one-regular mb-6 md:mb-8 lg:mb-10 mt-4">
           Prizes
         </h1>
 
@@ -38,13 +41,17 @@ const Prize = () => {
               boxShadow: "0px 6px 15px rgba(102, 178, 255, 0.5)",
             }}
           >
-            <Image
-              src="/assets/silver.png"
-              alt="Second Prize Icon"
-              width={200}  // Adjusted for mobile
-              height={200} // Adjusted for mobile
-              className="max-w-full"
-            />
+            {pic2 ? (
+              <Image
+                src={pic2}
+                alt="Second Prize Icon"
+                width={200}
+                height={200}
+                className="max-w-full"
+              />
+            ) : (
+              <p className="text-white">Image not found</p>
+            )}
             <h2 className="text-white text-xl md:text-2xl lg:text-3xl pirata-one-regular font-bold mt-4">
               Second Prize
             </h2>
@@ -59,13 +66,17 @@ const Prize = () => {
               boxShadow: "0px 6px 15px rgba(102, 204, 102, 0.5)",
             }}
           >
-            <Image
-              src="/assets/gold.png"
-              alt="First Prize Icon"
-              width={250}  // Adjusted for mobile
-              height={250} // Adjusted for mobile
-              className="max-w-full"
-            />
+            {pic1 ? (
+              <Image
+                src={pic1}
+                alt="First Prize Icon"
+                width={250}
+                height={250}
+                className="max-w-full"
+              />
+            ) : (
+              <p className="text-white">Image not found</p>
+            )}
             <h2 className="text-white text-2xl md:text-3xl lg:text-4xl pirata-one-regular font-bold mt-4">
               First Prize
             </h2>
@@ -80,13 +91,17 @@ const Prize = () => {
               boxShadow: "0px 6px 15px rgba(255, 153, 204, 0.5)",
             }}
           >
-            <Image
-              src="/assets/bronze.png"
-              alt="Third Prize Icon"
-              width={200}  // Adjusted for mobile
-              height={200} // Adjusted for mobile
-              className="max-w-full"
-            />
+            {pic3 ? (
+              <Image
+                src={pic3}
+                alt="Third Prize Icon"
+                width={200}
+                height={200}
+                className="max-w-full"
+              />
+            ) : (
+              <p className="text-white">Image not found</p>
+            )}
             <h2 className="text-white text-xl md:text-2xl lg:text-3xl pirata-one-regular font-bold mt-4">
               Third Prize
             </h2>

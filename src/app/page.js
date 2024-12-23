@@ -1,6 +1,6 @@
 import React from "react";
 import MainPg from '@/components/MainPg/MainPg.js'
-import AboutUs from '@/components/About_Us/AboutUs.js' 
+import AboutUs from '@/components/About_Us/AboutUs.js'
 import Faqs from "@/components/Faq/faq";
 import styles from './page.module.css'; // Import CSS module
 import Slider from '@/components/last_electrothon/slider.js';
@@ -19,6 +19,7 @@ import Image from "next/image";
 
 
 export default function Home() {
+
   return (
     <div
     className="relative bg-cover bg-center bg-fixed h-full overflow-y-auto"

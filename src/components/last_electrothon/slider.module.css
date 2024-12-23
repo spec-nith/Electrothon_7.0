@@ -22,7 +22,6 @@
     border-radius: 10px;
     border: 2px solid gray;
     max-width: 100%;
-
 }
 
 .image {
@@ -43,6 +42,7 @@
     align-items: center;
     width: auto;
     flex-shrink: 0;
+    overflow:hidden
 }
 
 .swiper-button-next,
@@ -109,7 +109,6 @@
     .image {
         width: 100%;
         height: auto;
-
     }
 
     .swiper-slide {

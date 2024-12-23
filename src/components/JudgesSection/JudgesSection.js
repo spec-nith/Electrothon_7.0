@@ -6,6 +6,7 @@ import judge3Image from "../../assets/judges/judge3.png";
 import judge4Image from "../../assets/judges/judge4.png";
 import judge5Image from "../../assets/judges/judge5.png";
 
+
 const pirataOne = Pirata_One({
   weight: "400",
   subsets: ["latin"],
@@ -34,7 +35,7 @@ const judges = [
 
 export default function JudgesSection() {
   return (
-    <section className="relative w-full min-h-screen md:h-screen md:overflow-hidden lg:h-screen lg:overflow-hidden">
+    <section id="judges" className="relative w-full min-h-screen md:h-screen md:overflow-hidden lg:h-screen lg:overflow-hidden">
       {/* Content Container */}
       <div className="relative w-full min-h-screen flex flex-col items-center justify-start pt-10 sm:pt-16 md:pt-8 lg:pt-8 pb-16 md:pb-0 lg:pb-0">
         {/* Title */}
