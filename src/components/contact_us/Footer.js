@@ -47,7 +47,7 @@ export default function Footer() {
 
     const templateParams = {
       from_name: name,
-      to_name: "Prajualit Tickoo",
+      to_name: "Electrothon_7.0",
       message,
     };
 
