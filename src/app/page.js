@@ -4,6 +4,7 @@ import AboutUs from '@/components/About_Us/AboutUs.js'
 import Faqs from "@/components/Faq/faq";
 import styles from './page.module.css'; // Import CSS module
 import Slider from '@/components/last_electrothon/slider.js';
+import Timeline from "@/components/Timeline/Timeline";
 import Sponsors1 from "@/components/Sponsors/Sponsers1";
 import Sponsors2 from "@/components/Sponsors/Sponsors2";
 import Prize from "@/components/Prizes/Prizes";
@@ -13,6 +14,10 @@ import Footer from "@/components/contact_us/Footer";
 import JudgesSection from "../components/JudgesSection/JudgesSection.js";
 import Organizers from "@/components/Organizers/Organizer";
 import Image from "next/image";
+
+
+
+
 export default function Home() {
   return (
     <div
@@ -24,10 +29,18 @@ export default function Home() {
     <Slider />
     <JudgesSection />
     <Prize />
+    <section id="timeline" className="py-12">
+    <Timeline />
+    </section>
     <Sponsors1 />
     <Sponsors2 />
     <SliderT /> 
     <Organizers />
+ 
+    
+
+
+
       <Faqs/> 
       <Footer/>
    
