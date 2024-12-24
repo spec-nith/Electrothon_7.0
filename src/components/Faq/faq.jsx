@@ -17,7 +17,7 @@ export default function Faqs() {
       className="w-full px-4 sm:px-10 mt-20 text-center text-white md:px-20 xl:px-32"
       id="faq"
       style={{
-        backgroundImage: "url('/assets/background.png')",
+        backgroundImage: "url('')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

@@ -1,5 +1,11 @@
 import Image from "next/image";
 import { Pirata_One } from "next/font/google";
+import judge1Image from "../../assets/judges/judge1.png";
+import judge2Image from "../../assets/judges/judge2.png";
+import judge3Image from "../../assets/judges/judge3.png";
+import judge4Image from "../../assets/judges/judge4.png";
+import judge5Image from "../../assets/judges/judge5.png";
+
 
 const pirataOne = Pirata_One({
   weight: "400",
@@ -20,16 +26,16 @@ const LinkedInIcon = () => (
 );
 
 const judges = [
-  { id: 1, color: "#37375E", image: "/images/judge1.png" },
-  { id: 2, color: "#782A2B", image: "/images/judge2.png" },
-  { id: 3, color: "#3E6E7C", image: "/images/judge3.png" },
-  { id: 4, color: "#002E78", image: "/images/judge4.png" },
-  { id: 5, color: "#D0A022", image: "/images/judge5.png" },
+  { id: 1, color: "#37375E", image: judge1Image },
+  { id: 2, color: "#782A2B", image: judge2Image },
+  { id: 3, color: "#3E6E7C", image: judge3Image },
+  { id: 4, color: "#002E78", image: judge4Image },
+  { id: 5, color: "#D0A022", image: judge5Image },
 ];
 
 export default function JudgesSection() {
   return (
-    <section className="relative w-full min-h-screen md:h-screen md:overflow-hidden lg:h-screen lg:overflow-hidden">
+    <section id="judges" className="relative w-full min-h-screen md:h-screen md:overflow-hidden lg:h-screen lg:overflow-hidden">
       {/* Content Container */}
       <div className="relative w-full min-h-screen flex flex-col items-center justify-start pt-10 sm:pt-16 md:pt-8 lg:pt-8 pb-16 md:pb-0 lg:pb-0">
         {/* Title */}
