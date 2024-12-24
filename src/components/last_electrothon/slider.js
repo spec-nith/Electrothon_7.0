@@ -16,7 +16,7 @@ const Slider = ({ images }) => {
             spaceBetween={20}
             navigation={true}
             autoplay={{
-                delay: 2000,
+                delay: 3000,
                 disableOnInteraction: false,
             }}
             modules={[Navigation, Autoplay]}
@@ -45,7 +45,7 @@ const Slider = ({ images }) => {
                         width={400}
                         height={400}
                         className={styles.image}
-                        priority
+                        loading="lazy"
                     />
                 </SwiperSlide>
             ))}
@@ -57,7 +57,7 @@ const DualSlider = () => {
     const imagePaths = Object.values(data).map(imagePath => imagePath);
     const row1Images = imagePaths.slice(0, 9);
     console.log(row1Images)
-    const row2Images = imagePaths.slice(10,18);
+    const row2Images = imagePaths.slice(10, 18);
     return (
         <div className={styles.dualSlider}>
             <Slider images={row1Images} />
