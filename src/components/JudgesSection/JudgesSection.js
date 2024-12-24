@@ -5,6 +5,7 @@ import judge2Image from "../../assets/judges/judge2.png";
 import judge3Image from "../../assets/judges/judge3.png";
 import judge4Image from "../../assets/judges/judge4.png";
 import judge5Image from "../../assets/judges/judge5.png";
+import ComingSoon from "../comingsoon/comingsoon";
 
 
 const pirataOne = Pirata_One({
@@ -48,27 +49,30 @@ export default function JudgesSection() {
           Our Judges and Mentors
         </h2>
 
+        {/* Coming Soon */}
+      <ComingSoon />
+
         {/* Judges Grid */}
-        <div className="flex flex-col items-center justify-center gap-8 mt-4 w-full px-4 md:grid md:grid-cols-5 md:grid-rows-2 md:gap-y-5 md:gap-x-4 md:max-w-7xl lg:grid lg:grid-cols-5 lg:grid-rows-2 lg:gap-y-5 lg:gap-x-4 lg:max-w-7xl">
+        {/* <div className="flex flex-col items-center justify-center gap-8 mt-4 w-full px-4 md:grid md:grid-cols-5 md:grid-rows-2 md:gap-y-5 md:gap-x-4 md:max-w-7xl lg:grid lg:grid-cols-5 lg:grid-rows-2 lg:gap-y-5 lg:gap-x-4 lg:max-w-7xl"> */}
           {/* Top row - two judges */}
-          <div className="md:col-start-2 md:col-span-1 md:translate-x-1/2 lg:translate-x-1/2">
-            <JudgeCard judge={judges[0]} />
-          </div>
-          <div className="md:col-start-4 md:col-span-1 md:-translate-x-1/2 lg:-translate-x-1/2">
-            <JudgeCard judge={judges[1]} />
-          </div>
+          {/* <div className="md:col-start-2 md:col-span-1 md:translate-x-1/2 lg:translate-x-1/2"> */}
+            {/* <JudgeCard judge={judges[0]} /> */}
+          {/* </div> */}
+          {/* <div className="md:col-start-4 md:col-span-1 md:-translate-x-1/2 lg:-translate-x-1/2"> */}
+            {/* <JudgeCard judge={judges[1]} /> */}
+          {/* </div> */}
 
           {/* Bottom row - three judges */}
-          <div className="md:col-start-1 md:col-span-1 md:self-end md:translate-x-3/4 lg:translate-x-3/4">
-            <JudgeCard judge={judges[2]} />
-          </div>
-          <div className="md:col-start-2 md:col-span-3 md:self-end">
-            <JudgeCard judge={judges[3]} />
-          </div>
-          <div className="md:col-start-5 md:col-span-1 md:self-end md:-translate-x-3/4 lg:-translate-x-3/4">
-            <JudgeCard judge={judges[4]} />
-          </div>
-        </div>
+          {/* <div className="md:col-start-1 md:col-span-1 md:self-end md:translate-x-3/4 lg:translate-x-3/4"> */}
+            {/* <JudgeCard judge={judges[2]} /> */}
+          {/* </div> */}
+          {/* <div className="md:col-start-2 md:col-span-3 md:self-end"> */}
+            {/* <JudgeCard judge={judges[3]} /> */}
+          {/* </div> */}
+          {/* <div className="md:col-start-5 md:col-span-1 md:self-end md:-translate-x-3/4 lg:-translate-x-3/4"> */}
+            {/* <JudgeCard judge={judges[4]} /> */}
+          {/* </div> */}
+        {/* </div> */}
       </div>
     </section>
   );
