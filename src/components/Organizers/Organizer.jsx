@@ -36,10 +36,9 @@ export default function Organizers() {
                 }}
               >
                 <div
-                  className="bg-[#473d8d] flex justify-center items-center rounded-sm"
+                  className="bg-[#473d8d] flex justify-center items-center rounded-sm relative overflow-hidden"
                   style={{
                     aspectRatio: "1",
-                    maxWidth: "100%",
                     width: "99%",
                     height: "99%",
                   }}
@@ -48,14 +47,16 @@ export default function Organizers() {
                     className="absolute -top-4 left-1/2 -translate-x-1/2 w-14 h-5 bg-white/50 transform -rotate-6 z-20"
                     style={{ opacity: 0.9 }}
                   />
-                  <Image
-                    src={leader.image}
-                    alt={leader.name}
-                    width={280}
-                    height={280}
-                    className="object-cover w-full h-full rounded-sm"
-                    loading="lazy"
-                  />
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={leader.image}
+                      alt={leader.name}
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-sm"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
               </div>
               <div className="mt-2 text-center">
