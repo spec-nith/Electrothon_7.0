@@ -58,7 +58,7 @@ export default function OrganizerSlider({ organizers, direction = "rtl" }) {
         pagination={{
           clickable: true,
         }}
-        navigation={true}
+        navigation={false}
         className="mySwiper"
       >
         {organizers.map((organizer, index) =>
