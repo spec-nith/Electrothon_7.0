@@ -55,8 +55,10 @@ export default function OrganizerSlider({ organizers, direction = "rtl" }) {
           reverseDirection: direction === "rtl",
         }}
         speed={5000}
-        pagination={false}
-        navigation={false}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
         className="mySwiper"
       >
         {organizers.map((organizer, index) =>
