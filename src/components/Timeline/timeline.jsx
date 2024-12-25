@@ -18,6 +18,7 @@ const Timeline = () => {
     if (!timeline || !logo || !heading) return;
 
     let isHeadingVisible = true;
+    let lastScrollY = window.scrollY;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -36,19 +37,28 @@ const Timeline = () => {
             const visibleHeight = timelineHeight * intersectionRatio;
             const scrolledDistance =
               timelineHeight - visibleHeight - boundingRect.top;
-            const easeOutQuad = (t) => t * (2 - t);
-            const scrollPercentage =
-              easeOutQuad(scrolledDistance / timelineHeight) * 100;
 
-            // Clamp the logo position between 20 and 100
-            const newLogoPosition = Math.max(
-              20,
-              Math.min(100, 20 + scrollPercentage * 0.8)
-            );
-            setLogoPosition(newLogoPosition);
+            // Determine scroll direction
+            const currentScrollY = window.scrollY;
+            const isScrollingDown = currentScrollY > lastScrollY;
+            lastScrollY = currentScrollY;
 
-            // Debug information
-            
+            if (isScrollingDown) {
+              // When scrolling down, keep the logo at the bottom (100%)
+              setLogoPosition(100);
+            } else {
+              // When scrolling up, calculate the logo position
+              const easeOutQuad = (t) => t * (2 - t);
+              const scrollPercentage =
+                easeOutQuad(scrolledDistance / timelineHeight) * 100;
+
+              // Clamp the logo position between 20 and 100
+              const newLogoPosition = Math.max(
+                20,
+                Math.min(100, 20 + scrollPercentage * 0.8)
+              );
+              setLogoPosition(newLogoPosition);
+            }
           } else {
             setLogoPosition(20); // Reset to 20% when heading is visible
           }
@@ -117,21 +127,24 @@ const Timeline = () => {
 
         {/* Timeline Items */}
         <div className="space-y-20">
-          <TimelineItem title="Registration Begins" />
-          <TimelineItem title="Participation Shortlist" />
-          <TimelineItem title="Electrothon Main Event" />
+          <TimelineItem title="Registration Begins" date="1st Dec, 2024" />
+          <TimelineItem title="Participation Shortlist" date="Coming Soon" />
+          <TimelineItem title="Electrothon Main Event" date="7-9 March, 2024" />
         </div>
       </div>
     </div>
   );
 };
 
-const TimelineItem = ({ title }) => (
+const TimelineItem = ({ title, date }) => (
   <div className="relative flex items-center">
     <div className="absolute left-7 top-1/2 -translate-y-1/2 w-[3vw] h-2 bg-[#374151]"></div>
     <div className="ml-20 bg-[#03294F] p-7 rounded-2xl shadow-lg w-5/6 relative opacity-75 h-[186px]">
-      <h3 className="text-[47.34px] relative pb-2" style={{ fontFamily: "Jacques Francois" }}>
-        {title}
+      <h3
+        className="text-2xl sm:text-4xl relative pb-2"
+        style={{ fontFamily: "Jacques Francois" }}
+      >
+        {title}: <span className="text-xl sm:text-3xl">{date}</span>
         <span className="absolute bottom-[-8px] left-0 w-full h-0.5 bg-white rounded-full"></span>
       </h3>
     </div>
@@ -139,3 +152,4 @@ const TimelineItem = ({ title }) => (
 );
 
 export default Timeline;
+  
