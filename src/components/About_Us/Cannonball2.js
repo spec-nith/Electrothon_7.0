@@ -1,44 +1,20 @@
-import React from 'react'
+"use client"; // Ensure this is a client component
 
-const Cannonball2 = ({ style, reflectionPosition = 'top-left' }) => {
-  // Default reflection style if no reflection position is provided
-  const getReflectionStyle = (position) => {
-    switch (position) {
-      case 'top-left':
-        return (
-          <div className="absolute top-1/8 left-1/4 w-3/4 h-3/4 bg-gradient-radial from-white/40 to-transparent rounded-full blur-md"></div>
-        )
-      case 'top-right':
-        return (
-          <div className="absolute top-1/8 right-1/8 w-3/4 h-3/4 bg-gradient-radial from-white/40 to-transparent rounded-full blur-md"></div>
-        )
-      case 'bottom-left':
-        return (
-          <div className="absolute top-12 left-1 w-1/2 h-3/4 bg-gradient-radial from-white/40 to-transparent rounded-full blur-md"></div>
-        )
-      case 'bottom-right':
-        return (
-          <div className="absolute bottom-1/8 right-4 w-3/4 h-3/4 bg-gradient-radial from-white/40 to-transparent rounded-full blur-md"></div>
-        )
-      case 'center':
-        return (
-          <div className="absolute top-1/4 left-0 w-1/2 h-1/2 bg-gradient-radial from-white/40 to-transparent rounded-full blur-md"></div>
-        )
-      default:
-        return (
-          <div className="absolute top-1/8 left-0 w-3/4 h-3/4 bg-gradient-radial from-white/40 to-transparent rounded-full blur-md"></div>
-        )
-    }
-  }
+import React from 'react';
 
-  return (
-    <div
-      className="relative w-60 h-60 bg-gradient-radial from-gray-700 via-[#1b1b2f] to-black rounded-full shadow-lg shadow-black"
-      style={style}
-    >
-      {getReflectionStyle(reflectionPosition)}
-    </div>
-  )
-}
+const Cannonball = () => {
+    return (
+        <div className="relative w-[25vw] h-[25vw] md:w-48 md:h-48 bg-[#10233B] rounded-full shadow-inner flex items-center justify-center">
+            {/* Inner Shadow Effect */}
+            <div className="absolute inset-0 rounded-full bg-[#10233B] opacity-70 shadow-[inset_0_4px_15px_rgba(156,156,156,0.7)]"></div>
+            
+            {/* Text Container */}
+            <div className="relative z-10 text-center text-white">
+                <div className="text-lg md:text-2xl font-bold">25+</div>
+                <div className="text-xs md:text-lg">Software Projects</div>
+            </div>
+        </div>
+    );
+};
 
-export default Cannonball2
+export default Cannonball;
