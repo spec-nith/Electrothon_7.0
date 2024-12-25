@@ -22,6 +22,7 @@
     border-radius: 10px;
     border: 2px solid gray;
     max-width: 100%;
+    will-change: transform; /* GPU acceleration for smooth transitions */
 }
 
 .image {
