@@ -12,7 +12,7 @@ const Sponsors2 = () => {
       </div>
       <div className="container flex flex-col items-center bg-transparent">
         {/* Nest content inside SubHeading */}
-        <SubHeading>Chancellor Sponsors</SubHeading>
+        <SubHeading>Chamberlain Sponsors</SubHeading>
         <Box companyLogos={[{ logo: `${logo.src}` }]} />
       </div>
     </div>

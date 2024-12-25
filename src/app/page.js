@@ -14,7 +14,7 @@ import Footer from "@/components/contact_us/Footer";
 import JudgesSection from "../components/JudgesSection/JudgesSection.js";
 import Organizers from "@/components/Organizers/Organizer";
 import Image from "next/image";
-
+import ThemeSection from "@/components/ThemeSection/themesection";
 
 
 
