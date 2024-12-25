@@ -27,7 +27,7 @@ export default function Home() {
     <MainPg />
     <AboutUs />
     <h1 className={styles.title}>Glimpse of Last Electrothon</h1>
-    <Slider />
+    {/* <Slider /> */}
     <JudgesSection />
     <Prize />
     {/* <section id="timeline" className="py-12">
