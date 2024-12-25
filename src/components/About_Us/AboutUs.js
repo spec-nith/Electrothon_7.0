@@ -21,7 +21,7 @@ const AboutUs = () => {
     const paragraphRef = useRef(null);
 
     return (
-        <div className="relative w-full">
+        <div id='about' className="relative w-full">
             {/* Background Layer */}
             <div className="fixed inset-0 z-[-1] bg-[#091826]">
                 <div className="relative w-full h-full">

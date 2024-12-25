@@ -192,7 +192,7 @@ const Navbar = () => {
                 <Link href='#judges' className='text-[18px]'>Judges</Link>
                 <Link href='#prizes' className='text-[18px]'>Prizes</Link>
                 <Link href='#sponsors' className='text-[18px]'>Sponsors</Link>
-                <Link href='#Testimonials' className='text-[18px]'>Testimonials</Link>
+                <Link href='#testimonials' className='text-[18px]'>Testimonials</Link>
                 <Link href='#Organizers' className='text-[18px]'>Organizers</Link>
                 <Link href='#faq' className='text-[18px]'>FAQs</Link>
                 <Link href='#contact' className='text-[18px]'>Contact Us</Link>
