@@ -51,7 +51,7 @@ const MainPg = () => {
       className="w-full lg:h-[87vh]"
     >
       <Navbar />
-      <div className="flex items-center justify-center space-y-12 h-full flex-col">
+      <div className="flex items-center justify-center space-y-16 mt-10 mb-10 h-full flex-col">
         <div className="flex w-full flex-col items-center justify-center">
           <span className="text-[150px] px-3 pirata-one-regular lg:leading-none max-lg:text-[120px] max-md:text-[80px] max-sm:text-[70px] text-center">
             ELECTROTHON 7.0

@@ -39,7 +39,7 @@ const AboutUs = () => {
             {/* Page Content Wrapper */}
             <div className="relative flex flex-col items-center w-full">
                 {/* Flex container for horses and title */}
-                <div className="flex items-center justify-center my-4">
+                <div className="flex items-center justify-center mb-4 mt-32">
                     {/* Mirrored Horse Image on the left */}
                     <Image
                         src={horse.src}
