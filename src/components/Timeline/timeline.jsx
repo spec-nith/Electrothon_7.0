@@ -127,9 +127,9 @@ const Timeline = () => {
 
         {/* Timeline Items */}
         <div className="space-y-20">
-          <TimelineItem title="Registration Begins" date="1st Dec, 2024" />
+          <TimelineItem title="Registration Begins" date="1st Dec, 2025" />
           <TimelineItem title="Participation Shortlist" date="Coming Soon" />
-          <TimelineItem title="Electrothon Main Event" date="7-9 March, 2024" />
+          <TimelineItem title="Electrothon Main Event" date="7-9 March, 2025" />
         </div>
       </div>
     </div>
@@ -152,4 +152,3 @@ const TimelineItem = ({ title, date }) => (
 );
 
 export default Timeline;
-  
