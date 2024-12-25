@@ -30,9 +30,9 @@ export default function Home() {
     <Slider />
     <JudgesSection />
     <Prize />
-    <section id="timeline" className="py-12">
+    {/* <section id="timeline" className="py-12">
     <Timeline />
-    </section>
+    </section> */}
     <Sponsors1 />
     <Sponsors2 />
     <SliderT /> 
