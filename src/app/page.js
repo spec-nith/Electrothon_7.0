@@ -14,11 +14,12 @@ import Footer from "@/components/contact_us/Footer";
 import JudgesSection from "../components/JudgesSection/JudgesSection.js";
 import Organizers from "@/components/Organizers/Organizer";
 import Image from "next/image";
+import ThemeSection from "@/components/ThemeSection/ThemeSection";
 
 export default function Home() {
   return (
     <div
-      className="relative bg-cover bg-center bg-fixed h-full overflow-y-auto"
+      className="relative scroll-smooth bg-cover bg-center bg-fixed h-full overflow-y-auto"
       style={{ backgroundImage: `url(${bg.src})` }}
     >
       <MainPg />
@@ -27,14 +28,16 @@ export default function Home() {
       <Slider />
       <JudgesSection />
       <Prize />
+      
+      {/* Timeline Section */}
       <section id="timeline" className="py-12">
         <Timeline />
       </section>
+      
       <Sponsors1 />
       <Sponsors2 />
       <SliderT />
       <Organizers />
-
       <Faqs />
       <Footer />
     </div>

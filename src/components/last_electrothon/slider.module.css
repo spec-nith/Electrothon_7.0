@@ -1,7 +1,7 @@
 .dualSlider {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
     margin: 0 auto;
     padding: 0;
     justify-content: center;
@@ -22,6 +22,7 @@
     border-radius: 10px;
     border: 2px solid gray;
     max-width: 100%;
+    will-change: transform; /* GPU acceleration for smooth transitions */
 }
 
 .image {
@@ -42,7 +43,7 @@
     align-items: center;
     width: auto;
     flex-shrink: 0;
-    overflow:hidden
+    overflow: hidden
 }
 
 .swiper-button-next,
@@ -95,11 +96,13 @@
 
 @media (max-width: 767px) {
     .dualSlider {
-        gap: 10px;
+        gap: 30px;
+        padding: 0 20px;
     }
 
     .slider {
         max-width: 100%;
+        margin: 0 auto;
     }
 
     .imageWrapper {

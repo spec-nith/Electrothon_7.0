@@ -1,44 +1,27 @@
-"use client"; // Add this line at the top of your file
+"use client"; // Ensure this is a client component
 
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import bg from '@/assets/backgroundimg.jpg';
+import horse from '@/assets/About_Us/horse.webp';
 import Image from 'next/image';
-// import { gsap } from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Pirata_One } from 'next/font/google';
+import Cannonball from './Cannonball';
+import Cannonball4 from './Cannonball4';
+import Cannonball3 from './Cannonball3';
+import Cannonball2 from './Cannonball2';
 
-// gsap.registerPlugin(ScrollTrigger);
+const pirataOne = Pirata_One({
+    weight: '400',
+    subsets: ['latin'],
+    display: 'swap',
+});
 
 const AboutUs = () => {
-    const titleRef = useRef(null);
     const rectangleRef = useRef(null);
     const paragraphRef = useRef(null);
 
-    useEffect(() => {
-        // Commenting out GSAP animations
-        /*
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: titleRef.current,
-                start: "top 80%", // Start when the top of the title hits 80% of the viewport height
-                end: "top 30%", // End when it reaches 30%
-                scrub: true,
-                markers: false // Set to true for debugging
-            }
-        });
-
-        tl.from(titleRef.current, { x: -100, opacity: 0, duration: 1 })
-          .from(rectangleRef.current, { x: -100, opacity: 0, duration: 1 }, "<")
-          .from(paragraphRef.current, { x: -100, opacity: 0, duration: 1 }, "<");
-
-        return () => {
-            // Clean up ScrollTrigger instances on unmount
-            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-        };
-        */
-    }, []);
-
     return (
-        <div className="relative">
+        <div id='about' className="relative w-full">
             {/* Background Layer */}
             <div className="fixed inset-0 z-[-1] bg-[#091826]">
                 <div className="relative w-full h-full">
@@ -53,35 +36,70 @@ const AboutUs = () => {
                 </div>
             </div>
 
-            {/* Page Content */}
-            <div id='about' className="relative">
-                <h1 ref={titleRef} className="text-5xl pt-[15vh] pl-[6vw] font-pirata md:text-4xl sm:text-3xl text-center">About Us</h1>
-                <div className="relative mx-[6vw] my-[5vh] flex flex-col items-center">
-                    {/* Background Rectangle */}
-                    <div ref={rectangleRef} className="relative w-full max-w-[70vw] bg-[#03294F] opacity-50 rounded-[100px] z-0 p-[4vh]">
-                        {/* Content */}
-                        <div className="relative z-10 w-full flex items-center justify-center">
-                            <p ref={paragraphRef} className="font-humanistika text-base md:text-xl lg:text-2xl font-normal text-white leading-[1.3] text-center md:text-left">
-                                Prepare to embark on an extraordinary journey into the Colosseum of Code as we unveil the 7th in-person edition of Electrothon! This year, under the banner of a medieval realm, we invite you to a battlefield where code meets creativity and innovation becomes legendary.
-                                <br />
-                                <br />
-                                Spearheaded by the dynamic student community SPEC and illuminated by the vibrant energy of NIT Hamirpur, Electrothon has left an indelible mark on the tech community, empowering over 6000 students to unleash their potential.
-                                <br />
-                                <br />
-                                In previous editions, budding innovators wove spells of technology, transforming visions into reality. Now, in this medieval chapter, prepare to arm yourself with ingenuity, compete with the bravest of coders, and forge groundbreaking solutions that will echo through the halls of innovation.
-                            </p>
-                        </div>
-                    </div>
+            {/* Page Content Wrapper */}
+            <div className="relative flex flex-col items-center w-full">
+                {/* Flex container for horses and title */}
+                <div className="flex items-center justify-center mb-4 mt-32">
+                    {/* Mirrored Horse Image on the left */}
+                    <Image
+                        src={horse.src}
+                        alt="Mirrored Horse Element"
+                        width={225} // Base width for larger screens
+                        height={180} // Base height for larger screens
+                        objectFit="cover"
+                        quality={100}
+                        className="opacity-100 transform scale-x-[-1] mr-4 w-[15%] sm:w-[20%] md:w-[25%] lg:w-[30%]" // Responsive width
+                    />
                     
-                    {/* Cannonballs Positioned Relative to Whole Page */}
-                    {/* Uncomment if needed */}
-                    {/* 
-                    <Cannonball2 style={{ position: 'absolute', top: '-35%', left: '60%' }} reflectionPosition="top-left" />
-                    <Cannonball3 style={{ position: 'absolute', top: '-35%', left: '86%' }} reflectionPosition="top-right" />
-                    <Cannonball4 style={{ position: 'absolute', top: '18%', left: '90%' }} reflectionPosition='bottom-left' />
-                    <Cannonball style={{ position: 'absolute', top: '60%', left: '78%' }} reflectionPosition='bottom-right' /> 
-                    */}
+                    {/* About Us Title */}
+                    <h2
+                        className={`${pirataOne.className} text-5xl sm:text-6xl md:text-7xl text-center text-white mb-0`}
+                        style={{
+                            textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
+                        }}
+                    >
+                        About Us
+                    </h2>
+                    
+                    {/* Normal Horse Image on the right */}
+                    <Image
+                        src={horse.src}
+                        alt="Horse Element"
+                        width={225} // Base width for larger screens
+                        height={180} // Base height for larger screens
+                        objectFit="cover"
+                        quality={100}
+                        className="opacity-100 ml-4 w-[15%] sm:w-[20%] md:w-[25%] lg:w-[30%]" // Responsive width
+                    />
                 </div>
+
+                {/* Background Rectangle */}
+                <div ref={rectangleRef} className="relative w-full max-w-[70vw] bg-[#03294F] opacity-80 rounded-[100px] z-0 p-[4vh] mx-auto">
+                    
+                    {/* Content */}
+                    <div className="relative z-10 w-full flex items-center justify-center">
+                        <p ref={paragraphRef} className="font-humanistika text-base md:text-xl lg:text-2xl font-normal text-white leading-[1.3] text-center md:text-left">
+                            Prepare to embark on an extraordinary journey into the Colosseum of Code as we unveil the 7th in-person edition of Electrothon! This year, under the banner of a medieval realm, we invite you to a battlefield where code meets creativity and innovation becomes legendary.
+                            <br />
+                            <br />
+                            Spearheaded by the dynamic student community SPEC and illuminated by the vibrant energy of NIT Hamirpur, Electrothon has left an indelible mark on the tech community, empowering over 6000 students to unleash their potential.
+                            <br />
+                            <br />
+                            In previous editions, budding innovators wove spells of technology, transforming visions into reality. Now, in this medieval chapter, prepare to arm yourself with ingenuity, compete with the bravest of coders, and forge groundbreaking solutions that will echo through the halls of innovation.
+                        </p>
+                    </div>
+                </div>
+
+                {/* New Div for Cannonballs with Flexbox for Horizontal Alignment */}
+                <div className="flex justify-center items-center gap-3 p-5 w-full h-auto"> {/* Increased gap here */}
+                    {/* Cannonballs Positioned Horizontally */}
+                    <Cannonball4 /> 
+                    <Cannonball3 /> 
+                    <Cannonball /> 
+                    <Cannonball2 /> 
+                </div>
+
+
             </div>
         </div>
     );
