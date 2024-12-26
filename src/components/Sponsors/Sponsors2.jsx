@@ -1,6 +1,7 @@
 import Box from "./logoboard";
 import SubHeading from "./SubHeading";
 import logo from "../../assets/logos/th.jpg";
+import ComingSoon from "../ComingSoon/ComingSoon";
 
 const Sponsors2 = () => {
   return (
@@ -8,12 +9,14 @@ const Sponsors2 = () => {
       <div className="container flex flex-col items-center bg-transparent">
         {/* Nest content inside SubHeading */}
         <SubHeading>Treasurer Sponsors</SubHeading>
-        <Box companyLogos={[{ logo: `${logo.src}` }]} />
+        <ComingSoon/>
+        {/* <Box companyLogos={[{ logo: `${logo.src}` }]} /> */}
       </div>
       <div className="container flex flex-col items-center bg-transparent">
         {/* Nest content inside SubHeading */}
         <SubHeading>Chamberlain Sponsors</SubHeading>
-        <Box companyLogos={[{ logo: `${logo.src}` }]} />
+        <ComingSoon/>
+        {/* <Box companyLogos={[{ logo: `${logo.src}` }]} /> */}
       </div>
     </div>
   );
