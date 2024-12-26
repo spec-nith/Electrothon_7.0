@@ -44,21 +44,18 @@ const Prize = () => {
               boxShadow: "0px 6px 15px rgba(102, 178, 255, 0.5)",
             }}
           >
-            {pic2 ? (
+            <div className="relative">
               <Image
-                src={pic2}
+                src={pic2 || "/placeholder-image.png"}
                 alt="Second Prize Icon"
                 width={200}
                 height={200}
                 className="max-w-full"
               />
-            ) : (
-              <div className="absolute inset-0 flex items-center justify-center bg-black/50">
-                <p className="text-white text-xl md:text-2xl pirata-one-regular font-bold">
-                  Coming Soon
-                </p>
-              </div>
-            )}
+              <p className="absolute inset-0 flex items-center justify-center text-white text-lg md:text-xl pirata-one-regular font-bold">
+                Coming Soon
+              </p>
+            </div>
             <h2 className="text-white text-lg md:text-xl lg:text-2xl pirata-one-regular font-bold mt-4">
               Second Prize
             </h2>
@@ -73,21 +70,18 @@ const Prize = () => {
               boxShadow: "0px 6px 15px rgba(102, 204, 102, 0.5)",
             }}
           >
-            {pic1 ? (
+            <div className="relative">
               <Image
-                src={pic1}
+                src={pic1 || "/placeholder-image.png"}
                 alt="First Prize Icon"
                 width={250}
                 height={250}
                 className="max-w-full"
               />
-            ) : (
-              <div className="absolute inset-0 flex items-center justify-center bg-black/50">
-                <p className="text-white text-xl md:text-2xl pirata-one-regular font-bold">
-                  Coming Soon
-                </p>
-              </div>
-            )}
+              <p className="absolute inset-0 flex items-center justify-center text-white text-xl md:text-2xl pirata-one-regular font-bold">
+                Coming Soon
+              </p>
+            </div>
             <h2 className="text-white text-lg md:text-xl lg:text-2xl pirata-one-regular font-bold mt-4">
               First Prize
             </h2>
@@ -102,21 +96,18 @@ const Prize = () => {
               boxShadow: "0px 6px 15px rgba(255, 153, 204, 0.5)",
             }}
           >
-            {pic3 ? (
+            <div className="relative">
               <Image
-                src={pic3}
+                src={pic3 || "/placeholder-image.png"}
                 alt="Third Prize Icon"
                 width={200}
                 height={200}
                 className="max-w-full"
               />
-            ) : (
-              <div className="absolute inset-0 flex items-center justify-center bg-black/50">
-                <p className="text-white text-xl md:text-2xl pirata-one-regular font-bold">
-                  Coming Soon
-                </p>
-              </div>
-            )}
+              <p className="absolute inset-0 flex items-center justify-center text-white text-lg md:text-xl pirata-one-regular font-bold">
+                Coming Soon
+              </p>
+            </div>
             <h2 className="text-white text-lg md:text-xl lg:text-2xl pirata-one-regular font-bold mt-4">
               Third Prize
             </h2>
