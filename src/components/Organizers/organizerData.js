@@ -49,13 +49,13 @@ import vyom from "../../assets/organisers/secondYear/vyom sharma.webp";
 
 export const leadOrganizers = [
   {
-    image: abhijay,
-    name: "Abhijay",
+    image: arun,
+    name: "Arun",
     role: "Lead Organizer",
   },
   {
-    image: arun,
-    name: "Arun",
+    image: abhijay,
+    name: "Abhijay",
     role: "Lead Organizer",
   },
   {
