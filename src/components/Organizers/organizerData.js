@@ -9,11 +9,11 @@ import dikshant from "../../assets/organisers/thirdYear/dikshant.webp";
 import khushbu from "../../assets/organisers/thirdYear/khushbu.webp";
 import kunal from "../../assets/organisers/thirdYear/Kunal Singh.webp";
 import nikita from "../../assets/organisers/thirdYear/Nikita Silu.webp";
-import nitin from "../../assets/organisers/thirdYear/nitin .webp";
+import nitin from "../../assets/organisers/thirdYear/nitin.webp";
 import prakriti from "../../assets/organisers/thirdYear/PrakritiN.webp";
 import priya from "../../assets/organisers/thirdYear/priya.webp";
 import rahul from "../../assets/organisers/thirdYear/rahul.webp";
-import utkarshM from "../../assets/organisers/thirdYear/Utkarsh Maurya.webp";
+import utkarshM from "../../assets/organisers/thirdYear/Utkarsh_Maurya.webp";
 import utkarshC from "../../assets/organisers/thirdYear/utkarsh_chauhannew.webp";
 
 import aman from "../../assets/organisers/secondYear/aman mishra.webp";
@@ -23,6 +23,7 @@ import ashishR from "../../assets/organisers/secondYear/Ashish Rajpal.webp";
 import ashishS from "../../assets/organisers/secondYear/ashish singh.webp";
 import avinash from "../../assets/organisers/secondYear/avinash.webp";
 import devesh from "../../assets/organisers/secondYear/Devesh jangid.webp";
+import hardik from "../../assets/organisers/secondYear/hardik.webp";
 import harsh from "../../assets/organisers/secondYear/harsh aryan.webp";
 import ishita from "../../assets/organisers/secondYear/Ishita Khanduja.webp";
 import jashnika from "../../assets/organisers/secondYear/jashnika.webp";
@@ -169,6 +170,11 @@ export const secondYearOrganizers = [
     role: "Organizer (Second Year)",
   },
   {
+    image: hardik,
+    name: "Hardik Manchanda",
+    role: "Organizer (Second Year)",
+  },
+  {
     image: harsh,
     name: "Harsh Aryan",
     role: "Organizer (Second Year)",
@@ -279,4 +285,3 @@ export const secondYearOrganizers = [
     role: "Organizer (Second Year)",
   },
 ];
-
