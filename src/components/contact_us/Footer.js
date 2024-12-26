@@ -1,19 +1,24 @@
-'use client';
+"use client";
 
 import React from "react";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faTwitter, faLinkedin, faInstagram, faDiscord } from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebook,
+  faTwitter,
+  faLinkedin,
+  faInstagram,
+  faDiscord,
+} from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
 import { TitleText } from "../Tracks_new/CustomTexts";
 import { staggerContainer } from "../Tracks_new/motion";
 import styles from "../Tracks_new/style";
-import "./footer.css"; 
-import speclogo from '@/assets/speclogo.png'
-import emailjs from 'emailjs-com';
+import "./footer.css";
+import speclogo from "@/assets/speclogo.png";
+import emailjs from "emailjs-com";
 
 export default function Footer() {
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -75,19 +80,22 @@ export default function Footer() {
       );
   };
   function BottomFooter() {
-
     return (
       <React.Fragment>
         <div className="md:flex justify-center gap-5 lg:gap-40 mt-5 font-['Gugi']">
           <div className="flex justify-center mb-2 md:visible">
-            <a href="https://spec.nith.ac.in/" target="_blank" rel="noopener noreferrer" className="text-sm text-white md:text-lg md:font-bold hover:text-gray-300">
+            <a
+              href="https://spec.nith.ac.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-white md:text-lg md:font-bold hover:text-gray-300"
+            >
               <picture>
                 <img
                   className="w-16 md:w-32"
                   src="/asset/speclogo.png" // Public path reference
                   alt="spec_logo"
                 />
-
               </picture>
             </a>
           </div>
@@ -97,15 +105,30 @@ export default function Footer() {
                 RESOURCES
               </li>
               <li>
-                <a href="https://drive.google.com/file/u/2/d/1wtCwnQQRZWrYbEgjDSJMi-XJcVHaQGLp/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="flex justify-center pb-2 font-sans text-sm text-gray-400 md:justify-start hover:text-gray-300">
+                <a
+                  href="https://drive.google.com/file/d/1tAc_veN54saZxE4tJwyQ8KulqCqn9D_b/view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex justify-center pb-2 font-sans text-sm text-gray-400 md:justify-start hover:text-gray-300"
+                >
                   Sponsorship Brochure
                 </a>
               </li>
               <li>
-                <a href="https://same-uranium-0e7.notion.site/Code-of-Conduct-13893473857580beb4a1e626f669ace6" target="_blank" rel="noopener noreferrer" className="flex justify-center pb-2 font-sans text-sm text-gray-400 md:justify-start hover:text-gray-300">
+                <a
+                  href="https://same-uranium-0e7.notion.site/Code-of-Conduct-13893473857580beb4a1e626f669ace6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex justify-center pb-2 font-sans text-sm text-gray-400 md:justify-start hover:text-gray-300"
+                >
                   Code of Conduct
                 </a>
-                <a href="https://giant-stork-bb9.notion.site/Hacker-s-Guide-to-ELECTROTHON-6-0-d19403d5cf67409fb57aec27e4769174?pvs=4" target="_blank" rel="noopener noreferrer" className="flex justify-center pb-2 font-sans text-sm text-gray-400 md:justify-start hover:text-gray-300">
+                <a
+                  href="https://giant-stork-bb9.notion.site/Hacker-s-Guide-to-ELECTROTHON-6-0-d19403d5cf67409fb57aec27e4769174?pvs=4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex justify-center pb-2 font-sans text-sm text-gray-400 md:justify-start hover:text-gray-300"
+                >
                   Hacker Guide
                 </a>
               </li>
@@ -113,14 +136,24 @@ export default function Footer() {
           </div>
           <div className="flex justify-center mb-4 text-sm text-white md:text-lg">
             <ul>
-              <li className="flex justify-center pb-2 font-medium text-white md:justify-start">ADDRESS</li>
+              <li className="flex justify-center pb-2 font-medium text-white md:justify-start">
+                ADDRESS
+              </li>
               <li className="flex justify-center pb-2 font-sans text-gray-400 md:text-sm md:justify-start hover:text-gray-300">
-                <a href="https://www.google.com/maps/place/NIT+Hamirpur/@31.6750134,76.5271587,13z/data=!4m8!1m2!2m1!1sNIT+Hamirpur,+Himachal+Pradesh,+India!3m4!1s0x3904d5487e12c4a1:0x395f92d3a202a7d0!8m2!3d31.708371!4d76.527356" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.google.com/maps/place/NIT+Hamirpur/@31.6750134,76.5271587,13z/data=!4m8!1m2!2m1!1sNIT+Hamirpur,+Himachal+Pradesh,+India!3m4!1s0x3904d5487e12c4a1:0x395f92d3a202a7d0!8m2!3d31.708371!4d76.527356"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   NIT Hamirpur
                 </a>
               </li>
-              <li className="flex justify-center pb-2 font-sans text-gray-400 md:text-sm md:justify-start">Hamirpur, Himachal Pradesh, India</li>
-              <li className="flex justify-center font-sans text-gray-400 md:text-sm md:justify-start">177005</li>
+              <li className="flex justify-center pb-2 font-sans text-gray-400 md:text-sm md:justify-start">
+                Hamirpur, Himachal Pradesh, India
+              </li>
+              <li className="flex justify-center font-sans text-gray-400 md:text-sm md:justify-start">
+                177005
+              </li>
             </ul>
           </div>
           <div>
@@ -129,31 +162,67 @@ export default function Footer() {
                 STAY CONNECTED
               </div>
               <div className="flex justify-center mt-1 mb-5 space-x-2 md:space-x-5 md:mt-1 opacity-80">
-                <a href="https://discord.gg/tTra8Ssuh2" rel="noreferrer noopener" target="_blank">
-                  <FontAwesomeIcon className="text-blue-800 fill-current text-1xl md:text-2xl" icon={faDiscord} />
+                <a
+                  href="https://discord.gg/tTra8Ssuh2"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon
+                    className="text-blue-800 fill-current text-1xl md:text-2xl"
+                    icon={faDiscord}
+                  />
                 </a>
-                <a href="https://www.facebook.com/spec.ece/" rel="noreferrer noopener" target="_blank">
-                  <FontAwesomeIcon className="text-blue-600 fill-current text-1xl md:text-2xl" icon={faFacebook} />
+                <a
+                  href="https://www.facebook.com/spec.ece/"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon
+                    className="text-blue-600 fill-current text-1xl md:text-2xl"
+                    icon={faFacebook}
+                  />
                 </a>
-                <a href="https://twitter.com/electrothon" rel="noreferrer noopener" target="_blank">
-                  <FontAwesomeIcon className="text-blue-300 fill-current text-1xl md:text-2xl" icon={faTwitter} />
+                <a
+                  href="https://twitter.com/electrothon"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon
+                    className="text-blue-300 fill-current text-1xl md:text-2xl"
+                    icon={faTwitter}
+                  />
                 </a>
                 <a
                   href="https://instagram.com/s.p.e.c_nith?utm_source=ig_profile_share&amp;igshid=1dd01jvv7xk83"
                   rel="noreferrer noopener"
                   target="_blank"
                 >
-                  <FontAwesomeIcon className="text-pink-600 fill-current text-1xl md:text-2xl" icon={faInstagram} />
+                  <FontAwesomeIcon
+                    className="text-pink-600 fill-current text-1xl md:text-2xl"
+                    icon={faInstagram}
+                  />
                 </a>
-                <a href="https://www.linkedin.com/in/s-p-e-c-nith-40214b197/" rel="noreferrer noopener" target="_blank">
-                  <FontAwesomeIcon className="text-blue-500 fill-current text-1xl md:text-2xl" icon={faLinkedin} />
+                <a
+                  href="https://www.linkedin.com/in/s-p-e-c-nith-40214b197/"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon
+                    className="text-blue-500 fill-current text-1xl md:text-2xl"
+                    icon={faLinkedin}
+                  />
                 </a>
               </div>
             </div>
             <div className="flex justify-center mt-5">
               <button
                 type="button"
-                onClick={() => window.open('https://electrothon-6-pnkn3vfit-specniths-projects.vercel.app/', '_blank')}
+                onClick={() =>
+                  window.open(
+                    "https://electrothon-6-pnkn3vfit-specniths-projects.vercel.app/",
+                    "_blank"
+                  )
+                }
                 className="relative text-white font-bold bg-gradient-to-r from-purple-700 to-blue-700 hover:from-blue-700 hover:to-purple-700 shadow-lg transition-all duration-300 px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-xl rounded-full"
               >
                 <span className="absolute inset-0 blur-md opacity-75 bg-gradient-to-r from-purple-700 to-blue-700 rounded-full"></span>
@@ -162,10 +231,12 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center pb-2 text-sm text-gray-400">© 2025, SPEC NITH</div>
+        <div className="flex justify-center pb-2 text-sm text-gray-400">
+          © 2025, SPEC NITH
+        </div>
       </React.Fragment>
     );
-  };
+  }
   return (
     <>
       <footer
@@ -205,7 +276,10 @@ export default function Footer() {
               ></iframe>
             </div>
 
-            <div className="flex flex-col justify-center space-y-6" style={{ margin: "auto" }}>
+            <div
+              className="flex flex-col justify-center space-y-6"
+              style={{ margin: "auto" }}
+            >
               {/* Email Section */}
               <div className="mt-8 text-gray-300 text-center">
                 Hate forms? Send us an email at{" "}
@@ -272,7 +346,8 @@ export default function Footer() {
                     type="submit"
                     onClick={sendEmail}
                     disabled={isLoading}
-                    className="bg-primary px-6 py-2 border-2 border-dashed rounded-md text-white">
+                    className="bg-primary px-6 py-2 border-2 border-dashed rounded-md text-white"
+                  >
                     Send Message
                   </button>
                 )}
