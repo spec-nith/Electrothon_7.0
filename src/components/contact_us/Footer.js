@@ -124,7 +124,7 @@ export default function Footer() {
                   Code of Conduct
                 </a>
                 <a
-                  href="https://giant-stork-bb9.notion.site/Hacker-s-Guide-to-ELECTROTHON-6-0-d19403d5cf67409fb57aec27e4769174?pvs=4"
+                  href="https://same-uranium-0e7.notion.site/Hacker-s-Guide-to-ELECTROTHON-7-0-16893473857580e6bf18e445e04afd61"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex justify-center pb-2 font-sans text-sm text-gray-400 md:justify-start hover:text-gray-300"
