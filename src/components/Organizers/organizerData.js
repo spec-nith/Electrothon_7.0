@@ -50,17 +50,17 @@ import vyom from "../../assets/organisers/secondYear/vyom sharma.webp";
 export const leadOrganizers = [
   {
     image: arun,
-    name: "Arun",
+    name: "Arun Kushwaha",
     role: "Lead Organizer",
   },
   {
     image: abhijay,
-    name: "Abhijay",
+    name: "Abhijay Singh Thakur",
     role: "Lead Organizer",
   },
   {
     image: jayant,
-    name: "Jayant",
+    name: "Jayant Sharma",
     role: "Lead Organizer",
   },
 ];
@@ -73,7 +73,7 @@ export const thirdYearOrganizers = [
   },
   {
     image: ananay,
-    name: "Ananay",
+    name: "Ananay Kaushal",
     role: "Organizer (Third Year)",
   },
   {
@@ -103,22 +103,22 @@ export const thirdYearOrganizers = [
   },
   {
     image: nitin,
-    name: "Nitin",
+    name: "Nitin Saini",
     role: "Organizer (Third Year)",
   },
   {
     image: prakriti,
-    name: "Prakriti",
+    name: "Prakriti Pal",
     role: "Organizer (Third Year)",
   },
   {
     image: priya,
-    name: "Priya",
+    name: "Priya Rajput",
     role: "Organizer (Third Year)",
   },
   {
     image: rahul,
-    name: "Rahul",
+    name: "Rahul Prasad",
     role: "Organizer (Third Year)",
   },
   {
