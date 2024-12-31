@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React from "react";
 import bg from "@/assets/backgroundimg.jpg";
 import Image from "next/image";
@@ -9,7 +9,6 @@ import hourglass from "@/assets/hourglass.gif";
 import { useState, useEffect } from "react";
 
 const MainPg = () => {
-
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -18,7 +17,7 @@ const MainPg = () => {
   });
 
   useEffect(() => {
-    const targetDate = new Date("2025-03-07T00:00:00").getTime();
+    const targetDate = new Date("2025-01-31T23:59:59").getTime();
 
     const updateTimer = () => {
       const now = new Date().getTime();
@@ -46,10 +45,7 @@ const MainPg = () => {
   }, []);
 
   return (
-    <div
-      id="home"
-      className="w-full lg:h-[87vh]"
-    >
+    <div id="home" className="w-full lg:h-[87vh]">
       <Navbar />
       <div className="flex items-center justify-center space-y-16 mt-10 mb-10 h-full flex-col">
         <div className="flex w-full flex-col items-center justify-center">
@@ -68,9 +64,7 @@ const MainPg = () => {
         </button> */}
         <Devfolio_Button />
 
-
-        <div className='flex justify-center items-center w-full'>
-
+        <div className="flex justify-center items-center w-full">
           <Image
             className="max-sm:hidden max-md:w-[100px] max-lg:w-[120px]"
             src={hourglass}
@@ -82,12 +76,7 @@ const MainPg = () => {
               Time Left To Register
             </div>
             <div className="abhaya-libre-regular sm:leading-[55px] leading-[40px] lg:leading-[75px] flex w-full justify-center items-center">
-              <Image
-                className="sm:hidden"
-                src={hourglass}
-                alt=""
-                width={60}
-              />
+              <Image className="sm:hidden" src={hourglass} alt="" width={60} />
               <div className="flex items-center justify-center text-[50px] text-[#abb1a2] sm:space-x-2 space-x-1">
                 <span className="flex flex-col items-center justify-center">
                   <span className="sm:text-[70px] text-[40px] text-[#abb1a2]">
@@ -97,9 +86,7 @@ const MainPg = () => {
                     Days
                   </span>
                 </span>
-                <span>
-                  :
-                </span>
+                <span>:</span>
                 <span className="flex flex-col items-center justify-center">
                   <span className="sm:text-[70px] text-[40px] text-[#abb1a2] ">
                     {timeLeft.hours}
@@ -108,9 +95,7 @@ const MainPg = () => {
                     Hours
                   </span>
                 </span>
-                <span>
-                  :
-                </span>
+                <span>:</span>
                 <span className="flex flex-col items-center justify-center">
                   <span className="sm:text-[70px] text-[40px] text-[#abb1a2] ">
                     {timeLeft.minutes}
@@ -119,9 +104,7 @@ const MainPg = () => {
                     Minutes
                   </span>
                 </span>
-                <span>
-                  :
-                </span>
+                <span>:</span>
                 <span className="flex flex-col items-center justify-center">
                   <span className="sm:text-[70px] text-[40px] text-[#abb1a2] ">
                     {timeLeft.seconds}
