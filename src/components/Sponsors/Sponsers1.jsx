@@ -4,6 +4,7 @@ import PartnerBox from "./PartnerBoard";
 import SubHeading from "./SubHeading";
 import logo from "../../assets/logos/th.jpg";
 import ComingSoon from "../ComingSoon/ComingSoon";
+import chancellorWhite from "../../assets/chancellorwhite.png";
 
 const Sponsors1 = () => {
   return (
@@ -18,8 +19,7 @@ const Sponsors1 = () => {
       <div className="container flex flex-col items-center bg-transparent">
         {/* Nest the subheading content inside the SubHeading component */}
         <SubHeading>Chancellor Sponsors</SubHeading>
-        <ComingSoon/>
-        {/* <Box companyLogos={[{ logo: `${logo.src}` }]} /> */}
+        <Box companyLogos={[{ logo: chancellorWhite }]} />
       </div>
     </div>
   );
