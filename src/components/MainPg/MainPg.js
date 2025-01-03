@@ -53,7 +53,7 @@ const MainPg = () => {
             ELECTROTHON 7.0
           </span>
           <span className="text-[50px] macondo-swash-caps-regular lg:leading-none max-lg:text-[40px] max-md:text-[30px] text-center">
-            Collosseum of Code
+            Colosseum of Code
           </span>
         </div>
         {/* <button className='lg:text-[28px] sm:text-[24px] text-[18px] flex space-x-3 bg-[#3770FF] items-center justify-center font-[600] inter px-6 py-2 rounded-full'>
