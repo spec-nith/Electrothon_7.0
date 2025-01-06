@@ -14,6 +14,7 @@ import JudgesSection from "../components/JudgesSection/JudgesSection.js";
 import Organizers from "@/components/Organizers/Organizer";
 import Image from "next/image";
 import ThemeSection from "@/components/ThemeSection/ThemeSection";
+import Theme from "@/components/Tracks_new/Track"
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
       <AboutUs />
       <Slider />
       <JudgesSection />
-      <ThemeSection />
+      <Theme />
       <Prize />
       <Timeline />
       <Sponsors1 />
