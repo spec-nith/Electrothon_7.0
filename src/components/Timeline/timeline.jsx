@@ -80,9 +80,13 @@ const Timeline = () => {
   }, []);
 
   return (
-    <div className="relative bg-cover bg-center min-h-screen flex flex-col items-center justify-start text-white pt-16">
+    <div className="relative bg-cover bg-center min-h-screen flex flex-col items-center justify-start text-white">
       <div ref={headingRef} className="flex items-center mb-12">
-        <h2 className="text-6xl mb-5 sm:text-8xl font-pirata">Timeline</h2>
+        <h2
+          style={{
+            textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
+          }}
+          className="text-[50px] sm:text-[70px] md:text-[6rem] font-pirata">Timeline</h2>
       </div>
 
       <div ref={timelineRef} className="relative w-full max-w-5xl px-8">
@@ -127,7 +131,7 @@ const Timeline = () => {
 
         {/* Timeline Items */}
         <div className="space-y-20">
-          <TimelineItem title="Registration Begins" date="1st Dec, 2024" />
+          <TimelineItem title="Registration Begins" date="lst Dec, 2024" />
           <TimelineItem title="Participation Shortlist" date="Coming Soon" />
           <TimelineItem title="Electrothon Main Event" date="7-9 March, 2025" />
         </div>

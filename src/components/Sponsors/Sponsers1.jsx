@@ -8,9 +8,9 @@ import chancellorWhite from "../../assets/chancellorwhite.png";
 
 const Sponsors1 = () => {
   return (
-    <div id="sponsors" className="container flex flex-col items-center w-3/4 mx-auto bg-transparent text-white">
+    <div id="sponsors" className="w-full container flex flex-col items-center mx-auto bg-transparent text-white">
       {/* Nest the heading content inside the Heading component */}
-      <Heading>OUR SPONSORS</Heading>
+      <Heading>Our Sponsors</Heading>
       {/* <div className="container flex flex-col items-center bg-transparent"> */}
         {/* Nest the subheading content inside the SubHeading component */}
         {/* <SubHeading>Event Partner</SubHeading> */}

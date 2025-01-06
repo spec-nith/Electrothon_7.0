@@ -241,10 +241,15 @@ export default function Footer() {
     <>
       <footer
         id="contact"
-        className="flex justify-center px-4 mt-10 -mb-6 text-gray-800 shadow-lg md:mt-20"
+        className="flex justify-center px-4 -mb-6 text-gray-800 shadow-lg"
       >
         <div className="container flex flex-col justify-center space-y-10 text-center">
-          <span className="text-4xl lg:text-[70px] font-bold my-4 lg:my-6 pirata-one-regular text-white">
+          <span
+            style={{
+              textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
+            }}
+            className="md:text-[6rem] sm:text-[70px] text-[50px] font-bold pirata-one-regular text-white"
+          >
             Lets talk about everything!
           </span>
           <div className="flex flex-col items-center justify-center m-4 mt-10 md:mt-4 lg:flex-row lg:space-x-44">

@@ -7,6 +7,7 @@ import Devfolio_Button from "./devfolio_button";
 import "@/app/globals.css";
 import hourglass from "@/assets/hourglass.gif";
 import { useState, useEffect } from "react";
+import timebg from "@/assets/timebg.png";
 
 const MainPg = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -45,11 +46,16 @@ const MainPg = () => {
   }, []);
 
   return (
-    <div id="home" className="w-full lg:h-[87vh]">
+    <div id="home" className="w-full lg:h-[90vh]">
       <Navbar />
-      <div className="flex items-center justify-center space-y-16 mt-10 mb-10 h-full flex-col">
+      <div className="flex items-center justify-center sm:space-y-16 space-y-12 h-full flex-col">
         <div className="flex w-full flex-col items-center justify-center">
-          <span className="text-[150px] px-3 pirata-one-regular lg:leading-none max-lg:text-[120px] max-md:text-[80px] max-sm:text-[70px] text-center">
+          <span
+            style={{
+              textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
+            }}
+            className="text-[150px] px-3 pirata-one-regular lg:leading-none max-lg:text-[120px] max-md:text-[80px] max-sm:text-[70px] text-center"
+          >
             ELECTROTHON 7.0
           </span>
           <span className="text-[50px] macondo-swash-caps-regular lg:leading-none max-lg:text-[40px] max-md:text-[30px] text-center">
@@ -66,67 +72,74 @@ const MainPg = () => {
 
         <div className="flex justify-center items-center w-full">
           <Image
-            className="max-sm:hidden max-md:w-[100px] max-lg:w-[120px]"
+            className="max-lg:hidden max-md:w-[100px] max-lg:w-[120px]"
             src={hourglass}
             alt=""
-            width={150}
+            width={220}
           />
-          <div className="flex flex-col items-center justify-center">
-            <div className="md:text-[53px] text-[46px] island-moments-regular leading-[35px] text-center">
+          <div 
+          style={{ backgroundImage: `url(${timebg.src})` }}
+          className="flex flex-col items-center justify-center md:h-[244px] md:w-[551px] sm:w-[500px] sm:h-[200px] w-[440px] h-[170px] bg-cover bg-center">
+            <div
+              className="md:text-[53px] text-[46px] island-moments-regular text-black leading-[35px] text-center"
+            >
               Time Left To Register
             </div>
             <div className="abhaya-libre-regular sm:leading-[55px] leading-[40px] lg:leading-[75px] flex w-full justify-center items-center">
-              <Image className="sm:hidden" src={hourglass} alt="" width={60} />
-              <div className="flex items-center justify-center text-[50px] text-[#abb1a2] sm:space-x-2 space-x-1">
+              {/* <Image className="sm:hidden" src={hourglass} alt="" width={60} /> */}
+              <div
+
+                className="flex items-center justify-center text-[50px] text-[#113A4A] font-light sm:space-x-2 space-x-1"
+              >
                 <span className="flex flex-col items-center justify-center">
-                  <span className="sm:text-[70px] text-[40px] text-[#abb1a2]">
+                  <span className="sm:text-[70px] text-[50px]">
                     {timeLeft.days}
                   </span>
-                  <span className="sm:text-[20px] text-base lg:leading-[0px] leading-[15px]">
+                  <span className="sm:text-[20px] text-[18px] lg:leading-[0px] leading-[15px]">
                     Days
                   </span>
                 </span>
                 <span>:</span>
                 <span className="flex flex-col items-center justify-center">
-                  <span className="sm:text-[70px] text-[40px] text-[#abb1a2] ">
+                  <span className="sm:text-[70px] text-[50px] ">
                     {timeLeft.hours}
                   </span>
-                  <span className="sm:text-[20px] text-base lg:leading-[0px] leading-[15px]">
+                  <span className="sm:text-[20px] text-[18px] lg:leading-[0px] leading-[15px]">
                     Hours
                   </span>
                 </span>
                 <span>:</span>
                 <span className="flex flex-col items-center justify-center">
-                  <span className="sm:text-[70px] text-[40px] text-[#abb1a2] ">
+                  <span className="sm:text-[70px] text-[50px] ">
                     {timeLeft.minutes}
                   </span>
-                  <span className="sm:text-[20px] text-base lg:leading-[0px] leading-[15px]">
+                  <span className="sm:text-[20px] text-[18px] lg:leading-[0px] leading-[15px]">
                     Minutes
                   </span>
                 </span>
                 <span>:</span>
                 <span className="flex flex-col items-center justify-center">
-                  <span className="sm:text-[70px] text-[40px] text-[#abb1a2] ">
+                  <span className="sm:text-[70px] text-[50px] ">
                     {timeLeft.seconds}
                   </span>
-                  <span className="sm:text-[20px] text-base lg:leading-[0px] leading-[15px]">
+                  <span className="sm:text-[20px] text-[18px] lg:leading-[0px] leading-[15px]">
                     Seconds
                   </span>
                 </span>
               </div>
-              <Image
+              {/* <Image
                 className="sm:hidden -scale-x-100"
                 src={hourglass}
                 alt=""
                 width={60}
-              />
+              /> */}
             </div>
           </div>
           <Image
-            className="max-sm:hidden max-md:w-[100px] -scale-x-100 max-lg:w-[120px]"
+            className="max-lg:hidden max-md:w-[100px] -scale-x-100 max-lg:w-[120px]"
             src={hourglass}
             alt=""
-            width={150}
+            width={220}
           />
         </div>
       </div>

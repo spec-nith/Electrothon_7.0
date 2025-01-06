@@ -12,12 +12,14 @@ import {
 
 export default function Organizers() {
   return (
-    <div id="Organizers" className="relative z-10 container mx-auto px-4 py-16">
+    <div id="Organizers" className="relative z-10 container mx-auto px-4">
       {/* Lead Organizers Section */}
-      <div className="mb-16">
+      <div className="mb-10">
         <h2
-          className="text-3xl md:text-5xl text-white text-center mb-6 md:mb-10"
-          style={{ fontFamily: "Pirata One, sans-serif" }}
+          className="text-[50px] sm:text-[70px] md:text-[6rem] text-white text-center mb-6 md:mb-10"
+          style={{ fontFamily: "Pirata One, sans-serif" ,
+              textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
+          }}
         >
           Lead Organizers
         </h2>
@@ -63,10 +65,12 @@ export default function Organizers() {
       </div>
 
       {/* Organizers Section */}
-      <div className="mb-16">
+      <div className="mb-10">
         <h2
-          className="text-3xl md:text-5xl text-white text-center mb-6 md:mb-10"
-          style={{ fontFamily: "Pirata One, sans-serif" }}
+          className="text-[50px] sm:text-[70px] md:text-[6rem] text-white text-center mb-6 md:mb-10"
+          style={{ fontFamily: "Pirata One, sans-serif" ,
+              textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
+          }}
         >
           Organizers
         </h2>

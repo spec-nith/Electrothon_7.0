@@ -37,9 +37,9 @@ const AboutUs = () => {
             </div>
 
             {/* Page Content Wrapper */}
-            <div className="relative flex flex-col items-center w-full">
+            <div className="relative flex flex-col items-center w-full ">
                 {/* Flex container for horses and title */}
-                <div className="flex items-center justify-center mb-4 mt-32">
+                <div className="flex items-center justify-center w-full mb-5">
                     {/* Mirrored Horse Image on the left */}
                     <Image
                         src={horse.src}
@@ -48,12 +48,12 @@ const AboutUs = () => {
                         height={180} // Base height for larger screens
                         objectFit="cover"
                         quality={100}
-                        className="opacity-100 transform scale-x-[-1] mr-4 w-[15%] sm:w-[20%] md:w-[25%] lg:w-[30%]" // Responsive width
+                        className="opacity-100 transform scale-x-[-1] mr-4 w-[70px] md:w-[10%] lg:w-[13%]" // Responsive width
                     />
                     
                     {/* About Us Title */}
                     <h2
-                        className={`${pirataOne.className} text-5xl sm:text-6xl md:text-7xl text-center text-white mb-0`}
+                        className={`${pirataOne.className} text-[50px] sm:text-[70px] md:text-[6rem] text-center text-white mb-0`}
                         style={{
                             textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
                         }}
@@ -69,12 +69,12 @@ const AboutUs = () => {
                         height={180} // Base height for larger screens
                         objectFit="cover"
                         quality={100}
-                        className="opacity-100 ml-4 w-[15%] sm:w-[20%] md:w-[25%] lg:w-[30%]" // Responsive width
+                        className="opacity-100 ml-4 w-[70px] md:w-[10%] lg:w-[13%]" // Responsive width
                     />
                 </div>
 
                 {/* Background Rectangle */}
-                <div ref={rectangleRef} className="relative w-full max-w-[70vw] bg-[#03294F] opacity-80 rounded-[100px] z-0 p-[4vh] mx-auto">
+                <div ref={rectangleRef} className="relative w-full max-w-[90vw] sm:max-w-[70vw] bg-[#03294F] opacity-80 rounded-[30px] sm:rounded-[50px] z-0 p-[4vh] mx-auto">
                     
                     {/* Content */}
                     <div className="relative z-10 w-full flex items-center justify-center">
@@ -91,7 +91,7 @@ const AboutUs = () => {
                 </div>
 
                 {/* New Div for Cannonballs with Flexbox for Horizontal Alignment */}
-                <div className="flex justify-center items-center gap-3 p-5 w-full h-auto"> {/* Increased gap here */}
+                <div className="flex justify-center items-center space-x-5 pt-5 w-full h-auto"> {/* Increased gap here */}
                     {/* Cannonballs Positioned Horizontally */}
                     <Cannonball4 /> 
                     <Cannonball3 /> 

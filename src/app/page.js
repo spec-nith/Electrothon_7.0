@@ -2,7 +2,6 @@ import React from "react";
 import MainPg from "@/components/MainPg/MainPg.js";
 import AboutUs from "@/components/About_Us/AboutUs.js";
 import Faqs from "@/components/Faq/faq";
-import styles from "./page.module.css"; // Import CSS module
 import Slider from "@/components/last_electrothon/slider.js";
 import Timeline from "@/components/Timeline/timeline";
 import Sponsors1 from "@/components/Sponsors/Sponsers1";
@@ -19,21 +18,16 @@ import ThemeSection from "@/components/ThemeSection/ThemeSection";
 export default function Home() {
   return (
     <div
-      className="relative scroll-smooth bg-cover bg-center bg-fixed h-full overflow-y-auto"
+      className="relative scroll-smooth bg-cover bg-center bg-fixed h-full overflow-y-auto space-y-20"
       style={{ backgroundImage: `url(${bg.src})` }}
     >
       <MainPg />
       <AboutUs />
-      <h1 className={styles.title}>Glimpse of Last Electrothon</h1>
       <Slider />
       <JudgesSection />
+      <ThemeSection />
       <Prize />
-      
-      {/* Timeline Section */}
-      <section id="timeline" className="py-12">
-        <Timeline />
-      </section>
-      
+      <Timeline />
       <Sponsors1 />
       <Sponsors2 />
       <SliderT />
