@@ -50,10 +50,7 @@ const initialQues = [
       title: "Do we need to apply in teams?",
       content: "For the voyage to be fun, we require that you register in teams of a minimum of 2 and a maximum of 4 participants.",
     },
-    {
-      title: "What are your COVID-19 regulations?",
-      content: "Electrothon's COVID-19 policy will be an ever-evolving document. In accordance with the local guidelines and global situation, we will adapt to the situation to ensure the safety of all the participants.",
-    },
+   
     {
       title: "What if I have more queries?",
       content: "Well, radio chat is not efficient enough. You can contact us on our social media, and here's our email for more efficiency: spec@nith.ac.in.",

@@ -14,8 +14,11 @@ import SliderT from "@/components/Testimonials/slider";
 import Footer from "@/components/contact_us/Footer";
 import JudgesSection from "../components/JudgesSection/JudgesSection.js";
 import Organizers from "@/components/Organizers/Organizer";
-import Loader from '../components/Loader/Loader'; // Import your Loader component
+import Image from "next/image";
+import ThemeSection from "@/components/ThemeSection/ThemeSection";
+import Theme from "@/components/Tracks_new/Track";
 import bg from '../assets/backgroundimg.jpg';
+import Loader from '@/components/Loader/Loader.js';
 
 export default function Home() {
     const [loading, setLoading] = useState(true);
@@ -31,34 +34,29 @@ export default function Home() {
     }, []);
 
     return (
-        <div className="relative h-screen overflow-hidden">
-            {loading ? (
-                <Loader /> // Show loader while loading                
-            ) : (
-                <div
-            className="relative scroll-smooth bg-cover bg-center bg-fixed h-full overflow-y-auto"
-            style={{ backgroundImage: `url(${bg.src})` }} // Ensure bg.src is defined
+    <div className="relative h-screen overflow-hidden">
+    {loading ? (
+        <Loader /> // Show loader while loading                
+    ) : (    
+        <div
+        className="relative scroll-smooth bg-cover bg-center bg-fixed h-full overflow-y-auto space-y-20"
+        style={{ backgroundImage: `url(${bg.src})` }}
         >
-                    <MainPg />
-                    <AboutUs />
-                    <h1 className="text-center text-4xl font-bold">Glimpse of Last Electrothon</h1>
-                    <Slider />
-                    <JudgesSection />
-                    <Prize />
-
-                    {/* Timeline Section */}
-                    <section id="timeline" className="py-12">
-                        <Timeline />
-                    </section>
-
-                    <Sponsors1 />
-                    <Sponsors2 />
-                    <SliderT />
-                    <Organizers />
-                    <Faqs />
-                    <Footer />
-                </div>
-            )}
+        <MainPg />
+        <AboutUs />
+        <Slider />
+        <JudgesSection />
+        <Theme />
+        <Prize />
+        <Timeline />
+        <Sponsors1 />
+        <Sponsors2 />
+        <SliderT />
+        <Organizers />
+        <Faqs />
+        <Footer />
         </div>
-    );
+        )}
+    </div>
+  );
 }

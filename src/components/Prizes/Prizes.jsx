@@ -20,7 +20,7 @@ const Prize = () => {
   return (
     <div
       id="prizes"
-      className="prizes-section w-full min-h-screen bg-cover bg-center flex items-center justify-center"
+      className="prizes-section w-full bg-cover bg-center flex items-center justify-center"
     >
       <motion.div
         variants={staggerContainer}
@@ -29,7 +29,11 @@ const Prize = () => {
         className="relative z-10 flex flex-col items-center justify-center text-center px-4 md:px-6 lg:px-8 w-full max-w-7xl"
       >
         {/* Title */}
-        <h1 className="text-white text-5xl md:text-6xl lg:text-7xl pirata-one-regular mb-8">
+        <h1
+          style={{
+            textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
+          }}
+          className="text-white text-[50px] md:text-[70px] lg:text-[6rem] pirata-one-regular mb-8">
           Prizes
         </h1>
 

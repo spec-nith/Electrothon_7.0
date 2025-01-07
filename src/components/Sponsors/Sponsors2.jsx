@@ -5,7 +5,7 @@ import ComingSoon from "../ComingSoon/ComingSoon";
 
 const Sponsors2 = () => {
   return (
-    <div className="container flex flex-col items-center w-3/4 mx-auto bg-transparent text-white">
+    <div className="container w-full flex flex-col items-center mx-auto bg-transparent text-white">
       <div className="container flex flex-col items-center bg-transparent">
         {/* Nest content inside SubHeading */}
         <SubHeading>Treasurer Sponsors</SubHeading>

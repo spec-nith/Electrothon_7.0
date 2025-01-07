@@ -36,12 +36,12 @@ const judges = [
 
 export default function JudgesSection() {
   return (
-    <section id="judges" className="relative w-full min-h-screen md:h-screen md:overflow-hidden lg:h-screen lg:overflow-hidden">
+    <section id="judges" className="relative w-full md:overflow-hidden lg:overflow-hidden">
       {/* Content Container */}
-      <div className="relative w-full min-h-screen flex flex-col items-center justify-start pt-10 sm:pt-16 md:pt-8 lg:pt-8 pb-16 md:pb-0 lg:pb-0">
+      <div className="relative w-full flex flex-col items-center justify-start">
         {/* Title */}
         <h2
-          className={`${pirataOne.className} text-5xl sm:text-6xl md:text-7xl text-center text-white mb-8 sm:mb-10 md:mb-12 lg:mb-12 w-[80%] sm:w-[70%] md:w-[60%]`}
+          className={`${pirataOne.className} text-[50px] sm:text-[70px] md:text-[6rem] text-center text-white mb-8 sm:mb-10 md:mb-12 lg:mb-12 w-[80%] sm:w-[70%] md:w-[60%]`}
           style={{
             textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
           }}

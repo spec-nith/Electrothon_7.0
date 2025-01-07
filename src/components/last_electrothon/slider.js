@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import styles from "./slider.module.css";
 import data from "@/assets/last_electrothon_data/images"; // Adjust the import path as needed
+import { Pirata_One } from 'next/font/google';
 
 const Slider = ({ images }) => {
     return (
@@ -54,6 +55,11 @@ const Slider = ({ images }) => {
         </Swiper>
     );
 };
+const pirataOne = Pirata_One({
+    weight: '400',
+    subsets: ['latin'],
+    display: 'swap',
+});
 
 const DualSlider = () => {
     const imagePaths = Object.values(data).map((imagePath) => imagePath);
@@ -61,7 +67,12 @@ const DualSlider = () => {
     const row2Images = imagePaths.slice(9, 18);
 
     return (
-        <div className={styles.dualSlider}>
+        <div className={`${styles.dualSlider}`}>
+            <h1 
+            style={{
+                textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
+            }}
+            className={`${pirataOne.className} text-[50px] sm:text-[70px] md:text-[6rem] text-center text-white mb-0`}>Glimpse of Last Electrothon</h1>
             <Slider images={row1Images} />
             <Slider images={row2Images} />
         </div>

@@ -14,7 +14,7 @@ export default function Faqs() {
 
   return (
     <div
-      className="w-full px-4 sm:px-10 mt-20 text-center text-white md:px-20 xl:px-32"
+      className="w-full px-4 sm:px-10 text-center text-white md:px-20 xl:px-32"
       id="faq"
       style={{
         backgroundImage: "url('')",
@@ -22,12 +22,13 @@ export default function Faqs() {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         position: "relative", // Required for overlay
+        textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
       }}
     >
       {/* FAQ Heading */}
-      <div className="py-5">
+      <div className="">
         <h1
-          className="text-6xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold pirata-one-regular"
+          className="text-[50px] sm:text-[70px] md:text-[6rem] font-bold pirata-one-regular"
           style={{
             color: "#FFFFFF", // White color for the heading text
             textTransform: "uppercase",
@@ -61,9 +62,8 @@ export default function Faqs() {
               </AccordionHeader>
 
               <AccordionBody
-                className={`text-lg md:text-xl h-auto text-justify lg:text-left text-white rounded-xl p-6 transition-all duration-500 ease-in-out ${
-                  open === index ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                }`}
+                className={`text-lg md:text-xl h-auto text-justify lg:text-left text-white rounded-xl p-6 transition-all duration-500 ease-in-out ${open === index ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                  }`}
                 style={{
                   backgroundColor: "rgba(128, 71, 28, 0.7)", // Dark brown background with 70% opacity
                   fontFamily: "Jacques Francois",
@@ -105,9 +105,8 @@ export default function Faqs() {
                 </AccordionHeader>
 
                 <AccordionBody
-                  className={`text-lg md:text-xl h-auto text-justify lg:text-left text-white rounded-xl p-6 transition-all duration-500 ease-in-out ${
-                    open === index + initialQues.length ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                  }`}
+                  className={`text-lg md:text-xl h-auto text-justify lg:text-left text-white rounded-xl p-6 transition-all duration-500 ease-in-out ${open === index + initialQues.length ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                    }`}
                   style={{
                     backgroundColor: "rgba(128, 71, 28, 0.7)", // Dark brown background with 70% opacity
                     fontFamily: "Jacques Francois",
@@ -128,7 +127,7 @@ export default function Faqs() {
         <div className="flex items-center justify-center w-full">
           <button
             onClick={() => setLoadMore((prev) => !prev)} // Toggle the loadMore state
-            className="p-4 mt-4 mb-10 text-lg sm:text-xl md:text-2xl lg:text-3xl rounded-lg pirata-one-regular text-white bg-[#000039] border-2 border-[#D2A374] hover:bg-[#021D3B]"
+            className="p-4 mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl rounded-lg pirata-one-regular text-white bg-[#000039] border-2 border-[#D2A374] hover:bg-[#021D3B]"
           >
             {loadMore ? "Show Less" : "Show More"}
           </button>

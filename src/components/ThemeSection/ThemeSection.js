@@ -1,5 +1,14 @@
+'use client'
 import { Pirata_One } from "next/font/google";
 import ComingSoon from "../ComingSoon/ComingSoon";
+import "./style.css";
+import React, { useState } from "react";
+import Gallery from "./Gallary";
+import Tabs from "./Tab";
+import { motion } from "framer-motion";
+import { TitleText } from "../Tracks_new/CustomTexts";
+import { staggerContainer } from "../Tracks_new/motion";
+import styles from "../Tracks_new/style";
 
 const pirataOne = Pirata_One({
     weight: "400",
@@ -7,24 +16,40 @@ const pirataOne = Pirata_One({
     display: "swap",
 });
 
-export default function ThemeSection() {
-    return (
-        <section
-            id="theme"
-            className="relative w-full min-h-screen flex flex-col items-center justify-start pt-10 sm:pt-16 md:pt-8 lg:pt-8 pb-16 md:pb-0 lg:pb-0"
-        >
-            {/* Title */}
-            <h2
-                className={`${pirataOne.className} text-5xl sm:text-6xl md:text-7xl text-center text-white mb-8 sm:mb-10 md:mb-12 lg:mb-12 w-[80%] sm:w-[70%] md:w-[60%]`}
-                style={{
-                    textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
-                }}
-            >
-                Themes
-            </h2>
 
-            {/* Coming Soon */}
-            <ComingSoon />
-        </section>
-    );
+
+function ThemeSection() {
+  const [activeTab, setActiveTab] = useState(0);
+
+  const handleTabClick = (index) => {
+    setActiveTab(index);
+  };
+
+  return (
+    <div className="container mx-auto mt-8">
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        className={`${styles.innerWidth} mx-auto flex flex-col`}
+      >
+        <TitleText
+          title={
+            <>
+              <div className="looke flex justify-center mx-24 text-3xl lg:text-7xl font-bold text-white my-4 lg:my-6 font-[Oswald]">
+                THEMES
+              </div>
+            </>
+          }
+          textStyles="text-center"
+        />
+      </motion.div>
+      <Tabs activeTab={activeTab} onTabClick={handleTabClick} />
+      <Gallery activeTab={activeTab} />
+    </div>
+  );
 }
+
+export default ThemeSection;
+
