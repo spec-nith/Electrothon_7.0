@@ -105,3 +105,13 @@ img.lazy {
 img.lazy.loaded {
     opacity: 1;
 }
+
+/* Add this to styles/globals.css */
+.loader {
+    border-top-color: #3498db; /* Change this color to fit your theme */
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
