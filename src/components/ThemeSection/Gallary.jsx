@@ -2,6 +2,7 @@ import React from "react";
 import { tabData } from "./Tabs_Data";
 import Design_copmponent from "./opacity";
 import Image from "next/image";
+import "./style.css"; // Ensure this import is present
 
 const Gallery = ({ activeTab }) => {
   const filteredData = tabData[activeTab] || [];
@@ -18,10 +19,10 @@ const Gallery = ({ activeTab }) => {
         >
           {/* 1st div - Content */}
           <div className="flex flex-rows p-4">
-            <div className="flex flex-col gap-8 text-white">
-              <h1 className="text-xl md:text-2xl lg:text-4xl font-bold ">
-                {data.heading}
-              </h1>
+            <div className="flex flex-col gap-8 text-white ">
+            <h1 className="text-xl md:text-2xl lg:text-4xl font-bold drop-shadow-xl">
+              {data.heading}
+            </h1>
               <p className="text-white">{data.content}</p>
             </div>
           </div>
