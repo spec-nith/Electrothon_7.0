@@ -1,22 +1,28 @@
-import Image from 'next/image';
+import Image from "next/image";
 
-const Box = ({ companyLogos }) => {
+const Box = ({ companyLogos, size }) => {
   return (
-    <div className="flex flex-wrap justify-center gap-4 w-3/4 lg:h-64 md:h-64 sm:h-60 xs:h-56 rounded-lg verflow-hidden bg-transparent">
+    <div className="flex flex-wrap justify-center gap-4 w-3/4 rounded-lg overflow-hidden bg-transparent">
       {companyLogos.map((company, index) => (
         <div
           key={index}
-          className="relative w-full h-full flex justify-center items-center bg-transparent"
+          className="relative flex justify-center items-center bg-transparent"
+          style={{
+            width: size.width, // Set explicit width
+            height: size.height, // Set explicit height
+          }}
         >
           <Image
             src={company.logo}
             alt={`${company.name} Logo`}
-            layout="intrinsic"  
-            width={500}  
-            height={500} 
+            layout="instrinsic"
+            width={size.width} 
+            height={size.height} 
             objectFit="contain"
             className="rounded-lg"
-            style={{ marginTop: '50px' }}
+            style={{
+              marginTop:'90px',
+            }}
           />
         </div>
       ))}
