@@ -54,7 +54,7 @@ import climate from "@/assets/ThemeSection/climate.webp";
 export const tabData = [
   {
     id: "world-1",
-    heading: "FoodTech",
+    heading: "Travel and Tourism",
     content:
       "To preserve, to distribute, to cultivate, to grow Many are the problems when it comes to food. Why don't you try your spells to solve the problem",
     img1: foodtech,
