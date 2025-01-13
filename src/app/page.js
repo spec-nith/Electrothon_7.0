@@ -19,6 +19,7 @@ import ThemeSection from "@/components/ThemeSection/ThemeSection";
 import Theme from "@/components/Tracks_new/Track";
 import bg from '../assets/backgroundimg.jpg';
 import Loader from '@/components/Loader/Loader.js';
+import Challenges from '@/components/Challenges/Challenges.jsx';
 
 export default function Home() {
     const [loading, setLoading] = useState(true);
@@ -48,6 +49,7 @@ export default function Home() {
         <JudgesSection />
         <Theme />
         <Prize />
+        <Challenges />
         <Timeline />
         <Sponsors1 />
         <Sponsors2 />

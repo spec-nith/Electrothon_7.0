@@ -31,7 +31,7 @@ const Explore = () => {
         <div className="mt-12 mb-20 sm:mb-8 md:px-24 xl:px-2 xl:mx-24 2xl:mx-28 flex lg:flex-row flex-col min-h-[85vh] md:min-h-[50vh] gap-10 md:gap-8">
           {tabData.map((world, index) => (
             <ExploreCard
-              key={world.id}
+              key={index} // Use index as a fallback
               {...world}
               index={index}
               active={active}

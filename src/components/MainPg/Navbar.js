@@ -191,6 +191,7 @@ const Navbar = () => {
                 <Link href='#about' className='text-[18px]'>About us</Link>
                 <Link href='#judges' className='text-[18px]'>Judges</Link>
                 <Link href='#prizes' className='text-[18px]'>Prizes</Link>
+                <Link href='#challenges' className='text-[18px]'>Challenges</Link>
                 <Link href='#sponsors' className='text-[18px]'>Sponsors</Link>
                 <Link href='#testimonials' className='text-[18px]'>Testimonials</Link>
                 <Link href='#Organizers' className='text-[18px]'>Organizers</Link>
