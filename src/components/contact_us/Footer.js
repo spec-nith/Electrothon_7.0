@@ -214,7 +214,7 @@ export default function Footer() {
                 </a>
               </div>
             </div>
-            <div className="flex justify-center mt-5">
+            <div className="flex justify-center mt-5 mb-16">
               <button
                 type="button"
                 onClick={() =>
@@ -223,17 +223,19 @@ export default function Footer() {
                     "_blank"
                   )
                 }
-                className="relative text-white font-bold bg-gradient-to-r from-purple-700 to-blue-700 hover:from-blue-700 hover:to-purple-700 shadow-lg transition-all duration-300 px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-xl rounded-full"
+                className="relative text-white font-bold bg-gradient-to-r from-purple-700 to-blue-700 hover:from-blue-700 hover:to-purple-700 shadow-lg transition-all duration-300 px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-xl rounded-full w-full md:w-auto"
               >
                 <span className="absolute inset-0 blur-md opacity-75 bg-gradient-to-r from-purple-700 to-blue-700 rounded-full"></span>
                 <span className="relative">Electrothon 6.0</span>
               </button>
             </div>
+
           </div>
         </div>
-        <div className="flex justify-center pb-2 text-sm text-gray-400">
+        <div className="flex justify-center pb-2 text-sm text-gray-400 ">
           © 2025, SPEC NITH
         </div>
+
       </React.Fragment>
     );
   }

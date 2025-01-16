@@ -54,10 +54,11 @@ const MainPg = () => {
             style={{
               textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
             }}
-            className="text-[150px] px-3 pirata-one-regular lg:leading-none max-lg:text-[120px] max-md:text-[80px] max-sm:text-[70px] text-center"
+            className="text-[150px] px-3 pirata-one-regular lg:leading-none max-lg:text-[120px] max-md:text-[70px] max-sm:text-[40px] text-center tracking-widest"
           >
             ELECTROTHON 7.0
           </span>
+
           <span className="text-[50px] macondo-swash-caps-regular lg:leading-none max-lg:text-[40px] max-md:text-[30px] text-center">
             Colosseum of Code
           </span>
@@ -71,17 +72,17 @@ const MainPg = () => {
         <Devfolio_Button />
 
         <div className="flex justify-center items-center w-full">
-          <Image
+          {/* <Image
             className="max-lg:hidden max-md:w-[100px] max-lg:w-[120px]"
             src={hourglass}
             alt=""
             width={220}
-          />
-          <div 
-          style={{ backgroundImage: `url(${timebg.src})` }}
-          className="flex flex-col items-center justify-center md:h-[244px] md:w-[551px] sm:w-[500px] sm:h-[200px] w-[440px] h-[170px] bg-cover bg-center">
+          /> */}
+          <div
+            style={{ backgroundImage: `url(${timebg.src})` }}
+            className="flex flex-col items-center justify-center md:h-[244px] md:w-[551px] sm:w-[500px] sm:h-[200px] w-[440px] h-[170px] bg-cover bg-center">
             <div
-              className="md:text-[53px] text-[46px] island-moments-regular text-black leading-[35px] text-center"
+              className="md:text-[53px] text-[40px] island-moments-regular text-black leading-[35px] text-center"
             >
               Time Left To Register
             </div>
@@ -135,12 +136,12 @@ const MainPg = () => {
               /> */}
             </div>
           </div>
-          <Image
+          {/* <Image
             className="max-lg:hidden max-md:w-[100px] -scale-x-100 max-lg:w-[120px]"
             src={hourglass}
             alt=""
             width={220}
-          />
+          /> */}
         </div>
       </div>
     </div>
@@ -148,3 +149,5 @@ const MainPg = () => {
 };
 
 export default MainPg;
+
+

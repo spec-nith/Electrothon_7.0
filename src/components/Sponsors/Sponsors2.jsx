@@ -13,55 +13,48 @@ import xyzwhite from "../../assets/xyz-logo-white.png";
 
 const Sponsors2 = () => {
   return (
-    <div className="container w-full flex flex-col items-center mx-auto bg-transparent text-white">
-      <div className="container flex flex-col items-center bg-transparent">
-        {/* Nest content inside SubHeading */}
+    <div className="container w-full flex flex-col items-center mx-auto bg-transparent text-white px-4">
+      {/* Treasurer Sponsors Section */}
+      <div className="w-full flex flex-col items-center bg-transparent mb-12">
         <SubHeading>Treasurer Sponsors</SubHeading>
         <ComingSoon />
-        {/* <Box companyLogos={[{ logo: `${logo.src}` }]} /> */}
       </div>
-      <div className="container flex flex-col items-center bg-transparent ">
-        {/* Nest content inside SubHeading */}
+
+      {/* Chamberlain Sponsors Section */}
+      <div className="w-full flex flex-col items-center bg-transparent mb-12">
         <SubHeading>Chamberlain Sponsors</SubHeading>
-        <div className="mt-2">
-          <div className="flex space-x-32 items-center ">
+        <div className="mt-4">
+          <div className="flex flex-wrap justify-center gap-8">
             <Box
               companyLogos={[{ logo: SJVNLogo }]}
-              size={{ width: 180, height: 360 }}
+              size={{ width: 150, height: 320 }}
             />
             <Box
               companyLogos={[{ logo: xyzwhite }]}
-              size={{ width: 250, height: 320 }}
+              size={{ width: 200, height: 280 }}
             />
           </div>
-
         </div>
       </div>
-      <div className="container flex flex-col items-center bg-transparent mt-20 mb-8">
-        {/* Nest content inside SubHeading */}
+
+      {/* Travel Partner Section */}
+      <div className="w-full flex flex-col items-center bg-transparent mb-12">
         <SubHeading>Travel Partner</SubHeading>
         <Box
           companyLogos={[{ logo: EMTlogo }]}
-          size={{ width: 450, height: 320 }}
+          size={{ width: 400, height: 250 }}
         />
       </div>
-      <div className="container flex flex-col items-center bg-transparent mt-20 mb-8">
-        {/* Nest content inside SubHeading */}
-        <SubHeading>Media Partner</SubHeading>
-        <div className="mr-32">
-          <div className="flex items-center space-x-4 mt-2">
-            {/* Flex container for side-by-side logos */}
-            <Box
-              companyLogos={[{ logo: slidoicon }]}
-              size={{ width: 250, height: 360 }}
-            />
-            <Box
-              companyLogos={[{ logo: slidologo }]}
-              size={{ width: 350, height: 360 }}
-            />
-          </div>
-        </div>
 
+      {/* Media Partner Section */}
+      <div className="w-full flex flex-col items-center bg-transparent mb-4">
+        <SubHeading>Media Partner</SubHeading>
+        <div className="flex flex-wrap justify-center gap-4 ">
+          <Box
+            companyLogos={[{ logo: slidologo }]}
+            size={{ width: 300, height: 300 }}
+          />
+        </div>
       </div>
     </div>
   );
