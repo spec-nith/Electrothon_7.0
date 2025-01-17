@@ -246,7 +246,7 @@ const Navbar = () => {
       </div>
       <Link href="https://mlh.io/seasons/2025/events">
         <Image
-          className="absolute top-0 right-0 w-[50px] sm:w-[60px] lg:w-[100px] mr-1"
+          className="fixed top-0 right-1 sm:right-14 w-[50px] sm:w-[60px] lg:w-[100px] mr-1"
           width={100}
           src={mlh}
           alt=""
