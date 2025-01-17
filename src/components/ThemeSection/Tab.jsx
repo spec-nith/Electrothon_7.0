@@ -5,7 +5,7 @@ const Tabs = ({ activeTab, onTabClick }) => {
   const tabs = [
     "FoodTech",
     " Healthcare",
-    "Data Security and Blockchain",
+    "Cyber Security and Blockchain",
     "EdTech",
     "Open Innovation",
   ];

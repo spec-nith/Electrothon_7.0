@@ -33,7 +33,7 @@ const Prize = () => {
           style={{
             textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
           }}
-          className="text-white text-[50px] md:text-[70px] lg:text-[6rem] pirata-one-regular mb-8">
+          className="text-white text-[20px] md:text-[70px] lg:text-[4.5rem] pirata-one-regular mb-8">
           Prizes
         </h1>
 

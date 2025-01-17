@@ -54,7 +54,7 @@ const MainPg = () => {
             style={{
               textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
             }}
-            className="text-[150px] px-3 pirata-one-regular lg:leading-none max-lg:text-[120px] max-md:text-[70px] max-sm:text-[40px] text-center tracking-widest"
+            className="text-[110px] px-3 pirata-one-regular lg:leading-none max-lg:text-[100px] max-md:text-[70px] max-sm:text-[40px] text-center tracking-widest"
           >
             ELECTROTHON 7.0
           </span>

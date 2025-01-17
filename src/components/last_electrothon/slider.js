@@ -60,7 +60,7 @@ const DualSlider = () => {
             style={{
                 textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
             }}
-            className={`${pirataOne.className} text-[50px] sm:text-[70px] md:text-[6rem] text-center text-white mb-0`}>
+            className={`${pirataOne.className} text-[50px] sm:text-[70px] md:text-[4.5rem] text-center text-white mb-0`}>
                 Glimpse of Last Electrothon
             </h1>
             {/* First row: Left-scrolling */}

@@ -36,7 +36,7 @@ export const tabData = [
   ],
   [
     {
-      heading: " Data Security and Blockchain ",
+      heading: " Cyber Security and Blockchain ",
       content:
         "The defence systems of high levels of tech are in dire need of help. Blockchain is a new fruit in the world of techno-magic. Use it to help the defence systems!        ",
       img1: blockchain,

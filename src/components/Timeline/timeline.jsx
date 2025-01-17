@@ -86,7 +86,7 @@ const Timeline = () => {
           style={{
             textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
           }}
-          className="text-[50px] sm:text-[70px] md:text-[6rem] font-pirata">Timeline</h2>
+          className="text-[50px] sm:text-[70px] md:text-[4.5rem] font-pirata">Timeline</h2>
       </div>
 
       <div ref={timelineRef} className="relative w-full max-w-5xl px-8">

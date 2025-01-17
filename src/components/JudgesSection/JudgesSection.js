@@ -41,7 +41,7 @@ export default function JudgesSection() {
       <div className="relative w-full flex flex-col items-center justify-start">
         {/* Title */}
         <h2
-          className={`${pirataOne.className} text-[50px] sm:text-[70px] md:text-[6rem] text-center text-white mb-8 sm:mb-10 md:mb-12 lg:mb-12 w-[80%] sm:w-[70%] md:w-[60%]`}
+          className={`${pirataOne.className} text-[50px] sm:text-[70px] md:text-[4.5rem] text-center text-white mb-8 sm:mb-10 md:mb-12 lg:mb-12 w-[80%] sm:w-[70%] md:w-[60%]`}
           style={{
             textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
           }}

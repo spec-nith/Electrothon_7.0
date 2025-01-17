@@ -28,7 +28,7 @@ export default function Faqs() {
       {/* FAQ Heading */}
       <div className="">
         <h1
-          className="text-[50px] sm:text-[70px] md:text-[6rem] font-bold pirata-one-regular"
+          className="text-[50px] sm:text-[70px] md:text-[4.5rem] font-bold pirata-one-regular"
           style={{
             color: "#FFFFFF", // White color for the heading text
             textTransform: "uppercase",

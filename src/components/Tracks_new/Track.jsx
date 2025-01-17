@@ -19,7 +19,7 @@ const Explore = () => {
 
   return (
     <section className={`${styles.paddings}`} id="themes">
-        <div className="text-[50px] text-center sm:text-[70px] md:text-[6rem] font-bold pirata-one-regular"
+        <div className="text-[50px] text-center sm:text-[70px] md:text-[4.5rem] font-bold pirata-one-regular"
           style={{
             color: "#FFFFFF", // White color for the heading text
             textTransform: "uppercase",

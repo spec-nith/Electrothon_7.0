@@ -1,5 +1,5 @@
 import React from "react";
-import challengesData from "./challengesData";
+import {challengesData} from "./challengesData";
 import { motion } from "framer-motion";
 import { TitleText } from "../Tracks_new/CustomTexts";
 import { staggerContainer } from "../Tracks_new/motion";
@@ -23,7 +23,7 @@ const Challenges = () => {
               style={{
                 textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
               }}
-              className="text-white text-[50px] md:text-[70px] lg:text-[6rem] pirata-one-regular mb-8">
+              className="text-white text-[50px] md:text-[70px] lg:text-[4.5rem] pirata-one-regular mb-8">
               Challenges
             </h1>
             </>
