@@ -59,7 +59,13 @@ const MainPg = () => {
             ELECTROTHON 7.0
           </span>
 
-          <span className="text-[50px] macondo-swash-caps-regular lg:leading-none max-lg:text-[40px] max-md:text-[30px] text-center">
+          <span
+            className="max-sm:text-[20px] text-[50px] macondo-swash-caps-regular lg:leading-none max-lg:text-[40px] max-md:text-[30px] text-center text-white"
+            style={{
+              textShadow:
+                "0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ffffff",
+            }}
+          >
             Colosseum of Code
           </span>
         </div>
@@ -80,18 +86,14 @@ const MainPg = () => {
           /> */}
           <div
             style={{ backgroundImage: `url(${timebg.src})` }}
-            className="flex flex-col items-center justify-center md:h-[244px] md:w-[551px] sm:w-[500px] sm:h-[200px] w-[440px] h-[170px] bg-cover bg-center">
-            <div
-              className="md:text-[53px] text-[40px] island-moments-regular text-black leading-[35px] text-center"
-            >
+            className="flex flex-col items-center justify-center md:h-[244px] md:w-[551px] sm:w-[500px] sm:h-[200px] xs:w-[440px] xs:h-[170px] w-[346px] h-[153px] bg-cover bg-center"
+          >
+            <div className="md:text-[53px] text-[40px] island-moments-regular text-black leading-[35px] text-center">
               Time Left To Register
             </div>
             <div className="abhaya-libre-regular sm:leading-[55px] leading-[40px] lg:leading-[75px] flex w-full justify-center items-center">
               {/* <Image className="sm:hidden" src={hourglass} alt="" width={60} /> */}
-              <div
-
-                className="flex items-center justify-center text-[50px] text-[#113A4A] font-light sm:space-x-2 space-x-1"
-              >
+              <div className="flex items-center justify-center text-[50px] text-[#113A4A] font-light sm:space-x-2 space-x-1">
                 <span className="flex flex-col items-center justify-center">
                   <span className="sm:text-[70px] text-[50px]">
                     {timeLeft.days}
@@ -149,5 +151,3 @@ const MainPg = () => {
 };
 
 export default MainPg;
-
-
