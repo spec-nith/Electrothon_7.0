@@ -12,7 +12,7 @@ import { Pirata_One } from 'next/font/google';
 const Slider = ({ images, reverse }) => {
     return (
         <Swiper
-            slidesPerView={4}
+            slidesPerView="auto"
             spaceBetween={20}
             autoplay={{
                 delay: 0, 
@@ -23,6 +23,11 @@ const Slider = ({ images, reverse }) => {
             loop={true} 
             modules={[Autoplay]}
             className={styles.slider}
+            breakpoints={{
+                400: { slidesPerView: 2 }, // Mobile
+                700: { slidesPerView: 3 }, // Tablet
+                1024: { slidesPerView: 4 }, // Laptop/Desktop
+            }}
         >
             {images.map((image, index) => (
                 <SwiperSlide key={index} className={styles.imageWrapper}>
