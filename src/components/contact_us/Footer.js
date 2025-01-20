@@ -124,6 +124,14 @@ export default function Footer() {
                   Code of Conduct
                 </a>
                 <a
+                  href="http://hackp.ac/coc?utm_campaign=Member+Event+-+Onboarding+Reminder&utm_content=Onboarding+Needed&utm_medium=Email&utm_source=Customer.io "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex justify-center pb-2 font-sans text-sm text-gray-400 md:justify-start hover:text-gray-300"
+                >
+                MLH Code of Conduct
+                </a>
+                <a
                   href="https://same-uranium-0e7.notion.site/Hacker-s-Guide-to-ELECTROTHON-7-0-16893473857580e6bf18e445e04afd61"
                   target="_blank"
                   rel="noopener noreferrer"
