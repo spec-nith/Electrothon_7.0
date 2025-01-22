@@ -74,11 +74,9 @@ const AboutUs = () => {
                 </div>
 
                 {/* Background Rectangle */}
-                <div ref={rectangleRef} className="relative w-full max-w-[90vw] sm:max-w-[70vw] bg-[#03294F] opacity-80 rounded-[30px] sm:rounded-[50px] z-0 p-[4vh] mx-auto">
-                    
-                    {/* Content */}
+                <div ref={rectangleRef} className="relative w-full max-w-[90vw] sm:max-w-[70vw] bg-[#03294F] opacity-80 rounded-[30px] sm:rounded-[50px] z-0 p-[4vh] mx-auto border">
                     <div className="relative z-10 w-full flex items-center justify-center">
-                        <p ref={paragraphRef} className="font-humanistika text-base md:text-xl lg:text-2xl font-normal text-white leading-[1.3] text-center md:text-left">
+                        <p ref={paragraphRef} className="font-humanistika text-base md:text-xl lg:text-[28px] lg:leading-[36px] font-normal text-white leading-[1.3] text-center md:text-left">
                             Prepare to embark on an extraordinary journey into the Colosseum of Code as we unveil the 7th in-person edition of Electrothon! This year, under the banner of a medieval realm, we invite you to a battlefield where code meets creativity and innovation becomes legendary.
                             <br />
                             <br />
