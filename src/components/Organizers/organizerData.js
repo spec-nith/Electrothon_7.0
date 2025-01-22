@@ -35,7 +35,7 @@ import pratyush from "../../assets/organisers/secondYear/Pratyush Dixit.webp";
 import prince from "../../assets/organisers/secondYear/Prince.webp";
 import raghav from "../../assets/organisers/secondYear/Raghav Jatic.webp";
 import rajvil from "../../assets/organisers/secondYear/Rajvil Choudhary.webp";
-import riya from "../../assets/organisers/secondYear/Riya-Singh .webp";
+import riya from "../../assets/organisers/secondYear/Riya-Singh.webp";
 import sanidhya from "../../assets/organisers/secondYear/Sanidhya Jamwal.webp";
 import shanpreet from "../../assets/organisers/secondYear/Shanpreet Singh .webp";
 import shivansh from "../../assets/organisers/secondYear/Shivansh Bhatnagar.webp";
