@@ -5,6 +5,7 @@ import SubHeading from "./SubHeading";
 import logo from "../../assets/logos/th.jpg";
 import ComingSoon from "../ComingSoon/ComingSoon";
 import SJVNLogo from "../../assets/SJVNLogo.jpg";
+import DevdockLogo from "../../assets/Devdock.png";
 import EMTlogo from "../../assets/EMT.png";
 import slidoicon from "../../assets/slido_icon_black.png";
 import slidologo from "../../assets/slido_logo_white.png";
@@ -36,6 +37,17 @@ const Sponsors2 = () => {
           </div>
         </div>
       </div>
+
+
+      {/* Track Sponser Section */}
+      <div className="w-full flex flex-col items-center bg-transparent mb-12">
+        <SubHeading>Track Sponser</SubHeading>
+        <Box
+          companyLogos={[{ logo: DevdockLogo }]}
+          size={{ width: 400, height: 250 }}
+        />
+      </div>
+
 
       {/* Travel Partner Section */}
       <div className="w-full flex flex-col items-center bg-transparent mb-12">

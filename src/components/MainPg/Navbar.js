@@ -244,12 +244,24 @@ const Navbar = () => {
           {ContactIcon()}
         </Link>
       </div>
-      <Link href="https://mlh.io/seasons/2025/events">
+      <Link
+      className="z-50 block lg:w-[100px] sm:w-[60px] w-[40px] "
+        id="mlh-trust-badge"
+        href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=white"
+        target="_blank"
+        style={{
+          position: "fixed",
+          right: "5vw",
+          top: "0",
+        }}
+      >
         <Image
-          className="fixed top-0 right-1 sm:right-14 w-[50px] sm:w-[60px] lg:w-[100px] mr-1"
+        className="max-lg:w-[70px]"
+          src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg"
           width={100}
-          src={mlh}
-          alt=""
+          height={100}
+          alt="Major League Hacking 2025 Hackathon Season"
+          style={{ width: "100%" }}
         />
       </Link>
     </div>
