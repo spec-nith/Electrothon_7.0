@@ -28,11 +28,20 @@ const AboutUs = () => {
             <div className="relative flex flex-col items-center w-full ">
                 {/* Flex container for horses and title */}
                 <div className="flex items-center justify-center w-full mb-5">
-                    
+                    {/* Mirrored Horse Image on the left */}
+                    <Image
+                        src={horse.src}
+                        alt="Mirrored Horse Element"
+                        width={225} // Base width for larger screens
+                        height={180} // Base height for larger screens
+                        objectFit="cover"
+                        quality={100}
+                        className="opacity-100 transform scale-x-[-1] mr-4 w-[70px] md:w-[10%] lg:w-[10%]" // Responsive width
+                    />
                     
                     {/* About Us Title */}
                     <h2
-                        className={`${pirataOne.className} text-[50px] sm:text-[70px] md:text-[4.5rem] text-center text-white mb-0`}
+                        className={`${pirataOne.className} text-[50px] sm:text-[70px] md:text-[5.5rem] text-center text-white mb-0`}
                         style={{
                             textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
                         }}
@@ -40,7 +49,16 @@ const AboutUs = () => {
                         About Us
                     </h2>
                     
-                    
+                    {/* Normal Horse Image on the right */}
+                    <Image
+                        src={horse.src}
+                        alt="Horse Element"
+                        width={225} // Base width for larger screens
+                        height={180} // Base height for larger screens
+                        objectFit="cover"
+                        quality={100}
+                        className="opacity-100 ml-4 w-[70px] md:w-[10%] lg:w-[10%]" // Responsive width
+                    />
                 </div>
 
                 {/* Background Rectangle */}
