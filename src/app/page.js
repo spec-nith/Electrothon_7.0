@@ -17,7 +17,7 @@ import Organizers from "@/components/Organizers/Organizer";
 import Image from "next/image";
 import ThemeSection from "@/components/ThemeSection/ThemeSection";
 import Theme from "@/components/Tracks_new/Track";
-import bg from '../assets/backgroundimg.jpg';
+import bg from '../assets/backgroundimg.webp';
 import Loader from '@/components/Loader/Loader.js';
 import Challenges from '@/components/Challenges/Challenges.jsx';
 

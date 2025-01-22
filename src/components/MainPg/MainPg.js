@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import bg from "@/assets/backgroundimg.jpg";
+import bg from "@/assets/backgroundimg.webp";
 import Image from "next/image";
 import Navbar from "@/components/MainPg/Navbar";
 import Devfolio_Button from "./devfolio_button";

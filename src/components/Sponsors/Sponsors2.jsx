@@ -14,18 +14,18 @@ import xyzwhite from "../../assets/xyz-logo-white.png";
 
 const Sponsors2 = () => {
   return (
-    <div className="container w-full flex flex-col items-center mx-auto bg-transparent text-white px-4">
+    <div className="container w-full items-center mx-auto mt-0 bg-transparent text-white px-4">
       {/* Treasurer Sponsors Section */}
-      <div className="w-full flex flex-col items-center bg-transparent mb-12">
+      <div className="w-full flex flex-col items-center bg-transparent">
         <SubHeading>Treasurer Sponsors</SubHeading>
         <ComingSoon />
       </div>
 
       {/* Chamberlain Sponsors Section */}
-      <div className="w-full flex flex-col items-center bg-transparent mb-12">
+      <div className="w-full  items-center mt-24 bg-transparent">
         <SubHeading>Chamberlain Sponsors</SubHeading>
         <div className="mt-4">
-          <div className="flex flex-wrap justify-center gap-8">
+          <div className="flex flex-wrap flex-row justify-center gap-5">
             <Box
               companyLogos={[{ logo: SJVNLogo }]}
               size={{ width: 150, height: 320 }}
@@ -40,7 +40,7 @@ const Sponsors2 = () => {
 
 
       {/* Track Sponser Section */}
-      <div className="w-full flex flex-col items-center bg-transparent mb-12">
+      <div className="w-full flex flex-col items-center mt-10 bg-transparent">
         <SubHeading>Track Sponser</SubHeading>
         <Box
           companyLogos={[{ logo: DevdockLogo }]}
@@ -50,7 +50,7 @@ const Sponsors2 = () => {
 
 
       {/* Travel Partner Section */}
-      <div className="w-full flex flex-col items-center bg-transparent mb-12">
+      <div className="w-full flex flex-col items-center bg-transparent">
         <SubHeading>Travel Partner</SubHeading>
         <Box
           companyLogos={[{ logo: EMTlogo }]}
@@ -59,7 +59,7 @@ const Sponsors2 = () => {
       </div>
 
       {/* Media Partner Section */}
-      <div className="w-full flex flex-col items-center bg-transparent mb-4">
+      <div className="w-full flex flex-col items-center bg-transparent">
         <SubHeading>Media Partner</SubHeading>
         <div className="flex flex-wrap justify-center gap-4 ">
           <Box

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Box = ({ companyLogos, size }) => {
   return (
-    <div className="flex flex-wrap justify-center gap-4 w-3/4 rounded-lg overflow-hidden bg-transparent">
+    <div className="flex flex-wrap justify-center gap-4 w-72 rounded-lg overflow-hidden bg-transparent">
       {companyLogos.map((company, index) => (
         <div
           key={index}
@@ -20,9 +20,7 @@ const Box = ({ companyLogos, size }) => {
             height={size.height} 
             objectFit="contain"
             className="rounded-lg"
-            style={{
-              marginTop:'90px',
-            }}
+            
           />
         </div>
       ))}

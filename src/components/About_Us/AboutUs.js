@@ -1,7 +1,6 @@
 "use client"; // Ensure this is a client component
 
 import React, { useRef } from 'react';
-import bg from '@/assets/backgroundimg.jpg';
 import horse from '@/assets/About_Us/horse.webp';
 import Image from 'next/image';
 import { Pirata_One } from 'next/font/google';
@@ -23,33 +22,13 @@ const AboutUs = () => {
     return (
         <div id='about' className="relative w-full">
             {/* Background Layer */}
-            <div className="fixed inset-0 z-[-1] bg-[#091826]">
-                <div className="relative w-full h-full">
-                    <Image
-                        src={bg.src}
-                        alt="Background image"
-                        layout="fill"
-                        objectFit="cover"
-                        quality={100} // Optional: Adjust quality
-                        className="opacity-50" // Set image opacity
-                    />
-                </div>
-            </div>
+            
 
             {/* Page Content Wrapper */}
             <div className="relative flex flex-col items-center w-full ">
                 {/* Flex container for horses and title */}
                 <div className="flex items-center justify-center w-full mb-5">
-                    {/* Mirrored Horse Image on the left */}
-                    <Image
-                        src={horse.src}
-                        alt="Mirrored Horse Element"
-                        width={225} // Base width for larger screens
-                        height={180} // Base height for larger screens
-                        objectFit="cover"
-                        quality={100}
-                        className="opacity-100 transform scale-x-[-1] mr-4 w-[70px] md:w-[10%] lg:w-[13%]" // Responsive width
-                    />
+                    
                     
                     {/* About Us Title */}
                     <h2
@@ -61,16 +40,7 @@ const AboutUs = () => {
                         About Us
                     </h2>
                     
-                    {/* Normal Horse Image on the right */}
-                    <Image
-                        src={horse.src}
-                        alt="Horse Element"
-                        width={225} // Base width for larger screens
-                        height={180} // Base height for larger screens
-                        objectFit="cover"
-                        quality={100}
-                        className="opacity-100 ml-4 w-[70px] md:w-[10%] lg:w-[13%]" // Responsive width
-                    />
+                    
                 </div>
 
                 {/* Background Rectangle */}
