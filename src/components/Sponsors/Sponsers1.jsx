@@ -19,7 +19,7 @@ const Sponsors1 = () => {
       <div className="container flex flex-col items-center bg-transparent">
         {/* Nest the subheading content inside the SubHeading component */}
         <SubHeading>Chancellor Sponsors</SubHeading>
-        <Box companyLogos={[{ logo: chancellorWhite }]} size={{ width: 500, height: 400 }} />
+        <Box companyLogos={[{ logo: chancellorWhite }]} size={{ width: 300, height: 200 }} />
 
       </div>
     </div>

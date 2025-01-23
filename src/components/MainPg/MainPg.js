@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import bg from "@/assets/backgroundimg.jpg";
+import bg from "@/assets/backgroundimg.webp";
 import Image from "next/image";
 import Navbar from "@/components/MainPg/Navbar";
 import Devfolio_Button from "./devfolio_button";
@@ -49,7 +49,7 @@ const MainPg = () => {
     <div id="home" className="w-full lg:h-[90vh]">
       <Navbar />
       <div className="flex items-center justify-center sm:space-y-16 space-y-12 h-full flex-col">
-        <div className="flex w-full flex-col items-center justify-center">
+        <div className="flex w-full flex-col items-center sm:space-y-10 justify-center">
           <span
             style={{
               textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
@@ -58,9 +58,8 @@ const MainPg = () => {
           >
             ELECTROTHON 7.0
           </span>
-
           <span
-            className="max-sm:text-[20px] text-[50px] macondo-swash-caps-regular lg:leading-none max-lg:text-[40px] max-md:text-[30px] text-center text-white"
+            className="max-sm:text-[20px] text-[60px] macondo-swash-caps-regular lg:leading-none max-lg:text-[40px] max-md:text-[30px] text-center text-white"
             style={{
               textShadow:
                 "0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ffffff",
