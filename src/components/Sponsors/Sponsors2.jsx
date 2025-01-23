@@ -39,9 +39,9 @@ const Sponsors2 = () => {
       </div>
 
 
-      {/* Track Sponser Section */}
+      {/* Track Sponsor Section */}
       <div className="w-full flex flex-col items-center mt-10 bg-transparent">
-        <SubHeading>Track Sponser</SubHeading>
+        <SubHeading>Track Sponsor</SubHeading>
         <Box
           companyLogos={[{ logo: DevdockLogo }]}
           size={{ width: 400, height: 250 }}

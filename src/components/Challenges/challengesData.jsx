@@ -1,4 +1,4 @@
-import polygon from "@/assets/images/polygon.webp.png";
+import polygon from "../../assets/images/1.webp";
 
 export const challengesData = [
   {
