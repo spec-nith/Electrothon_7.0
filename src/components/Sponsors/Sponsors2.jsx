@@ -24,49 +24,58 @@ const Sponsors2 = () => {
       {/* Chamberlain Sponsors Section */}
       <div className="w-full  items-center mt-24 bg-transparent">
         <SubHeading>Chamberlain Sponsors</SubHeading>
-        <div className="mt-4">
-          <div className="flex flex-wrap flex-row justify-center gap-5">
+        <div className="mt-9">
+          <div className="flex flex-wrap justify-center flex-row gap-5">
             <Box
               companyLogos={[{ logo: SJVNLogo }]}
-              size={{ width: 150, height: 320 }}
+              size={{ width: "45vw", height: "25vh" }}
             />
             <Box
               companyLogos={[{ logo: xyzwhite }]}
-              size={{ width: 200, height: 280 }}
+              size={{ width: "45vw", height: "30vh" }}
             />
           </div>
         </div>
       </div>
 
-
       {/* Track Sponsor Section */}
-      <div className="w-full flex flex-col items-center mt-10 bg-transparent">
+      <div className="w-full  items-center mt-10 bg-transparent">
         <SubHeading>Track Sponsors</SubHeading>
-        <Box
-          companyLogos={[{ logo: DevdockLogo }]}
-          size={{ width: 400, height: 250 }}
-        />
+        <div className="mt-0">
+          <div className="flex flex-wrap justify-center flex-row gap-5">
+            <Box
+              companyLogos={[{ logo: DevdockLogo }]}
+              size={{ width: "60vw", height: "17vh" }}
+            />
+          </div>
+        </div>       
       </div>
 
-
       {/* Travel Partner Section */}
-      <div className="w-full flex flex-col items-center bg-transparent">
+      <div className="w-full  items-center mt-10 bg-transparent">
         <SubHeading>Travel Partner</SubHeading>
-        <Box
-          companyLogos={[{ logo: EMTlogo }]}
-          size={{ width: 400, height: 250 }}
-        />
+        <div className="mt-0">
+          <div className="flex flex-wrap justify-center flex-row gap-5">
+            <Box
+              companyLogos={[{ logo: EMTlogo }]}
+              size={{ width: "60vw", height: "23vh" }}
+            />
+          </div>
+        </div> 
       </div>
 
       {/* Media Partner Section */}
-      <div className="w-full flex flex-col items-center bg-transparent">
+      <div className="w-full  items-center mt-10 bg-transparent">
         <SubHeading>Media Partner</SubHeading>
-        <div className="flex flex-wrap justify-center gap-4 ">
-          <Box
-            companyLogos={[{ logo: slidologo }]}
-            size={{ width: 300, height: 300 }}
-          />
+        <div className="mt-0">
+          <div className="flex flex-wrap justify-center flex-row gap-5">
+            <Box
+              companyLogos={[{ logo: slidologo }]}
+              size={{ width: "60vw", height: "20vh" }}
+            />
+          </div>
         </div>
+        
       </div>
     </div>
   );
