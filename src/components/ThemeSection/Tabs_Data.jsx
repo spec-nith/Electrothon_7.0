@@ -1,10 +1,10 @@
 'use client'
-import blockchain from "@/assets/ThemeSection/blockchain.webp";
-import Edtech from "@/assets/ThemeSection/Edtech.webp";
-import health from "@/assets/ThemeSection/health.webp";
-import open_innov from "@/assets/ThemeSection/open_innov.webp";
-import foodtech from "@/assets/ThemeSection/foodtech.webp";
-import climate from "@/assets/ThemeSection/climate.webp";
+import blockchain from "../../assets/ThemeSection/blockchain.webp";
+import Edtech from "../../assets/ThemeSection/Edtech.webp";
+import health from "../../assets/ThemeSection/health.webp";
+import open_innov from "../../assets/ThemeSection/open_innov.webp";
+import foodtech from "../../assets/ThemeSection/foodtech.webp";
+import climate from "../../assets/ThemeSection/climate.webp";
 
 export const tabData = [
   [

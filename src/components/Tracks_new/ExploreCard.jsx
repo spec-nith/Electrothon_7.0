@@ -27,19 +27,24 @@ const ExploreCard = ({
       className="absolute w-full h-full object-cover rounded-[24px]"
     />
     {active !== id ? (
-      <h3 className="font-semibold sm:text-[26px] text-[18px] text-gray-100 absolute z-0 lg:bottom-10 text-center lg:origin-[0,0]">
-        {heading}
-      </h3>
-    ) : (
-      <div className="absolute bottom-0 p-4 md:p-6 3xl:p-10 flex justify-start w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-[24px] h-full">
-        <p className="font-normal text-sm md:text-base 3xl:text-xl leading-[20.16px] text-white">
-          {content}
-        </p>
-        <h2 className="mt-4 font-semibold text-lg md:text-2xl text-white absolute bottom-10">
-          {heading}
-        </h2>
-      </div>
-    )}
+  <>
+    {/* Add a semi-transparent black overlay */}
+    <div className="absolute w-full h-full bg-black opacity-30 rounded-[24px]"></div>
+    <h3 className="font-semibold sm:text-[26px] text-[18px] text-white absolute z-10 lg:bottom-10 text-center lg:origin-[0,0]">
+      {heading}
+    </h3>
+  </>
+) : (
+  <div className="absolute bottom-0 p-4 md:p-6 3xl:p-10 flex justify-start w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-[24px] h-full">
+    <p className="font-normal text-sm md:text-base 3xl:text-xl leading-[20.16px] text-white">
+      {content}
+    </p>
+    <h2 className="mt-4 font-semibold text-lg md:text-2xl text-white absolute bottom-10">
+      {heading}
+    </h2>
+  </div>
+)}
+
   </motion.div>
 );
 
