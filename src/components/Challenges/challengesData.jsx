@@ -1,6 +1,6 @@
 import polygon from "../../assets/images/polygon.png";
 import ethereum from "../../assets/images/ethereum.png";
-import aptos from "../../assets/images/aptos.png";
+import aptos from "../../assets/images/Aptos.png";
 
 export const challengesData = [
   {
