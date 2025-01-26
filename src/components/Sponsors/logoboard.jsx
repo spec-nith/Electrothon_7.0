@@ -6,7 +6,7 @@ const Box = ({ companyLogos, size }) => {
       {companyLogos.map((company, index) => (
         <div
           key={index}
-          className="relative flex justify-center items-center bg-transparent"
+          className="relative flex justify-center items-center bg-[#221e1e] bg-opacity-70 rounded-lg overflow-hidden"
           style={{
             width: size?.width || "20vw", // Default to 20% of the viewport width
             height: size?.height || "10vh", // Default to 10% of the viewport height
@@ -17,7 +17,7 @@ const Box = ({ companyLogos, size }) => {
             alt={`${company.name || "Company"} Logo`} // Fallback for alt text
             layout="fill" // Makes the image fill the parent container
             objectFit="contain" // Ensures the logo fits within the box
-            className="rounded-lg"
+            className="rounded-lg p-5"
           />
         </div>
       ))}

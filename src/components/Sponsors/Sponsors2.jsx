@@ -28,11 +28,11 @@ const Sponsors2 = () => {
           <div className="flex flex-wrap justify-center flex-row gap-5">
             <Box
               companyLogos={[{ logo: SJVNLogo }]}
-              size={{ width: "45vw", height: "25vh" }}
+              size={{ width: "45vw", height: "20vh" }}
             />
             <Box
               companyLogos={[{ logo: xyzwhite }]}
-              size={{ width: "45vw", height: "30vh" }}
+              size={{ width: "45vw", height: "20vh" }}
             />
           </div>
         </div>
@@ -46,6 +46,7 @@ const Sponsors2 = () => {
             <Box
               companyLogos={[{ logo: DevdockLogo }]}
               size={{ width: "60vw", height: "17vh" }}
+              
             />
           </div>
         </div>       
@@ -71,7 +72,8 @@ const Sponsors2 = () => {
           <div className="flex flex-wrap justify-center flex-row gap-5">
             <Box
               companyLogos={[{ logo: slidologo }]}
-              size={{ width: "60vw", height: "20vh" }}
+              size={{ width: "60vw", height: "18vh" }}
+              className="p-5"
             />
           </div>
         </div>
