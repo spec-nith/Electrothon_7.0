@@ -5,6 +5,8 @@ import { TitleText } from "../Tracks_new/CustomTexts";
 import { staggerContainer } from "../Tracks_new/motion";
 import styles from "../Tracks_new/style";
 import "./style.css";
+import Image from "next/image";
+import { ethereum } from "fontawesome";
 
 const Challenges = () => {
   return (
@@ -34,7 +36,7 @@ const Challenges = () => {
 
       <section
         id="challenges"
-        className="relative p-2 md:p-10 mx-auto w-100% md:w-[80%] mt-2 overflow-hidden bg-[#221e1e] bg-opacity-50 rounded-3xl"
+        className="relative p-4 md:p-10 mx-auto w-[95%] md:w-[80%] mt-2 overflow-hidden bg-[#221e1e] bg-opacity-50 rounded-3xl"
         data-aos="fade"
         data-aos-delay="50"
         data-aos-duration="500"
@@ -44,24 +46,20 @@ const Challenges = () => {
           {challengesData && challengesData.length > 0 ? (
             challengesData.map((challenge, index) => (
               <div
-                className="flex md:flex-row flex-col justify-center items-center md:m-4 mb-6 rounded-xl shadow-2xl p-4 text-white"
+                className="flex md:flex-row flex-col justify-between items-center rounded-xl shadow-2xl p-4 text-white"
                 key={challenge.key || index}
               >
-                <div className="float-left p-5 w-3/4 mr-auto h-[140px] flex justify-center items-center ">
+                <div className="float-left p-5 mr-auto h-[200px] flex justify-center w-full items-center ">
                   <picture>
-                    <img
+                    <Image
                       src={challenge.img}
-                      className={`object-cover ${
-                        index === 7
-                          ? "w-1/2 h-1/2 lg:w-full lg:h-full"
-                          : "w-full h-full"
-                      }`}
+                      className={`object-cover ${challenge.key === "Aptos" ? "w-[150px]" : "w-[300px]"} ${challenge.key === "polygon" ? "invert-0" : "invert"}`}
                       alt={challenge.key + "-challenge"}
                     />
                   </picture>
                 </div>
-                <div className="ml-auto w-3/4">
-                  <div className="flex flex-col justify-between h-full space-y-4">
+                <div className="ml-auto w-full">
+                  <div className="flex flex-col justify-between h-full space-y-4 max-sm:text-center">
                     <div className="px-3">
                       <ul className={challenge.list}>
                         {challenge.desc.map((element, descIndex) => (
