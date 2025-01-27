@@ -4,9 +4,11 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import smallLogo from "../../assets/small_logo.png";
 import ellipse61 from "../../assets/Ellipse 61.png";
+import ellipse from "../../assets/Ellipse.png";
+import ellipse2 from '../../assets/Ellipse2.png';
 
 const Timeline = () => {
-  const [logoPosition, setLogoPosition] = useState(15); // Start at 20%
+  const [logoPosition, setLogoPosition] = useState(0); // Start at 0%
   const timelineRef = useRef(null);
   const logoRef = useRef(null);
   const headingRef = useRef(null);
@@ -52,15 +54,15 @@ const Timeline = () => {
               const scrollPercentage =
                 easeOutQuad(scrolledDistance / timelineHeight) * 100;
 
-              // Clamp the logo position between 20 and 100
+              // Clamp the logo position between 0 and 100
               const newLogoPosition = Math.max(
-                20,
-                Math.min(100, 20 + scrollPercentage * 0.8)
+                0,
+                Math.min(100, scrollPercentage * 0.8)
               );
               setLogoPosition(newLogoPosition);
             }
           } else {
-            setLogoPosition(20); // Reset to 20% when heading is visible
+            setLogoPosition(0); // Reset to 0% when heading is visible
           }
         });
       },
@@ -91,7 +93,7 @@ const Timeline = () => {
 
       <div ref={timelineRef} className="relative w-full max-w-5xl px-8">
         {/* Vertical Line */}
-        <div className="absolute left-5 top-0 w-10 h-full bg-[#374151] rounded-lg">
+        <div className="absolute left-7 top-0 w-7 h-full bg-[#374151] rounded-lg">
           {/* Blue overlay */}
           <div
             className="absolute left-0 top-0 w-full bg-[#03294F] rounded-lg transition-all duration-300 ease-out"
@@ -102,23 +104,23 @@ const Timeline = () => {
         {/* Logo */}
         <div
           ref={logoRef}
-          className="absolute left-[1rem] w-12 h-12 flex justify-center items-center bg-transparent transition-all duration-300 ease-out"
+          className="absolute left-[1rem] w-14 h-14 flex justify-center items-center bg-transparent transition-all duration-300 ease-out"
           style={{
-            top: `${logoPosition}%`,
+            top: `calc(${logoPosition}% - 6px)`, // Adjust for centering
             transform: "translateY(-50%)",
           }}
         >
           <Image
-            src={ellipse61}
+            src={ellipse2}
             alt="Logo"
             fill
-            style={{ objectFit: "contain" }}
+            style={{ objectFit: "contain", zIndex:10 }}
           />
-          <Image
+          {/* <Image
             src={smallLogo}
             alt="Overlay Logo"
-            width={74}
-            height={66}
+            width={60}
+            height={60}
             className="absolute"
             style={{
               objectFit: "contain",
@@ -126,31 +128,32 @@ const Timeline = () => {
               left: "50%",
               transform: "translate(-50%, -50%)",
             }}
-          />
+          /> */}
         </div>
 
         {/* Timeline Items */}
         <div className="space-y-20">
-          <TimelineItem title="Registration Begins" date="lst Dec, 2024" />
-          <TimelineItem title="Participation Shortlist" date="Coming Soon" />
-          <TimelineItem title="Electrothon Main Event" date="7-9 March, 2025" />
+          <TimelineItem title="Registration Begins" date="lst Dec, 2024" detail="Registrations for Electrothon 7.0 starts"/>
+          <TimelineItem title="Participation Shortlist" date="Coming Soon" detail="Mails sent to accepted hackers" />
+          <TimelineItem title="Electrothon Main Event" date="7-9 March, 2025" detail="The Hacking Period"/>
         </div>
       </div>
     </div>
   );
 };
 
-const TimelineItem = ({ title, date }) => (
+const TimelineItem = ({ title, date, detail }) => (
   <div className="relative flex items-center">
-    <div className="absolute left-7 top-1/2 -translate-y-1/2 w-[3vw] h-2 bg-[#374151]"></div>
-    <div className="ml-20 bg-[#03294F] p-7 rounded-2xl shadow-lg w-5/6 relative opacity-75 h-[186px]">
+    <div className="absolute left-6 top-1/2 -translate-y-1/2 w-[3vw] h-2 bg-[#374151]"></div>
+    <div className="ml-20 bg-[#03294F] p-7 rounded-2xl shadow-lg w-5/6 relative opacity-90 h-[186px]">
       <h3
-        className="text-2xl sm:text-4xl relative pb-2"
+        className="text-2xl sm:text-4xl relative pb-5"
         style={{ fontFamily: "Jacques Francois" }}
       >
         {title}: <span className="text-xl sm:text-3xl">{date}</span>
         <span className="absolute bottom-[-8px] left-0 w-full h-0.5 bg-white rounded-full"></span>
-      </h3>
+      </h3><br></br>
+      <span className="font-sans text-lg sm:text-xl">{detail}</span>
     </div>
   </div>
 );
