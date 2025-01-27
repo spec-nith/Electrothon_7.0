@@ -10,7 +10,7 @@ import Comp7 from '../../assets/Sponsor/Comp7(green).mp4';
 import Comp8 from '../../assets/Sponsor/Comp8(purple).mp4';
 import Comp9 from '../../assets/Sponsor/Comp9(orange).mp4';
 
-const Box = ({ companyLogos, size }) => {
+const Eventpart = ({ companyLogos, size }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -24,7 +24,7 @@ const Box = ({ companyLogos, size }) => {
     >
       {/* Video always playing in the background */}
       <ReactPlayer 
-        url={Comp4} 
+        url={Comp6} 
         className="absolute inset-0" // Fill parent container
         playing={true} // Always play video
         loop={true} // Loop video for seamless playback
@@ -44,7 +44,7 @@ const Box = ({ companyLogos, size }) => {
       {companyLogos.map((company, index) => (
         <div
           key={index}
-          className="relative z-10 flex justify-center items-center rounded-2xl"
+          className="relative z-10 flex justify-center items-center"
           style={{
             width: size.width,
             height: size.height,
@@ -57,7 +57,7 @@ const Box = ({ companyLogos, size }) => {
             width={size.width}
             height={size.height}
             objectFit="contain"
-            className="rounded-lg"
+            
           />
         </div>
       ))}
@@ -65,4 +65,4 @@ const Box = ({ companyLogos, size }) => {
   );
 };
 
-export default Box;
+export default Eventpart;

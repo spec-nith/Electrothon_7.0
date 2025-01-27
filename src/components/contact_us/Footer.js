@@ -254,14 +254,14 @@ export default function Footer() {
         className="flex justify-center px-4 -mb-6 text-gray-800 shadow-lg"
       >
         <div className="container flex flex-col justify-center space-y-10 text-center">
-          <span
-            style={{
+        <h2
+          className="text-[50px] sm:text-[70px] md:text-[4.5rem] text-white text-center mb-6 md:mb-10"
+          style={{ fontFamily: "Pirata One, sans-serif" ,
               textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
-            }}
-            className="md:text-[6rem] sm:text-[70px] text-[50px] font-bold pirata-one-regular text-white"
-          >
+          }}
+        >
             Lets talk about everything!
-          </span>
+          </h2>
           <div className="flex flex-col items-center justify-center m-4 mt-10 md:mt-4 lg:flex-row lg:space-x-44">
             {/* Map for Mobile View */}
             <div className="block md:hidden" style={{ margin: "auto" }}>

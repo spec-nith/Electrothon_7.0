@@ -5,12 +5,16 @@ import SubHeading from "./SubHeading";
 import logo from "../../assets/logos/th.jpg";
 import ComingSoon from "../ComingSoon/ComingSoon";
 import SJVNLogo from "../../assets/SJVNLogo.jpg";
-import DevdockLogo from "../../assets/Devdock.png";
-import EMTlogo from "../../assets/EMT.png";
-import slidoicon from "../../assets/slido_icon_black.png";
-import slidologo from "../../assets/slido_logo_white.png";
-import xyzcolor from "../../assets/xyz-logo-color.png";
 import xyzwhite from "../../assets/xyz-logo-white.png";
+import slidologo from "../../assets/slido_logo_white.png";
+import EMTlogo from "../../assets/EMT.png";
+import EMTwhite from '../../assets/EMT_White.png';
+import DevdockLogo from "../../assets/Devdock.png";
+import Chamberlainv from "./Chamberlianv";
+import Chamberlainh from "./Chamberlianh";
+import TrackSpon from "./Trackspon";
+import TravelPart from "./TravelPart";
+import MediaPart from "./MediaPart";
 
 const Sponsors2 = () => {
   return (
@@ -25,14 +29,14 @@ const Sponsors2 = () => {
       <div className="w-full  items-center mt-24 bg-transparent">
         <SubHeading>Chamberlain Sponsors</SubHeading>
         <div className="mt-9">
-          <div className="flex flex-wrap justify-center flex-row gap-5">
-            <Box
+          <div className="flex flex-wrap justify-center flex-row gap-14">
+            <Chamberlainv
               companyLogos={[{ logo: SJVNLogo }]}
-              size={{ width: "45vw", height: "20vh" }}
+              size={{ width: "20vw", height: "20vh" }}
             />
-            <Box
+            <Chamberlainh
               companyLogos={[{ logo: xyzwhite }]}
-              size={{ width: "45vw", height: "20vh" }}
+              size={{ width: "40vw", height: "10vh" }}
             />
           </div>
         </div>
@@ -43,7 +47,7 @@ const Sponsors2 = () => {
         <SubHeading>Track Sponsors</SubHeading>
         <div className="mt-0">
           <div className="flex flex-wrap justify-center flex-row gap-5">
-            <Box
+            <TrackSpon
               companyLogos={[{ logo: DevdockLogo }]}
               size={{ width: "60vw", height: "17vh" }}
               
@@ -57,8 +61,8 @@ const Sponsors2 = () => {
         <SubHeading>Travel Partner</SubHeading>
         <div className="mt-0">
           <div className="flex flex-wrap justify-center flex-row gap-5">
-            <Box
-              companyLogos={[{ logo: EMTlogo }]}
+            <TravelPart
+              companyLogos={[{ logo: EMTwhite }]}
               size={{ width: "60vw", height: "23vh" }}
             />
           </div>
@@ -70,7 +74,7 @@ const Sponsors2 = () => {
         <SubHeading>Media Partner</SubHeading>
         <div className="mt-0">
           <div className="flex flex-wrap justify-center flex-row gap-5">
-            <Box
+            <MediaPart
               companyLogos={[{ logo: slidologo }]}
               size={{ width: "60vw", height: "18vh" }}
               className="p-5"
