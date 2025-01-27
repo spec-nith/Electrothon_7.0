@@ -24,7 +24,9 @@ module.exports = {
       screens: {
         xs: '360px', 
       },
-
+      screens: {
+        'custom': { min: '504px', max: '639px' }, // Custom range
+      },
     },
   },
   plugins: [],

@@ -133,7 +133,7 @@ const Timeline = () => {
 
         {/* Timeline Items */}
         <div className="space-y-20">
-          <TimelineItem title="Registration Begins" date="lst Dec, 2024" detail="Registrations for Electrothon 7.0 starts"/>
+          <TimelineItem title="Registration Begins" date="lst December 2024" detail="Registrations for Electrothon 7.0 starts"/>
           <TimelineItem title="Participation Shortlist" date="Coming Soon" detail="Mails sent to accepted hackers" />
           <TimelineItem title="Electrothon Main Event" date="7-9 March, 2025" detail="The Hacking Period"/>
         </div>
@@ -144,18 +144,27 @@ const Timeline = () => {
 
 const TimelineItem = ({ title, date, detail }) => (
   <div className="relative flex items-center">
-    <div className="absolute left-6 top-1/2 -translate-y-1/2 w-[3vw] h-2 bg-[#374151]"></div>
-    <div className="ml-20 bg-[#03294F] p-7 rounded-2xl shadow-lg w-5/6 relative opacity-90 h-[186px]">
-      <h3
-        className="text-2xl sm:text-4xl relative pb-5"
-        style={{ fontFamily: "Jacques Francois" }}
-      >
-        {title}: <span className="text-xl sm:text-3xl">{date}</span>
-        <span className="absolute bottom-[-8px] left-0 w-full h-0.5 bg-white rounded-full"></span>
-      </h3><br></br>
-      <span className="font-sans text-lg sm:text-xl">{detail}</span>
-    </div>
+  <div className="absolute left-6 top-1/2 -translate-y-1/2 w-[15vw] h-2 bg-[#374151]"></div>
+  <div className="ml-20 bg-[#03294F] p-7 rounded-2xl shadow-lg w-5/6 relative opacity-90 h-[186px]">
+    {/* Title */}
+    <h3
+      className="text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl relative pb-0 md:pb-6 sm:pb-8 lg:pb-5 custom:pb-7"
+      style={{ fontFamily: "Jacques Francois" }}
+    >
+      {title}:{" "}
+      <span className="text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
+        {date}
+      </span>
+      <span className="absolute bottom-[-8px] left-0 w-full h-0.5 bg-white rounded-full"></span>
+    </h3>
+    <br/>
+    {/* Details */}
+    <span className="font-sans text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+      {detail}
+    </span>
   </div>
+</div>
+
 );
 
 export default Timeline;
