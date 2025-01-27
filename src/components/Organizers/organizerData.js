@@ -210,11 +210,6 @@ export const secondYearOrganizers = [
     role: "Organizer (Second Year)",
   },
   {
-    image: pratyush,
-    name: "Pratyush Dixit",
-    role: "Organizer (Second Year)",
-  },
-  {
     image: prince,
     name: "Prince",
     role: "Organizer (Second Year)",
@@ -267,11 +262,6 @@ export const secondYearOrganizers = [
   {
     image: tejasv,
     name: "Tejasv Singh Hada",
-    role: "Organizer (Second Year)",
-  },
-  {
-    image: utkarsh,
-    name: "Utkarsh",
     role: "Organizer (Second Year)",
   },
   {
