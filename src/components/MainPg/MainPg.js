@@ -54,12 +54,12 @@ const MainPg = () => {
             style={{
               textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
             }}
-            className="text-[110px] px-3 pirata-one-regular lg:leading-none max-lg:text-[100px] max-md:text-[70px] max-sm:text-[40px] text-center tracking-widest"
+            className="lg:text-[110px] px-3 pirata-one-regular lg:leading-none md:text-[100px] sm:text-[70px] text-[40px] text-center tracking-widest"
           >
             ELECTROTHON 7.0
           </span>
           <span
-            className="max-sm:text-[20px] text-[60px] macondo-swash-caps-regular lg:leading-none max-lg:text-[40px] max-md:text-[30px] text-center text-white"
+            className="text-[20px] md:text-[40px] sm:text-[30px] lg:text-[60px] macondo-swash-caps-regular lg:leading-none  text-center text-white"
             style={{
               textShadow:
                 "0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ffffff",

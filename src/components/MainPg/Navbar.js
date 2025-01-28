@@ -190,7 +190,7 @@ const Navbar = () => {
         src={logo}
         alt=""
       />
-      <div className="z-50 h-[57px] max-lg:hidden max-xl:w-[800px] max-xl:scale-90 macondo-swash-caps-regular fixed bg-[#37393bd3] w-[1000px] rounded-[40px] shadow-sm shadow-white flex items-center justify-around">
+      <div className="z-50 h-[57px] w-[800px] lg:flex hidden max-xl:scale-90 macondo-swash-caps-regular fixed bg-[#37393bd3] xl:w-[1000px] rounded-[40px] shadow-sm shadow-white items-center justify-around">
         <Link href="#home" className="text-[18px]">
           Home
         </Link>
