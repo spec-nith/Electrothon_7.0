@@ -17,7 +17,7 @@ const SliderT = () => {
         navigation={false}
         pagination={false}
         autoplay={{
-          delay: 4000,
+          delay: 2000,
           disableOnInteraction: true,
         }}
         breakpoints={{
@@ -50,9 +50,9 @@ const SliderT = () => {
 
       >
         {Data.map((d, index) => (
-          <SwiperSlide className='bg-transparent 2xl:w-[85%]' key={index}>
+          <SwiperSlide className='bg-transparent  2xl:w-[85%]' key={index}>
             <div
-              className="flex flex-col items-center xs:w-[100%] sm:w-[85%] md:w-[85%] lg:w-[96%] xl:w-[97%] 2xl:max-w-[85%] xs:h-[69%] sm:h-[82%] md:h-[87%] bg-gradient-to-r from-[#272727] to-[#111111] lg:h-[78%] 2xl:h-[83%] mx-auto border border-[#909090] text-white rounded-xl xs:mt-16 sm:mt-8 md:mt-6 lg:mt-6 xl:mt-6 first-line:p-7"
+              className="flex flex-col items-center w-[95%] sm:w-[85%] md:w-[85%] lg:w-[96%] xl:w-[97%] 2xl:max-w-[85%] h-[69%] sm:h-[82%] md:h-[87%] bg-gradient-to-r from-[#272727] to-[#111111] lg:h-[78%] 2xl:h-[83%] mx-auto border border-[#909090] text-white rounded-xl xs:mt-16 sm:mt-8 md:mt-6 lg:mt-6 xl:mt-6 first-line:p-7"
               key={index}
             >
               {/* Profile Section */}
@@ -79,7 +79,7 @@ const SliderT = () => {
 
               {/* Post Section */}
               <div
-                className="flex xs:items-start xs:flex-col lg:flex-row xl:flex-row w-full h-3/4 bg-transparent"
+                className="flex xs:items-start flex-col lg:flex-row xl:flex-row w-full h-3/4 bg-transparent"
                 style={{ fontFamily: "Afacad, sans-serif" }}
               >
                 <Image
@@ -87,7 +87,7 @@ const SliderT = () => {
                   width={300}
                   height={300}
                   alt="Post"
-                  className=" xs:w-[88%] mx-5 mb-5 sm:w-[87%] md:w-[86%] lg:w-[55%] h-auto p-1 xs:center rounded-lg m-2 object-cover"
+                  className=" w-[88%] mx-5 mt-2 mb-5 sm:w-[87%] md:w-[86%] lg:w-[55%] h-auto bg-center rounded-lg object-cover"
                 />
                 <div className="xs:text-sm sm:text-lg md:text-lg lg:text-xl xl:text-xl 2xl:text-2xl text-left bg-transparent font-semibold lg:pt-1 xs:p-4 mx-5 mb-5 sm:p-2 md:p-2 lg:pl-6 pr-4 xl:pl-1 sm:w-[full] md:w-[full] lg:w-[34%]">
                   {d.content}
