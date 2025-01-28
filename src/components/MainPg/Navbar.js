@@ -184,7 +184,7 @@ const Navbar = () => {
   return (
     <div className="flex justify-center h-[80px] items-center">
       <Image
-        className="absolute max-lg:top-0 left-0 max-lg:w-[100px]"
+        className="absolute max-sm:w-[100px] max-lg:top-0 left-0 max-lg:w-[100px]"
         width={150}
         height={119}
         src={logo}
