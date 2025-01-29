@@ -11,7 +11,7 @@ import Comp8 from '../../assets/Sponsor/Comp8(purple).mp4';
 import Comp9 from '../../assets/Sponsor/Comp9(orange).mp4';
 import Comp10 from '../../assets/Sponsor/Comp10(aqua).mp4';
 
-const Chamberlainh = ({ companyLogos, size }) => {
+const Treasurer = ({ companyLogos, size }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -25,7 +25,7 @@ const Chamberlainh = ({ companyLogos, size }) => {
     >
       {/* Video always playing in the background */}
       <ReactPlayer 
-        url={Comp3} 
+        url={Comp10} 
         className="absolute inset-0" // Fill parent container
         playing={true} // Always play video
         loop={true} // Loop video for seamless playback
@@ -66,4 +66,4 @@ const Chamberlainh = ({ companyLogos, size }) => {
   );
 };
 
-export default Chamberlainh;
+export default Treasurer;

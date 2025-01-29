@@ -18,6 +18,7 @@ import Chamberlainh from "./Chamberlianh";
 import TrackSpon from "./Trackspon";
 import TravelPart from "./TravelPart";
 import MediaPart from "./MediaPart";
+import Treasurer from "./Treasurer";
 
 const Sponsors2 = () => {
   return (
@@ -27,15 +28,15 @@ const Sponsors2 = () => {
         <SubHeading>Treasurer Sponsors</SubHeading>
         <div className="mt-9">
           <div className="flex flex-wrap justify-center flex-row gap-14">
-            <Chamberlainh
+            <Treasurer
               companyLogos={[{ logo: polygon }]}
               size={{ width: "60vw", height: "10vh" }}
             />
-            <Chamberlainh
+            <Treasurer
               companyLogos={[{ logo: ethindia }]}
-              size={{ width: "20vw", height: "10vh" }}
+              size={{ width: "60vw", height: "10vh" }}
             />
-            <Chamberlainh
+            <Treasurer
               companyLogos={[{ logo: fold }]}
               size={{ width: "60vw", height: "10vh" }}
             />

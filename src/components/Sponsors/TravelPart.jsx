@@ -9,6 +9,7 @@ import Comp6 from '../../assets/Sponsor/Comp6(blue).mp4';
 import Comp7 from '../../assets/Sponsor/Comp7(green).mp4';
 import Comp8 from '../../assets/Sponsor/Comp8(purple).mp4';
 import Comp9 from '../../assets/Sponsor/Comp9(orange).mp4';
+import Comp10 from '../../assets/Sponsor/Comp10(aqua).mp4';
 
 const TravelPart = ({ companyLogos, size }) => {
   const [isHovered, setIsHovered] = useState(false);
