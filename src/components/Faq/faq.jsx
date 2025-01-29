@@ -133,7 +133,7 @@ export default function Faqs() {
         <div className="flex items-center justify-center w-full">
           <button
             onClick={() => setLoadMore((prev) => !prev)} // Toggle the loadMore state
-            className="p-4 mt-4 w-[280px] h-[92px] text-xl sm:text-2xl md:text-3xl lg:text-4xl rounded-[46px] pirata-one-regular font-bolder text-[#ffffff] bg-[#BC8741] border-2 border-[#7A5A35] hover:bg-[#D9B679] hover:text-[#3D3D3D]"
+            className="p-4 mt-4 w-60 h-20 text-xl sm:text-2xl md:text-3xl lg:text-4xl rounded-[46px] pirata-one-regular font-bolder text-[#ffffff] bg-[#BC8741] border-2 border-[#7A5A35] hover:bg-[#D9B679] hover:text-[#3D3D3D]"
           >
             {loadMore ? "Show Less" : "Show More"}
           </button>
