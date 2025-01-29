@@ -8,8 +8,11 @@ import SJVNLogo from "../../assets/SJVNLogo.jpg";
 import xyzwhite from "../../assets/xyz-logo-white.png";
 import slidologo from "../../assets/slido_logo_white.png";
 import EMTlogo from "../../assets/EMT.png";
-import EMTwhite from '../../assets/EMT_White.png';
+import EMTwhite from "../../assets/EMT_White.png";
 import DevdockLogo from "../../assets/Devdock.png";
+import ethindia from "../../assets/ethindia.png";
+import fold from "../../assets/fold.png";
+import polygon from "../../assets/polygon.png";
 import Chamberlainv from "./Chamberlianv";
 import Chamberlainh from "./Chamberlianh";
 import TrackSpon from "./Trackspon";
@@ -22,7 +25,22 @@ const Sponsors2 = () => {
       {/* Treasurer Sponsors Section */}
       <div className="w-full flex flex-col items-center bg-transparent">
         <SubHeading>Treasurer Sponsors</SubHeading>
-        <ComingSoon />
+        <div className="mt-9">
+          <div className="flex flex-wrap justify-center flex-row gap-14">
+            <Chamberlainh
+              companyLogos={[{ logo: polygon }]}
+              size={{ width: "60vw", height: "10vh" }}
+            />
+            <Chamberlainh
+              companyLogos={[{ logo: ethindia }]}
+              size={{ width: "20vw", height: "10vh" }}
+            />
+            <Chamberlainh
+              companyLogos={[{ logo: fold }]}
+              size={{ width: "60vw", height: "10vh" }}
+            />
+          </div>
+        </div>
       </div>
 
       {/* Chamberlain Sponsors Section */}
@@ -50,10 +68,9 @@ const Sponsors2 = () => {
             <TrackSpon
               companyLogos={[{ logo: DevdockLogo }]}
               size={{ width: "60vw", height: "17vh" }}
-              
             />
           </div>
-        </div>       
+        </div>
       </div>
 
       {/* Travel Partner Section */}
@@ -66,7 +83,7 @@ const Sponsors2 = () => {
               size={{ width: "60vw", height: "23vh" }}
             />
           </div>
-        </div> 
+        </div>
       </div>
 
       {/* Media Partner Section */}
@@ -81,7 +98,6 @@ const Sponsors2 = () => {
             />
           </div>
         </div>
-        
       </div>
     </div>
   );
