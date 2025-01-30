@@ -18,7 +18,7 @@ const MainPg = () => {
   });
 
   useEffect(() => {
-    const targetDate = new Date("2025-01-31T23:59:59").getTime();
+    const targetDate = new Date("2025-02-15T23:59:59").getTime();
 
     const updateTimer = () => {
       const now = new Date().getTime();
