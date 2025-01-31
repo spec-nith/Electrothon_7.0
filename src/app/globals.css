@@ -165,3 +165,31 @@ img.lazy.loaded {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
+
+@layer utilities {
+  @keyframes scrollX {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  @keyframes scrollXReverse {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-scrollX {
+    animation: scrollX var(--duration) linear infinite;
+  }
+  
+  .animate-scrollX-reverse {
+    animation: scrollXReverse var(--duration) linear infinite;
+  }
+}  

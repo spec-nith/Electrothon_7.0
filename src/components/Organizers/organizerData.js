@@ -29,21 +29,18 @@ import ishita from "../../assets/organisers/secondYear/Ishita Khanduja.webp";
 import jashnika from "../../assets/organisers/secondYear/jashnika.webp";
 import kanika from "../../assets/organisers/secondYear/Kanika Thakur.webp";
 import kritika from "../../assets/organisers/secondYear/Kritika Singh.webp";
-import kunalT from "../../assets/organisers/secondYear/Kunal Thakur.webp";
 import prajualit from "../../assets/organisers/secondYear/Prajualit Tickoo.webp";
-import pratyush from "../../assets/organisers/secondYear/Pratyush Dixit.webp";
 import prince from "../../assets/organisers/secondYear/Prince.webp";
 import raghav from "../../assets/organisers/secondYear/Raghav Jatic.webp";
 import rajvil from "../../assets/organisers/secondYear/Rajvil Choudhary.webp";
 import riya from "../../assets/organisers/secondYear/Riya-Singh.webp";
 import sanidhya from "../../assets/organisers/secondYear/Sanidhya Jamwal.webp";
-import shanpreet from "../../assets/organisers/secondYear/Shanpreet Singh .webp";
+import shanpreet from "../../assets/organisers/secondYear/Shanpreet Singh.webp";
 import shivansh from "../../assets/organisers/secondYear/Shivansh Bhatnagar.webp";
 import shreshth from "../../assets/organisers/secondYear/Shreshth Sharma.webp";
 import soham from "../../assets/organisers/secondYear/SohamJuneja.webp";
 import sona from "../../assets/organisers/secondYear/Sona Kerketta.webp";
 import tejasv from "../../assets/organisers/secondYear/Tejasv Singh Hada.webp";
-import utkarsh from "../../assets/organisers/secondYear/utkarsh.webp";
 import vaibhav from "../../assets/organisers/secondYear/Vaibhav Sharma.webp";
 import vyom from "../../assets/organisers/secondYear/vyom sharma.webp";
 
@@ -197,11 +194,6 @@ export const secondYearOrganizers = [
   {
     image: kritika,
     name: "Kritika Singh",
-    role: "Organizer (Second Year)",
-  },
-  {
-    image: kunalT,
-    name: "Kunal Thakur",
     role: "Organizer (Second Year)",
   },
   {

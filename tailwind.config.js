@@ -22,14 +22,49 @@ module.exports = {
         'gradient-radial': 'radial-gradient(circle, var(--tw-gradient-stops))',
       },
       screens: {
-        xs: '360px', 
-      },
-      screens: {
         'custom': { min: '504px', max: '639px' }, // Custom range
+        'xs': {min:'360px', max:'503px'},
       },
+      keyframes: {
+        scrollX: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" }
+        },
+        scrollY: {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(-100%)" }
+        }
+      },
+      animation: {
+        scrollX: "scrollX var(--duration) linear infinite",
+        scrollY: "scrollY var(--duration) linear infinite"
+      }
+            
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        '.mask-horizontal': {
+          '@apply [mask-image:linear-gradient(to_right,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_5%,rgba(0,0,0,1)_95%,rgba(0,0,0,0)_100%)]': {},
+          '@apply [mask-size:cover]': {},
+          '@apply [mask-repeat:no-repeat]': {},
+        },
+        '.mask-vertical': {
+          '@apply [mask-image:linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_20%,rgba(0,0,0,1)_80%,rgba(0,0,0,0)_100%)]': {},
+          '@apply [mask-size:cover]': {},
+          '@apply [mask-repeat:no-repeat]': {},
+        },
+        '.paused .animate-scrollX, .paused .animate-scrollY': {
+          'animation-play-state': 'paused !important',
+        },
+        '.reverse-x': {
+          'animation-direction': 'reverse',
+          'animation-delay': '-3s',
+        },
+      });
+    },
+  ],
 };
 
 
