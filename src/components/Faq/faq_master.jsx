@@ -23,10 +23,7 @@ const initialQues = [
       title: "Are there any sponsored challenges and API prizes?",
       content: "There will be API prizes from multiple sponsors to build a hack on top of their APIs or SDKs. Keep an eye out on the website and social media handles, where we'll be adding more ideas to hack on closer to the event. Teams are free to pick from them as well.",
     },
-    {
-      title: "Cost of participation in Hackathon?",
-      content: "Nothing. Registration for this voyage is completely free, thanks to our lunartastic sponsors.",
-    },
+    
   ];
   
   const moreQues = [
@@ -59,14 +56,7 @@ const initialQues = [
       title: "Cost of participation in Hackathon?",
       content: "Zero.Zip.Zilch.Nada.Nothing.Our wonderful sponsors have made registration absolutely free, turning it into a truly enchanting experience.",
     },
-    {
-      title: "What do I get from the event?",
-      content: "The winners will be awarded with enchanting monetary prizes.The short-listed students will be given recognition and a chance to show off their skills. Winners of the finest hacks created using the partner firms' APIs and SDKs will receive special prizes.",
-    },
-    {
-      title: "How does Electrothon promote diversity?",
-      content: "The Electrothon team believes that diversity is not just about women, it's about all of us. The Electrothon’s magical voyage supports competitors from different regions, religions, the specially-abled, beginners, people of colour, and everybody who dreams to embark on a spellbound journey.",
-    },
+    
   ];
   
   export { initialQues, moreQues };

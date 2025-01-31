@@ -52,7 +52,7 @@ export default function Faqs() {
                   color: "#FFFFFF", // White text for the question
                   borderBottom: open === index ? "2px solid #D2A374" : "none", // Golden border when open
                   transition: "border-bottom 0.3s ease", // Smooth transition for the effect
-                  boxShadow: "0 8px 12px #BC8741"
+                  boxShadow: "0px 6px 16px rgba(188, 135, 65, 0.35)"
                 
                 }}
                 className="my-4 p-6 text-center rounded-xl text-base font-normal border-none"
@@ -67,7 +67,7 @@ export default function Faqs() {
                 className={`text-lg md:text-xl h-auto text-justify lg:text-left text-white rounded-xl p-6 transition-all duration-500 ease-in-out ${open === index ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                   }`}
                 style={{
-                  backgroundColor: "#BC8741", // Dark brown background with 70% opacity
+                  backgroundColor: "#1E3A5F",
                   fontFamily: "Jacques Francois",
                   color: "#E0D6D1",
                   margin: "auto",
@@ -98,7 +98,7 @@ export default function Faqs() {
                     color: "#FFFFFF", // White text for the question
                     borderBottom: open === index + initialQues.length ? "2px solid #D2A374" : "none", // Golden border when open
                     transition: "border-bottom 0.3s ease", // Smooth transition for the effect
-                    boxShadow: "0 8px 12px #BC8741"
+                    boxShadow: "0px 6px 16px rgba(188, 135, 65, 0.35)"
                   
 
                   }}
@@ -114,12 +114,13 @@ export default function Faqs() {
                   className={`text-lg md:text-xl h-auto text-justify lg:text-left text-white rounded-xl p-6 transition-all duration-500 ease-in-out ${open === index + initialQues.length ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                     }`}
                   style={{
-                    backgroundColor: "#BC8741", // Dark brown background with 70% opacity
+                    backgroundColor: "#1E3A5F", 
                     fontFamily: "Jacques Francois",
                     color: "#E0D6D1",
                     margin: "auto",
                     width: "100%",
                     borderRadius: "1rem", // Rounded corners for a nicer shape
+                    
                   }}
                 >
                   {faq.content}
@@ -133,7 +134,7 @@ export default function Faqs() {
         <div className="flex items-center justify-center w-full">
           <button
             onClick={() => setLoadMore((prev) => !prev)} // Toggle the loadMore state
-            className="p-4 mt-4 w-60 h-20 text-xl sm:text-2xl md:text-3xl lg:text-4xl rounded-[46px] pirata-one-regular font-bolder text-[#ffffff] bg-[#BC8741] border-2 border-[#7A5A35] hover:bg-[#D9B679] hover:text-[#3D3D3D]"
+            className="p-3 mt-6 w-52 h-14 sm:w-56 sm:h-16 text-lg sm:text-xl md:text-2xl rounded-[46px] pirata-one-regular font-bold text-[#ffffff] bg-[#BC8741] border-2 border-[#7A5A35] hover:bg-[#D9B679] hover:text-[#3D3D3D] transition-all duration-300 ease-in-out"
           >
             {loadMore ? "Show Less" : "Show More"}
           </button>
