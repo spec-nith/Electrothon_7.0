@@ -1,5 +1,27 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import localFont from "next/font/local";
 import "./globals.css";
+
+const Mordred = localFont({
+  variable: "Mordred",
+  src: "./fonts/Mordred.ttf",
+  fontWeight: 400,
+});
+const strandall = localFont({
+  variable: "strandall",
+  src: "./fonts/strandall.ttf",
+  fontWeight: 400,
+});
+const Gatterys = localFont({
+  variable: "Gatterys",
+  src: "./fonts/Gatterys.ttf",
+  fontWeight: 400,
+});
+const inkwell = localFont({
+  variable: "inkwell",
+  src: "./fonts/inkwell-scribe.otf",
+  fontWeight: 400,
+});
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",

@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useRef, useEffect } from "react";
 import logo from "@/assets/speclogo.png";
 import mlh from "@/assets/mlhlogo.png";
 import Image from "next/image";
@@ -181,49 +182,93 @@ const Navbar = () => {
     </svg>
   );
 
+  const [hoverStyle, setHoverStyle] = useState({
+    left: 0,
+    width: 0,
+    opacity: 0,
+    activeIndex: null,
+  });
+  const navRef = useRef(null);
+  const linksRef = useRef([]);
+
+  useEffect(() => {
+    // Reset refs on render
+    linksRef.current = linksRef.current.slice(0, links.length);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const handleHover = (index) => {
+    if (linksRef.current[index] && navRef.current) {
+      const link = linksRef.current[index];
+      const navbarRect = navRef.current.getBoundingClientRect();
+      const linkRect = link.getBoundingClientRect();
+
+      setHoverStyle({
+        left: linkRect.left - navbarRect.left, // Position relative to navbar
+        width: linkRect.width,
+        opacity: 1,
+        activeIndex: index, // Store the index of the hovered link
+      });
+    }
+  };
+
+  const handleLeave = () => {
+    setHoverStyle((prev) => ({ ...prev, opacity: 0, activeIndex: null })); // Hide background
+  };
+
+  const links = [
+    { name: "Home", href: "#home" },
+    { name: "About Us", href: "#about" },
+    { name: "Judges", href: "#judges" },
+    { name: "Prizes", href: "#prizes" },
+    { name: "Challenges", href: "#challenges" },
+    { name: "Sponsors", href: "#sponsors" },
+    { name: "Testimonials", href: "#testimonials" },
+    { name: "Organizers", href: "#Organizers" },
+    { name: "FAQs", href: "#faq" },
+    { name: "Contact Us", href: "#contact" },
+  ];
+
   return (
     <div className="flex justify-center h-[80px] items-center">
       <Image
-        className="absolute max-sm:w-[100px] max-lg:top-0 left-0 max-lg:w-[100px]"
+        className="absolute sm:w-[150px] w-[100px] top-0 lg:top-auto left-0 max-lg:w-[100px]"
         width={150}
         height={119}
         src={logo}
         alt=""
       />
-      <div className="z-50 h-[57px] w-[800px] lg:flex hidden max-xl:scale-90 macondo-swash-caps-regular fixed bg-[#37393bd3] xl:w-[1000px] rounded-[40px] shadow-sm shadow-white items-center justify-around">
-        <Link href="#home" className="text-[18px]">
-          Home
-        </Link>
-        <Link href="#about" className="text-[18px]">
-          About us
-        </Link>
-        <Link href="#judges" className="text-[18px]">
-          Judges
-        </Link>
-        <Link href="#prizes" className="text-[18px]">
-          Prizes
-        </Link>
-        <Link href="#challenges" className="text-[18px]">
-          Challenges
-        </Link>
-        <Link href="#sponsors" className="text-[18px]">
-          Sponsors
-        </Link>
-        <Link href="#testimonials" className="text-[18px]">
-          Testimonials
-        </Link>
-        <Link href="#Organizers" className="text-[18px]">
-          Organizers
-        </Link>
-        <Link href="#faq" className="text-[18px]">
-          FAQs
-        </Link>
-        <Link href="#contact" className="text-[18px]">
-          Contact Us
-        </Link>
+      <div
+        ref={navRef}
+        className="z-50 h-[57px] w-[800px] lg:flex hidden max-xl:scale-90 bg-[#37393bd3] xl:w-[1000px] rounded-[40px] shadow-sm shadow-white items-center justify-around relative Mordred"
+        onMouseLeave={handleLeave} // Hide when leaving navbar
+      >
+        {/* Sliding Background */}
+        <div
+          className="absolute top-0 bottom-0 bg-white rounded-full my-2 transition-all duration-300"
+          style={{
+            left: hoverStyle.left,
+            width: hoverStyle.width,
+            opacity: hoverStyle.opacity,
+          }}
+        />
+
+        {links.map((link, index) => (
+          <Link
+            key={index}
+            href={link.href}
+            className={`text-[18px] px-4 py-2 relative z-10 transition-all duration-300 ${
+              hoverStyle.activeIndex === index ? "text-black" : "text-white"
+            }`}
+            ref={(el) => (linksRef.current[index] = el)} // Store ref for measuring
+            onMouseEnter={() => handleHover(index)}
+          >
+            {link.name}
+          </Link>
+        ))}
       </div>
       {/* <Image className='absolute right-2 top-0 max-lg:w-[60px]' width={100} src={mlh} alt="" /> */}
-      <div className="py-3 lg:hidden macondo-swash-caps-regular fixed bottom-2 z-50 bg-[#2b3846] w-[98%] rounded-2xl flex items-center justify-around">
+      <div className="py-3 lg:hidden fixed bottom-2 z-50 bg-[#2b3846] w-[98%] rounded-2xl flex items-center justify-around">
         <Link href="#home" className="text-[20px]">
           {homeIcon()}
         </Link>
@@ -245,7 +290,7 @@ const Navbar = () => {
         </Link>
       </div>
       <Link
-      className="z-50 block lg:w-[100px] sm:w-[60px] w-[40px] "
+        className="z-50 block lg:w-[100px] sm:w-[60px] w-[40px] "
         id="mlh-trust-badge"
         href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=white"
         target="_blank"
@@ -256,7 +301,7 @@ const Navbar = () => {
         }}
       >
         <Image
-        className="max-lg:w-[70px]"
+          className="max-lg:w-[70px]"
           src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg"
           width={100}
           height={100}

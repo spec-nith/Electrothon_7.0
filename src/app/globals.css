@@ -38,6 +38,58 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Mordred";
+  src: url("/app/fonts/Mordred.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "strandall";
+  src: url("/app/fonts/strandall.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gatterys";
+  src: url("/app/fonts/Gatterys.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "inkwell";
+  src: url("/app/fonts/inkwell-scribe.otf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.inkwell{
+  font-family: "inkwell";
+  font-weight: normal;
+  font-style: normal;
+}
+
+.Gatterys{
+  font-family: "Gatterys";
+  font-weight: normal;
+  font-style: normal;
+}
+
+.strandall{
+  font-family: "strandall";
+  font-weight: normal;
+  font-style: normal;
+}
+
+.Mordred{
+  font-family: "Mordred";
+  font-weight: normal;
+  font-style: normal;
+}
 
 @font-face {
   font-family: "Colder-Weather-Regular";
@@ -50,6 +102,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 
 .Italianno {
   font-family: "Italianno";

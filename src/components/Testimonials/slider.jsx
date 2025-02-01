@@ -50,7 +50,7 @@ const SliderT = () => {
 
       >
         {Data.map((d, index) => (
-          <SwiperSlide className='bg-transparent  2xl:w-[85%]' key={index}>
+          <SwiperSlide className='bg-transparent 2xl:w-[85%]' key={index}>
             <div
               className="flex flex-col items-center w-[95%] sm:w-[85%] md:w-[85%] lg:w-[96%] xl:w-[97%] 2xl:max-w-[85%] h-[69%] sm:h-[82%] md:h-[87%] bg-gradient-to-r from-[#272727] to-[#111111] lg:h-[78%] 2xl:h-[83%] mx-auto border border-[#909090] text-white rounded-xl xs:mt-16 sm:mt-8 md:mt-6 lg:mt-6 xl:mt-6 first-line:p-7"
               key={index}
