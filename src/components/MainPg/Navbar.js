@@ -194,7 +194,7 @@ const Navbar = () => {
   useEffect(() => {
     // Reset refs on render
     linksRef.current = linksRef.current.slice(0, links.length);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleHover = (index) => {
@@ -238,36 +238,39 @@ const Navbar = () => {
         src={logo}
         alt=""
       />
-      <div
-        ref={navRef}
-        className="z-50 h-[57px] w-[800px] lg:flex hidden max-xl:scale-90 bg-[#37393bd3] xl:w-[1000px] rounded-[40px] shadow-sm shadow-white items-center justify-around relative Mordred"
-        onMouseLeave={handleLeave} // Hide when leaving navbar
-      >
-        {/* Sliding Background */}
+      <div className="fixed z-50">
         <div
-          className="absolute top-0 bottom-0 bg-white rounded-full my-2 transition-all duration-300"
-          style={{
-            left: hoverStyle.left,
-            width: hoverStyle.width,
-            opacity: hoverStyle.opacity,
-          }}
-        />
+          ref={navRef}
+          className=" h-[57px] w-[800px] lg:flex hidden max-xl:scale-90 bg-[#37393bd3] xl:w-[1000px] rounded-[40px] shadow-sm shadow-white items-center justify-around relative Mordred"
+          onMouseLeave={handleLeave} // Hide when leaving navbar
+        >
+          {/* Sliding Background */}
+          <div
+            className="absolute top-0 bottom-0 bg-white rounded-full my-2 transition-all duration-300"
+            style={{
+              left: hoverStyle.left,
+              width: hoverStyle.width,
+              opacity: hoverStyle.opacity,
+            }}
+          />
 
-        {links.map((link, index) => (
-          <Link
-            key={index}
-            href={link.href}
-            className={`text-[18px] px-4 py-2 relative z-10 transition-all duration-300 ${
-              hoverStyle.activeIndex === index ? "text-black" : "text-white"
-            }`}
-            ref={(el) => (linksRef.current[index] = el)} // Store ref for measuring
-            onMouseEnter={() => handleHover(index)}
-          >
-            {link.name}
-          </Link>
-        ))}
+          {links.map((link, index) => (
+            <Link
+              key={index}
+              href={link.href}
+              className={`text-[18px] px-4 py-2 relative z-10 transition-all duration-300  ${
+                hoverStyle.activeIndex === index
+                  ? "text-black font-semibold"
+                  : "text-white"
+              } `}
+              ref={(el) => (linksRef.current[index] = el)}
+              onMouseEnter={() => handleHover(index)}
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
       </div>
-      {/* <Image className='absolute right-2 top-0 max-lg:w-[60px]' width={100} src={mlh} alt="" /> */}
       <div className="py-3 lg:hidden fixed bottom-2 z-50 bg-[#2b3846] w-[98%] rounded-2xl flex items-center justify-around">
         <Link href="#home" className="text-[20px]">
           {homeIcon()}
