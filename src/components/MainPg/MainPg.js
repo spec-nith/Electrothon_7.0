@@ -8,6 +8,7 @@ import "@/app/globals.css";
 import hourglass from "@/assets/hourglass.gif";
 import { useState, useEffect } from "react";
 import timebg from "@/assets/timebg.png";
+import PixelCard from "./pixelCard.js";
 
 const MainPg = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -82,61 +83,58 @@ const MainPg = () => {
             src={hourglass}
             alt=""
             width={220}
-          /> */}
-          <div
-            style={{ backgroundImage: `url(${timebg.src})` }}
-            className="flex flex-col items-center justify-center md:h-[244px] md:w-[551px] sm:w-[500px] sm:h-[200px] xs:w-[440px] xs:h-[170px] w-[346px] h-[153px] bg-cover bg-center"
-          >
-            <div className="md:text-[53px] text-[40px] island-moments-regular text-black leading-[35px] text-center">
-              Time Left To Register
-            </div>
-            <div className="abhaya-libre-regular sm:leading-[55px] leading-[40px] lg:leading-[75px] flex w-full justify-center items-center">
-              {/* <Image className="sm:hidden" src={hourglass} alt="" width={60} /> */}
-              <div className="flex items-center justify-center text-[50px] text-[#113A4A] font-light sm:space-x-2 space-x-1">
-                <span className="flex flex-col items-center justify-center">
-                  <span className="sm:text-[70px] text-[50px]">
-                    {timeLeft.days}
-                  </span>
-                  <span className="sm:text-[20px] text-[18px] lg:leading-[0px] leading-[15px]">
-                    Days
-                  </span>
-                </span>
-                <span>:</span>
-                <span className="flex flex-col items-center justify-center">
-                  <span className="sm:text-[70px] text-[50px] ">
-                    {timeLeft.hours}
-                  </span>
-                  <span className="sm:text-[20px] text-[18px] lg:leading-[0px] leading-[15px]">
-                    Hours
-                  </span>
-                </span>
-                <span>:</span>
-                <span className="flex flex-col items-center justify-center">
-                  <span className="sm:text-[70px] text-[50px] ">
-                    {timeLeft.minutes}
-                  </span>
-                  <span className="sm:text-[20px] text-[18px] lg:leading-[0px] leading-[15px]">
-                    Minutes
-                  </span>
-                </span>
-                <span>:</span>
-                <span className="flex flex-col items-center justify-center">
-                  <span className="sm:text-[70px] text-[50px] ">
-                    {timeLeft.seconds}
-                  </span>
-                  <span className="sm:text-[20px] text-[18px] lg:leading-[0px] leading-[15px]">
-                    Seconds
-                  </span>
-                </span>
+            /> */}
+
+          <div className="flex items-center rounded-lg justify-center">
+            <div className="relative w-[330px] h-[130px] sm:w-[400px] sm:h-[170px] md:w-[500px] md:h-[200px]">
+              <PixelCard
+                className="absolute inset-0 w-full h-full z-10 rounded-lg opacity-50"
+                variant="default"
+              />
+              <div className="absolute inset-0 flex flex-col items-center justify-center bg-transparent backdrop-blur-lg border-[#7777771c] border-[10px] rounded-lg z-0">
+                <div className="md:text-[53px] sm:text-[40px] text-[30px] strandall sm:tracking-widest tracking-wider text-white leading-none sm:leading-[35px] text-center">
+                  Time Left To Register
+                </div>
+
+                <div className="abhaya-libre-regular sm:leading-[55px] leading-[40px] md:scale-100 sm:scale-90 scale-75 lg:leading-[75px] flex w-full justify-center items-center">
+                  <div className="flex items-center justify-center text-[50px] text-[#c7aa73] font-light space-x-1">
+                    <span className="flex w-[90px] flex-col items-center justify-center">
+                      <span className="md:text-6xl sm:text-5xl text-4xl">
+                        {timeLeft.days}
+                      </span>
+                      <span className="border-[1px] border-[#c7aa73] w-[90%]"></span>
+                      <span className="text-lg">Days</span>
+                    </span>
+                    <span>:</span>
+                    <span className="flex flex-col items-center w-[90px] justify-center">
+                      <span className="md:text-6xl sm:text-5xl text-4xl">
+                        {timeLeft.hours}
+                      </span>
+                      <span className="border-[1px] border-[#c7aa73] w-[90%]"></span>
+                      <span className="text-lg">Hours</span>
+                    </span>
+                    <span>:</span>
+                    <span className="flex flex-col w-[90px] items-center justify-center">
+                      <span className="md:text-6xl sm:text-5xl text-4xl">
+                        {timeLeft.minutes}
+                      </span>
+                      <span className="border-[1px] border-[#c7aa73] w-[90%]"></span>
+                      <span className="text-lg">Minutes</span>
+                    </span>
+                    <span>:</span>
+                    <span className="flex w-[90px] flex-col items-center justify-center">
+                      <span className="md:text-6xl sm:text-5xl text-4xl">
+                        {timeLeft.seconds}
+                      </span>
+                      <span className="border-[1px] border-[#c7aa73] w-[90%]"></span>
+                      <span className="text-lg">Seconds</span>
+                    </span>
+                  </div>
+                </div>
               </div>
-              {/* <Image
-                className="sm:hidden -scale-x-100"
-                src={hourglass}
-                alt=""
-                width={60}
-              /> */}
             </div>
           </div>
+
           {/* <Image
             className="max-lg:hidden max-md:w-[100px] -scale-x-100 max-lg:w-[120px]"
             src={hourglass}
