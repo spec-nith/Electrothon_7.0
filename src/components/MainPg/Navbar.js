@@ -260,7 +260,7 @@ const Navbar = () => {
               href={link.href}
               className={`text-[18px] px-4 py-2 relative z-10 transition-all duration-300  ${
                 hoverStyle.activeIndex === index
-                  ? "text-black font-semibold"
+                  ? "text-black"
                   : "text-white"
               } `}
               ref={(el) => (linksRef.current[index] = el)}
