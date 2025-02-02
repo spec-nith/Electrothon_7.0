@@ -30,6 +30,7 @@ import bg10 from '../assets/backgroundimg10.jpg';
 
 import Loader from '@/components/Loader/Loader.js';
 import Challenges from '@/components/Challenges/Challenges.jsx';
+import Prizes from '@/components/Prizes/Prizes';
 
 export default function Home() {
     const [loading, setLoading] = useState(true);
@@ -58,7 +59,7 @@ export default function Home() {
         <Slider />
         <JudgesSection />
         <Theme />
-        <Prize />
+        <Prizes />
         <Challenges />
         <Timeline />
         <Sponsors1 />
