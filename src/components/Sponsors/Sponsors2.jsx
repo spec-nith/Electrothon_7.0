@@ -19,6 +19,7 @@ import TrackSpon from "./Trackspon";
 import TravelPart from "./TravelPart";
 import MediaPart from "./MediaPart";
 import Treasurer from "./Treasurer";
+import quillAi from "../../assets/quill_resized.webp";
 
 const Sponsors2 = () => {
   return (
@@ -54,9 +55,10 @@ const Sponsors2 = () => {
               size={{ width: "20vw", height: "20vh" }}
             />
             <Chamberlainh
-              companyLogos={[{ logo: xyzwhite }]}
-              size={{ width: "40vw", height: "10vh" }}
+              companyLogos={[{ logo: quillAi }]}
+              size={{ width: "20vw", height: "20vh" }}
             />
+
           </div>
         </div>
       </div>
@@ -69,6 +71,10 @@ const Sponsors2 = () => {
             <TrackSpon
               companyLogos={[{ logo: DevdockLogo }]}
               size={{ width: "60vw", height: "17vh" }}
+            />
+            <TrackSpon
+              companyLogos={[{ logo: xyzwhite }]}
+              size={{ width: "40vw", height: "10vh" }}
             />
           </div>
         </div>
