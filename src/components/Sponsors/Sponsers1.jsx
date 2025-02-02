@@ -8,6 +8,7 @@ import chancellorWhite from "../../assets/chancellorwhite.png";
 import devfolioWhite2x from "../../assets/devfolioWhite2x.png";
 import mlhw from '../../assets/mlh_white.png';
 import Eventpart from "./Eventpart";
+import GitHub from "../../assets/GitHub_Logo_White.png";
 
 const Sponsors1 = () => {
   return (
@@ -40,6 +41,10 @@ const Sponsors1 = () => {
           />
           <Box
             companyLogos={[{ logo: devfolioWhite2x }]}
+            size={{ width: "45vw", height: "30vh" }}
+          />
+          <Box
+            companyLogos={[{ logo: GitHub }]}
             size={{ width: "45vw", height: "30vh" }}
           />
         </div>
