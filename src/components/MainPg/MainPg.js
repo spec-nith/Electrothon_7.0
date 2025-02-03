@@ -60,7 +60,7 @@ const MainPg = () => {
             ELECTROTHON 7.0
           </span>
           <span
-            className="text-[20px] md:text-[40px] sm:text-[30px] lg:text-[60px] macondo-swash-caps-regular lg:leading-none  text-center text-white"
+            className="text-[20px] md:text-[40px] sm:text-[30px] lg:text-[60px] inkwell lg:leading-none  text-center text-white"
             style={{
               textShadow:
                 "0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ffffff",
