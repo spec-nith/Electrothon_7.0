@@ -67,7 +67,7 @@ const Sponsors2 = () => {
       <div className="w-full  items-center mt-10 bg-transparent">
         <SubHeading>Track Sponsors</SubHeading>
         <div className="mt-0">
-          <div className="flex flex-wrap justify-center flex-row gap-5">
+          <div className="flex flex-wrap justify-center flex-row gap-14">
             <TrackSpon
               companyLogos={[{ logo: DevdockLogo }]}
               size={{ width: "60vw", height: "17vh" }}

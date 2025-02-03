@@ -9,9 +9,7 @@ module.exports = {
     extend: {
       colors: {
         'bd': '#D9D9D9',
-      },
-      fontFamily: {
-        pirata: ['Pirata One', 'sans-serif'],
+        'deepblue': '#152433',
       },
       fontFamily: {
         pirata: ['"Pirata One"', 'cursive'],
@@ -23,7 +21,7 @@ module.exports = {
       },
       screens: {
         'custom': { min: '504px', max: '639px' }, // Custom range
-        'xs': {min:'360px', max:'503px'},
+        'xs': { min: '360px', max: '503px' },
       },
       keyframes: {
         scrollX: {
@@ -33,13 +31,17 @@ module.exports = {
         scrollY: {
           "0%": { transform: "translateY(0)" },
           "100%": { transform: "translateY(-100%)" }
-        }
+        },
+        borderSpin: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(-360deg)" },
+        },
       },
       animation: {
         scrollX: "scrollX var(--duration) linear infinite",
-        scrollY: "scrollY var(--duration) linear infinite"
+        scrollY: "scrollY var(--duration) linear infinite",
+        borderSpin: "borderSpin 2s linear infinite",
       }
-            
     },
   },
   plugins: [
@@ -66,5 +68,3 @@ module.exports = {
     },
   ],
 };
-
-
