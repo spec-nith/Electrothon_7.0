@@ -86,7 +86,7 @@ const Sponsors2 = () => {
         </div>
       </div>
       <div className="w-full  items-center mt-10 bg-transparent">
-        <SubHeading>Inkind Sponsors</SubHeading>
+        <SubHeading>In-kind Sponsors</SubHeading>
         <div className="mt-0">
           <div className="flex flex-wrap justify-center flex-row gap-5">
             <InkindSpon
@@ -114,12 +114,22 @@ const Sponsors2 = () => {
               size={{ width: "60vw", height: "18vh" }}
               className="p-5 "
             />
+            <InkindSpon
+              companyLogos={[{ logo: EMTwhite }]}
+              size={{ width: "60vw", height: "23vh" }}
+              className="p-5 "
+            />
+            <InkindSpon
+              companyLogos={[{ logo: slidologo }]}
+              size={{ width: "60vw", height: "23vh" }}
+              className="p-5 "
+            />
           </div>
         </div>
       </div>
 
       {/* Travel Partner Section */}
-      <div className="w-full  items-center mt-10 bg-transparent">
+      {/* <div className="w-full  items-center mt-10 bg-transparent">
         <SubHeading>Travel Partner</SubHeading>
         <div className="mt-0">
           <div className="flex flex-wrap justify-center flex-row gap-5">
@@ -129,10 +139,10 @@ const Sponsors2 = () => {
             />
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Media Partner Section */}
-      <div className="w-full  items-center mt-10 bg-transparent">
+      {/* <div className="w-full  items-center mt-10 bg-transparent">
         <SubHeading>Media Partner</SubHeading>
         <div className="mt-0">
           <div className="flex flex-wrap justify-center flex-row gap-5">
@@ -143,7 +153,7 @@ const Sponsors2 = () => {
             />
           </div>
         </div>
-      </div>
+      </div> */}
 
     </div>
   );

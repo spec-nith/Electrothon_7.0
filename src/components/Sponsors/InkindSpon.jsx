@@ -25,7 +25,7 @@ const InkindSpon = ({ companyLogos, size }) => {
     >
       {/* Video always playing in the background */}
       <ReactPlayer 
-        url={Comp10} 
+        url={Comp9} 
         className="absolute inset-0" // Fill parent container
         playing={true} // Always play video
         loop={true} // Loop video for seamless playback
@@ -58,7 +58,7 @@ const InkindSpon = ({ companyLogos, size }) => {
             width={size.width}
             height={size.height}
             objectFit="contain"
-            className="rounded-lg "//filter brightness-0 invert
+            className={`rounded-lg `}
           />
         </div>
       ))}
