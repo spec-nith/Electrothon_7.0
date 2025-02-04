@@ -20,6 +20,12 @@ import TravelPart from "./TravelPart";
 import MediaPart from "./MediaPart";
 import Treasurer from "./Treasurer";
 import quillAi from "../../assets/quill_resized.webp";
+import appwrite from "../../assets/Sponsor/appwrite.png";
+import InkindSpon from "./InkindSpon.jsx"; 
+import Protoio from "../../assets/Sponsor/Protoio.png";
+import theDevArmy from "../../assets/Sponsor/theDevArmy.png";
+import SolidityScan from "../../assets/Sponsor/SolidityScan.png";
+import CredShields from "../../assets/Sponsor/CredShields.png";
 
 const Sponsors2 = () => {
   return (
@@ -79,6 +85,38 @@ const Sponsors2 = () => {
           </div>
         </div>
       </div>
+      <div className="w-full  items-center mt-10 bg-transparent">
+        <SubHeading>Inkind Sponsors</SubHeading>
+        <div className="mt-0">
+          <div className="flex flex-wrap justify-center flex-row gap-5">
+            <InkindSpon
+              companyLogos={[{ logo: appwrite }]}
+              size={{ width: "60vw", height: "18vh" }}
+              className="p-5"
+            />
+            <InkindSpon
+              companyLogos={[{ logo: Protoio }]}
+              size={{ width: "60vw", height: "18vh" }}
+              className="p-5"
+            />
+            <InkindSpon
+              companyLogos={[{ logo: theDevArmy }]}
+              size={{ width: "60vw", height: "18vh" }}
+              className="p-5 "
+            />
+            <InkindSpon
+              companyLogos={[{ logo: SolidityScan }]}
+              size={{ width: "60vw", height: "18vh" }}
+              className="p-5 "
+            />
+            <InkindSpon
+              companyLogos={[{ logo: CredShields }]}
+              size={{ width: "60vw", height: "18vh" }}
+              className="p-5 "
+            />
+          </div>
+        </div>
+      </div>
 
       {/* Travel Partner Section */}
       <div className="w-full  items-center mt-10 bg-transparent">
@@ -106,6 +144,7 @@ const Sponsors2 = () => {
           </div>
         </div>
       </div>
+
     </div>
   );
 };

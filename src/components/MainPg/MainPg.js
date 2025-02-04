@@ -95,7 +95,6 @@ const MainPg = () => {
                 <div className="md:text-[53px] sm:text-[40px] text-[30px] strandall sm:tracking-widest tracking-wider text-white leading-none sm:leading-[35px] text-center">
                   Time Left To Register
                 </div>
-
                 <div className="abhaya-libre-regular sm:leading-[55px] leading-[40px] md:scale-100 sm:scale-90 scale-75 lg:leading-[75px] flex w-full justify-center items-center">
                   <div className="flex items-center justify-center text-[50px] text-[#c7aa73] font-light space-x-1">
                     <span className="flex w-[90px] flex-col items-center justify-center">
