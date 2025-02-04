@@ -62,7 +62,7 @@ const Sponsors2 = () => {
             />
             <Chamberlainh
               companyLogos={[{ logo: quillAi }]}
-              size={{ width: "20vw", height: "20vh" }}
+              size={{ width: "50vw", height: "20vh" }}
             />
 
           </div>
