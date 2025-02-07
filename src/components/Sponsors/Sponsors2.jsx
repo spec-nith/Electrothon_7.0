@@ -21,11 +21,12 @@ import MediaPart from "./MediaPart";
 import Treasurer from "./Treasurer";
 import quillAi from "../../assets/quill_resized.webp";
 import appwrite from "../../assets/Sponsor/appwrite.png";
-import InkindSpon from "./InkindSpon.jsx"; 
+import InkindSpon from "./InkindSpon.jsx";
 import Protoio from "../../assets/Sponsor/Protoio.png";
 import theDevArmy from "../../assets/Sponsor/theDevArmy.png";
 import SolidityScan from "../../assets/Sponsor/SolidityScan.png";
 import CredShields from "../../assets/Sponsor/CredShields.png";
+import Aptos from "../../assets/Sponsor/Aptos.png";
 
 const Sponsors2 = () => {
   return (
@@ -46,6 +47,10 @@ const Sponsors2 = () => {
             <Treasurer
               companyLogos={[{ logo: fold }]}
               size={{ width: "60vw", height: "10vh" }}
+            />
+            <Treasurer
+              companyLogos={[{ logo: Aptos }]}
+            size={{ width: "60vw", height: "10vh" }}
             />
           </div>
         </div>
