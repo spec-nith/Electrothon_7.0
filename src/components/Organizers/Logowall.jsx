@@ -68,7 +68,7 @@ function LogoWall({
             animationPlayState: isPaused ? "paused" : "running" // Ensures hover pause works
           }}
         >
-          {[...items, ...items].map((item, idx) => (
+          {[...items].map((item, idx) => (
             <Image
               key={idx}
               src={item.imgUrl}
