@@ -54,7 +54,7 @@ export default function OrganizerSlider({ organizers, direction = "rtl" }) {
           disableOnInteraction: false,
           reverseDirection: direction === "rtl",
         }}
-        speed={5000}
+        speed={4000}
         pagination={{
           clickable: true,
         }}
