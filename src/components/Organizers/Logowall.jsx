@@ -68,7 +68,7 @@ function LogoWall({
             animationPlayState: isPaused ? "paused" : "running" // Ensures hover pause works
           }}
         >
-          {[...items].map((item, idx) => (
+          {[...items, ...items, ...items, ...items, ...items, ...items, ...items, ...items, ...items].map((item, idx) => (
             <Image
               key={idx}
               src={item.imgUrl}
@@ -118,7 +118,7 @@ export default function OrganizersLogoWall() {
       direction="horizontal"
       pauseOnHover={true}
       size="clamp(5rem, 1rem + 1vmin, 50rem)"
-      duration="30s"
+      duration="180s"
       bgColor="transparent"
       bgAccentColor="transparent"
     />
@@ -127,7 +127,7 @@ export default function OrganizersLogoWall() {
       direction="horizontal"
       pauseOnHover={true}
       size="clamp(5rem, 30rem + 15vmin, 50rem)"
-      duration="50s"
+      duration="300s"
       bgColor="transparent"
       bgAccentColor="transparent"
     />
