@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-page-custom-font */
+import Head from "next/head";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -43,6 +44,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <title>Electrothon 7.0 - NITH</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content="Electrothon, Hackathon, SPEC NITH, NIT Hamirpur, Coding, Innovation, Electrothon 7.0, SPEC" />
+        <meta name="author" content="Team SPEC" />
+        <meta property="og:title" content="Electrothon 7.0 - Colosseum of Code" />
+        <meta property="og:description" content={metadata.description} />
+        <meta property="og:url" content="https://electrothon.nith.ac.in/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Electrothon 7.0 - NITH" />
+        <meta name="twitter:description" content={metadata.description} />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-title" content="Electrothon 7.0" />
         <link
           href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap"
           rel="stylesheet"
