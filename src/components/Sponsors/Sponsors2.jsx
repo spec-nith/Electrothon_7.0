@@ -27,6 +27,7 @@ import theDevArmy from "../../assets/Sponsor/theDevArmy.png";
 import SolidityScan from "../../assets/Sponsor/SolidityScan.png";
 import CredShields from "../../assets/Sponsor/CredShields.png";
 import Aptos from "../../assets/Sponsor/Aptos.png";
+import langdb from "@/assets/Sponsor/langdb.svg";
 
 const Sponsors2 = () => {
   return (
@@ -126,6 +127,11 @@ const Sponsors2 = () => {
             />
             <InkindSpon
               companyLogos={[{ logo: slidologo }]}
+              size={{ width: "60vw", height: "23vh" }}
+              className="p-5 "
+            />
+            <InkindSpon
+              companyLogos={[{ logo: langdb }]}
               size={{ width: "60vw", height: "23vh" }}
               className="p-5 "
             />
