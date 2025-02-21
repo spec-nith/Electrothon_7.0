@@ -28,6 +28,7 @@ import SolidityScan from "../../assets/Sponsor/SolidityScan.png";
 import CredShields from "../../assets/Sponsor/CredShields.png";
 import Aptos from "../../assets/Sponsor/Aptos.png";
 import langdb from "@/assets/Sponsor/langdb.svg";
+import loftWhite from "../../assets/Loft_White.png"
 
 const Sponsors2 = () => {
   return (
@@ -51,7 +52,7 @@ const Sponsors2 = () => {
             />
             <Treasurer
               companyLogos={[{ logo: Aptos }]}
-            size={{ width: "60vw", height: "10vh" }}
+              size={{ width: "60vw", height: "10vh" }}
             />
           </div>
         </div>
@@ -70,7 +71,10 @@ const Sponsors2 = () => {
               companyLogos={[{ logo: quillAi }]}
               size={{ width: "50vw", height: "20vh" }}
             />
-
+            <Chamberlainv
+              companyLogos={[{ logo: loftWhite }]}
+              size={{ width: "20vw", height: "20vh" }}
+            />
           </div>
         </div>
       </div>
@@ -165,7 +169,6 @@ const Sponsors2 = () => {
           </div>
         </div>
       </div> */}
-
     </div>
   );
 };
