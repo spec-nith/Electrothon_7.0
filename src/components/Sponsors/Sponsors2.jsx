@@ -29,6 +29,10 @@ import CredShields from "../../assets/Sponsor/CredShields.png";
 import Aptos from "../../assets/Sponsor/Aptos.png";
 import langdb from "@/assets/Sponsor/langdb.svg";
 import loftWhite from "../../assets/Loft_White.png"
+import mongo from "../../assets/images/MongoDB_White.png"
+import midnight from "../../assets/images/midnight.png"
+import streamlit from "../../assets/images/streamlit-logo-primary.png"
+import cf from "../../assets/images/CF_logo_horizontal_whitetype.png"
 
 const Sponsors2 = () => {
   return (
@@ -54,6 +58,23 @@ const Sponsors2 = () => {
               companyLogos={[{ logo: Aptos }]}
               size={{ width: "60vw", height: "10vh" }}
             />
+            <Treasurer
+              companyLogos={[{ logo: mongo }]}
+              size={{ width: "60vw", height: "10vh" }}
+            />
+            <Treasurer
+              companyLogos={[{ logo: midnight }]}
+              size={{ width: "60vw", height: "10vh" }}
+            />
+            <Treasurer
+              companyLogos={[{ logo: streamlit }]}
+              size={{ width: "60vw", height: "10vh" }}
+            />
+            <Treasurer
+              companyLogos={[{ logo: cf }]}
+              size={{ width: "60vw", height: "10vh" }}
+            />
+            
           </div>
         </div>
       </div>
