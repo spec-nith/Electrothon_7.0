@@ -92,6 +92,10 @@ const Sponsors2 = () => {
               companyLogos={[{ logo: quillAi }]}
               size={{ width: "50vw", height: "20vh" }}
             />
+            <Chamberlainh
+              companyLogos={[{ logo: DevdockLogo }]}
+              size={{ width: "50vw", height: "20vh" }}
+            />
             <Chamberlainv
               companyLogos={[{ logo: loftWhite }]}
               size={{ width: "20vw", height: "20vh" }}
@@ -100,22 +104,7 @@ const Sponsors2 = () => {
         </div>
       </div>
 
-      {/* Track Sponsor Section */}
-      <div className="w-full  items-center mt-10 bg-transparent">
-        <SubHeading>Track Sponsors</SubHeading>
-        <div className="mt-0">
-          <div className="flex flex-wrap justify-center flex-row gap-14">
-            <TrackSpon
-              companyLogos={[{ logo: DevdockLogo }]}
-              size={{ width: "60vw", height: "17vh" }}
-            />
-            <TrackSpon
-              companyLogos={[{ logo: xyzwhite }]}
-              size={{ width: "40vw", height: "10vh" }}
-            />
-          </div>
-        </div>
-      </div>
+      {/* In-Kind Sponsors Section */}
       <div className="w-full  items-center mt-10 bg-transparent">
         <SubHeading>In-kind Sponsors</SubHeading>
         <div className="mt-0">
@@ -137,6 +126,11 @@ const Sponsors2 = () => {
             />
             <InkindSpon
               companyLogos={[{ logo: SolidityScan }]}
+              size={{ width: "60vw", height: "18vh" }}
+              className="p-5 "
+            />
+            <InkindSpon
+              companyLogos={[{ logo: xyzwhite }]}
               size={{ width: "60vw", height: "18vh" }}
               className="p-5 "
             />
