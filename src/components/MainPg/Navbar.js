@@ -222,6 +222,7 @@ const Navbar = () => {
     { name: "Judges", href: "#judges" },
     { name: "Prizes", href: "#prizes" },
     { name: "Challenges", href: "#challenges" },
+    { name: "Timeline", href: "#timeline" },
     { name: "Sponsors", href: "#sponsors" },
     { name: "Testimonials", href: "#testimonials" },
     { name: "Organizers", href: "#Organizers" },

@@ -97,7 +97,7 @@ const Timeline = () => {
   }, [logoPosition, isScrolling, smoothPosition]);
 
   return (
-    <div className="relative bg-cover bg-center min-h-screen flex flex-col items-center justify-start text-white px-4 sm:px-6 md:px-8">
+    <div id="timeline" className="relative bg-cover bg-center min-h-screen flex flex-col items-center justify-start text-white px-4 sm:px-6 md:px-8">
       <div ref={headingRef} className="flex items-center mb-8 sm:mb-12">
         <h2
           style={{
