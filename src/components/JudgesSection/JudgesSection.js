@@ -5,8 +5,10 @@ import judge2Image from "../../assets/judges/judge2.png";
 import judge3Image from "../../assets/judges/judge3.png";
 import judge4Image from "../../assets/judges/judge4.png";
 import judge5Image from "../../assets/judges/judge5.png";
-import ComingSoon from "../ComingSoon/ComingSoon";
-
+import judge6Image from "../../assets/judges/judge6.png";
+import judge7Image from "../../assets/judges/judge7.png";
+import judge8Image from "../../assets/judges/judge8.png";
+import { useRef } from "react";
 
 const pirataOne = Pirata_One({
   weight: "400",
@@ -14,62 +16,74 @@ const pirataOne = Pirata_One({
   display: "swap",
 });
 
-const LinkedInIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="currentColor"
-  >
-    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+const LeftArrowIcon = () => (
+  <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 8L8 12M8 12L12 16M8 12H16M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 22 12 12 22C6.47715 22 2 17.5228 2 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+const RightArrowIcon = () => (
+  <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 16L16 12M16 12L12 8M16 12H8M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 2 12 12 2C22 6.47715 22 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
 const judges = [
-  { id: 1, color: "#37375E", image: judge1Image },
-  { id: 2, color: "#782A2B", image: judge2Image },
-  { id: 3, color: "#3E6E7C", image: judge3Image },
-  { id: 4, color: "#002E78", image: judge4Image },
-  { id: 5, color: "#D0A022", image: judge5Image },
+  { id: 1, name: "Megha Arora", color: "#37375E", image: judge1Image, linkedin: "https://www.linkedin.com/in/devrelmegha/" },
+  { id: 2, name: "Sachin Jha", color: "#782A2B", image: judge2Image, linkedin: "https://www.linkedin.com/in/sachin-jha-/" },
+  { id: 3, name: "Shekhar Patel", color: "#3E6E7C", image: judge3Image, linkedin: "https://www.linkedin.com/in/shekhar-patel-149bb0224" },
+  { id: 4, name: "Himank Varshney", color: "#002E78", image: judge4Image, linkedin: "https://www.linkedin.com/in/varhimank/" },
+  { id: 5, name: "Devansh Sood", color: "#D0A022", image: judge5Image, linkedin: "https://www.linkedin.com/in/sood2105/" },
+  { id: 6, name: "Dhiraj Kumar", color: "#5E2D79", image: judge6Image, linkedin: "https://www.linkedin.com/in/dhiraj-kumar-71620b45/" },
+  { id: 7, name: "Vikrant Khedkar", color: "#1B4D3E", image: judge7Image, linkedin: "https://www.linkedin.com/in/vikrant-khedkar/" },
+  { id: 8, name: "Aman Kr. Poddar", color: "#AA4A44", image: judge8Image, linkedin: "https://www.linkedin.com/in/amanpoddar10/" },
 ];
 
 export default function JudgesSection() {
+  const scrollRef = useRef(null);
+
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      const scrollAmount = 250;
+      scrollRef.current.scrollBy({ left: direction === "left" ? -scrollAmount : scrollAmount, behavior: "smooth" });
+    }
+  };
+
   return (
-    <section id="judges" className="relative w-full md:overflow-hidden lg:overflow-hidden">
-      {/* Content Container */}
+    <section id="judges" className="relative w-full overflow-hidden">
       <div className="relative w-full flex flex-col items-center justify-start">
-        {/* Title */}
         <h2
           className={`${pirataOne.className} text-[50px] sm:text-[70px] md:text-[4.5rem] text-center text-white mt-3 mb-8 sm:mb-10 md:mb-12 lg:mb-12 w-[80%] sm:w-[70%] md:w-[60%]`}
-          style={{
-            textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
-          }}
+          style={{ textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)" }}
         >
           Our Judges and Mentors
         </h2>
-          <ComingSoon />
-        {/* Judges Grid */}
-        {/* <div className="flex flex-col items-center justify-center gap-8 mt-4 w-full px-4 md:grid md:grid-cols-5 md:grid-rows-2 md:gap-y-5 md:gap-x-4 md:max-w-7xl lg:grid lg:grid-cols-5 lg:grid-rows-2 lg:gap-y-5 lg:gap-x-4 lg:max-w-7xl"> */}
-          {/* Top row - two judges */}
-          {/* <div className="md:col-start-2 md:col-span-1 md:translate-x-1/2 lg:translate-x-1/2"> */}
-            {/* <JudgeCard judge={judges[0]} /> */}
-          {/* </div> */}
-          {/* <div className="md:col-start-4 md:col-span-1 md:-translate-x-1/2 lg:-translate-x-1/2"> */}
-            {/* <JudgeCard judge={judges[1]} /> */}
-          {/* </div> */}
-
-          {/* Bottom row - three judges */}
-          {/* <div className="md:col-start-1 md:col-span-1 md:self-end md:translate-x-3/4 lg:translate-x-3/4"> */}
-            {/* <JudgeCard judge={judges[2]} /> */}
-          {/* </div> */}
-          {/* <div className="md:col-start-2 md:col-span-3 md:self-end"> */}
-            {/* <JudgeCard judge={judges[3]} /> */}
-          {/* </div> */}
-          {/* <div className="md:col-start-5 md:col-span-1 md:self-end md:-translate-x-3/4 lg:-translate-x-3/4"> */}
-            {/* <JudgeCard judge={judges[4]} /> */}
-          {/* </div> */}
-        {/* </div> */}
+        
+        <div className="relative w-full flex items-center justify-center">
+          <button
+            className="absolute left-2 md:left-5 lg:left-8 bg-transparent text-white z-10 opacity-50 hover:opacity-100"
+            onClick={() => scroll("left")}
+          >
+            <LeftArrowIcon />
+          </button>
+          
+          <div
+            ref={scrollRef}
+            className="flex overflow-x-auto scrollbar-hide w-full max-w-6xl space-x-16 px-8 justify-start"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {judges.map((judge) => (
+              <JudgeCard key={judge.id} judge={judge} />
+            ))}
+          </div>
+          
+          <button
+            className="absolute right-2 md:right-5 lg:right-8 bg-transparent text-white z-10 opacity-50 hover:opacity-100"
+            onClick={() => scroll("right")}
+          >
+            <RightArrowIcon />
+          </button>
+        </div>
       </div>
     </section>
   );
@@ -77,41 +91,19 @@ export default function JudgesSection() {
 
 function JudgeCard({ judge }) {
   return (
-    <div className="flex flex-col items-center justify-center space-y-4">
-      {/* Profile Image Container */}
-      <div className="relative w-40 h-40 sm:w-60 sm:h-60 md:w-40 md:h-40 lg:w-48 lg:h-48">
-        <div
-          className="absolute inset-0 rounded-full"
-          style={{ backgroundColor: judge.color }}
-        />
-        {judge.image && (
-          <div className="absolute inset-0 overflow-hidden rounded-full">
-            <Image
-              src={judge.image}
-              alt={`Judge ${judge.id}`}
-              fill
-              sizes="(max-width: 640px) 160px, (max-width: 768px) 144px, (max-width: 1024px) 192px, 192px"
-              className="object-cover"
-            />
-          </div>
-        )}
-      </div>
-
-      {/* Colored Rectangle */}
-      <div
-        className="w-40 sm:w-48 md:w-36 lg:w-48 h-1 mt-2"
-        style={{ backgroundColor: judge.color }}
-      />
-
-      {/* LinkedIn Icon */}
-      <div className="mt-2 flex justify-center">
-        <div
-          className="w-[50px] h-[50px] flex items-center justify-center"
-          style={{ color: judge.color }}
-        >
-          <LinkedInIcon />
+    <div className="flex flex-col items-center justify-center space-y-6">
+      <a href={judge.linkedin} target="_blank" rel="noopener noreferrer">
+        <div className="relative w-44 h-44 sm:w-64 sm:h-64 md:w-44 md:h-44 lg:w-52 lg:h-52">
+          <div className="absolute inset-0 rounded-full" style={{ backgroundColor: judge.color }} />
+          {judge.image && (
+            <div className="absolute inset-0 overflow-hidden rounded-full">
+              <Image src={judge.image} alt={judge.name} fill className="object-cover" />
+            </div>
+          )}
         </div>
-      </div>
+      </a>
+      <p className="text-white text-lg font-semibold text-center">{judge.name}</p>
+      <div className="w-44 sm:w-52 md:w-40 lg:w-52 h-1 mt-2" style={{ backgroundColor: judge.color }} />
     </div>
   );
 }
