@@ -8,7 +8,7 @@ import { leadOrganizers } from "./organizerData";
 
 export default function Organizers() {
   return (
-    <div className="bg-transparent relative w-full h-auto text-center items-center px-4 md:px-16 lg:px-32">
+    <div id = "Organizers" className="bg-transparent relative w-full h-auto text-center items-center px-4 md:px-16 lg:px-32">
       
       {/* Lead Organizers Section */}
       <h2
