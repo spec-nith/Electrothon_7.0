@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 // Event schedule data
 const dayData = {
@@ -15,12 +15,12 @@ const dayData = {
     { "Event": "Dinner", "Timing": "7:45 PM", "Venue": "Mess" }
   ],
   "DAY 2": [
-    { "Event": "BreakFast", "Timing": "8:00 AM", "Venue": "Mess" },
-    { "Event": "Hacking phase I", "Timing": "9:00 AM", "Venue": "New Lecture Hall" },
-    { "Event": "Mentor Shift Active", "Timing": "10:00 AM- 11:30 AM", "Venue": "New Lecture Hall" },
-    { "Event": "DevRelSquad Workshop", "Timing": "11:30 AM- 12:15 AM", "Venue": "New Lecture Hall" },
+    { "Event": "Breakfast", "Timing": "8:00 AM", "Venue": "Mess" },
+    { "Event": "Hacking Phase I", "Timing": "9:00 AM", "Venue": "New Lecture Hall" },
+    { "Event": "Mentor Shift Active", "Timing": "10:00 AM - 11:30 AM", "Venue": "New Lecture Hall" },
+    { "Event": "DevRelSquad Workshop", "Timing": "11:30 AM - 12:15 AM", "Venue": "New Lecture Hall" },
     { "Event": "Lunch", "Timing": "12:20 PM - 2:00 PM", "Venue": "Mess" },
-    { "Event": "Hacking Phase 2", "Timing": "2:00 PM - 3:00 PM", "Venue": "New Lecture Hall" },
+    { "Event": "Hacking Phase II", "Timing": "2:00 PM - 3:00 PM", "Venue": "New Lecture Hall" },
     { "Event": "Mentors Shift 2", "Timing": "2:30 PM", "Venue": "New Lecture Hall" },
     { "Event": "MLH Mini event/talk", "Timing": "3:00 PM - 4:00 PM", "Venue": "New Lecture Hall" },
     { "Event": "Evaluation Phase 1", "Timing": "4:30 PM", "Venue": "New Lecture Hall" },
@@ -40,7 +40,6 @@ const dayData = {
 };
 
 const ScrollingTextShow = () => {
-  const [hoveredEvent, setHoveredEvent] = useState(null);
   const scrollContainerRef = useRef(null);
 
   // Ensure scroll starts at the leftmost position on mount
@@ -50,71 +49,72 @@ const ScrollingTextShow = () => {
     }
   }, []);
 
-  const handleMouseEnter = (item) => {
-    setHoveredEvent(item);
+  const fadeIn = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
   };
 
-  const handleMouseLeave = () => {
-    setHoveredEvent(null);
+  const slideIn = {
+    hidden: { opacity: 0, x: -50 },
+    show: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } }
   };
 
   const createScrollingContainer = (events) => (
-    <motion.ul className="flex flex-col space-y-3 min-h-full w-[300px]">
+    <motion.ul 
+      variants={fadeIn}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+      className="flex flex-col space-y-3 min-h-full w-[300px]"
+    >
       {events.map((item, index) => (
-        <li
+        <motion.li
           key={index}
-          onMouseEnter={() => handleMouseEnter(item)}
-          onMouseLeave={handleMouseLeave}
           className="w-full cursor-pointer p-3 text-center text-sm md:text-base font-semibold bg-gradient-to-b from-[rgba(0,0,57,0.7)] to-[rgba(2,29,59,0.7)] text-white rounded-lg shadow-xl border-b-2 border-[#D2A374] transition-all"
         >
           <div className="pb-3">{item.Event}</div>
-
-          {/* Tooltip for event details */}
-          {hoveredEvent && hoveredEvent.Event === item.Event && (
-            <AnimatePresence>
-              <motion.div
-                key="tooltip"
-                className="w-full py-3 rounded-lg bg-transparent"
-                initial={{ opacity: 0, height: "auto" }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <p className="text-center font-normal">Time: {hoveredEvent.Timing}</p>
-                <p className="text-center font-normal">Venue: {hoveredEvent.Venue}</p>
-              </motion.div>
-            </AnimatePresence>
-          )}
-        </li>
+          <p className="text-center font-normal">Time: {item.Timing}</p>
+          <p className="text-center font-normal">Venue: {item.Venue}</p>
+        </motion.li>
       ))}
     </motion.ul>
   );
 
   const SliderItem = ({ children, day }) => (
-    <div className="w-[300px] flex-shrink-0 flex flex-col items-center snap-start">
+    <motion.div
+      variants={slideIn}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+      className="w-[300px] flex-shrink-0 flex flex-col items-center snap-start"
+    >
       <h2 className="text-white text-lg md:text-[40px] font-bold mt-5 mb-5">{day}</h2>
       {children}
-    </div>
+    </motion.div>
   );
 
   return (
     <div className="relative w-full max-w-full flex flex-col items-center justify-center">
       {/* Title */}
-      <h1
+      <motion.h1
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
         style={{ textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)" }}
         className="w-full py-4 md:py-6 text-center text-xl md:text-6xl font-pirata text-white"
       >
         Run of Show
-      </h1>
+      </motion.h1>
 
       {/* Horizontal Scrollable Container */}
       <div
-        ref={scrollContainerRef}
-        className="w-full overflow-x-auto flex items-start justify-start lg:justify-center scrollbar-hide scroll-smooth snap-x snap-mandatory"
-      >
-        <div className="flex space-x-10 px-5 min-h-screen max-w-max">
+  ref={scrollContainerRef}
+  className="w-full overflow-x-auto flex items-start justify-start lg:justify-center scrollbar-hide scroll-smooth snap-x snap-mandatory"
+>
+
+        <div className="flex space-x-10 scrollbar-hide px-5 min-h-screen max-w-max">
           {Object.keys(dayData).map((day) => (
-            <div key={day} className="overflow-y-visible flex items-start justify-center">
+            <div key={day} className="overflow-y-visible scrollbar-hide flex items-start justify-center">
               <SliderItem day={day}>{createScrollingContainer(dayData[day])}</SliderItem>
             </div>
           ))}

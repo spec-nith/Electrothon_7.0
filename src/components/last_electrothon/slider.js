@@ -2,80 +2,97 @@
 
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules"; // Update this import
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/autoplay"; // If you want additional autoplay styles
 import Image from "next/image";
-import "swiper/css";
+import { motion } from "framer-motion";
 import styles from "./slider.module.css";
-import data from "@/assets/last_electrothon_data/images"; 
-import { Pirata_One } from 'next/font/google';
+import data from "@/assets/last_electrothon_data/images";
+import { Pirata_One } from "next/font/google";
 
 const Slider = ({ images, reverse }) => {
-    return (
-        <Swiper
-            slidesPerView="auto"
-            spaceBetween={20}
-            autoplay={{
-                delay: 0, 
-                disableOnInteraction: false, 
-                reverseDirection: reverse, 
-            }}
-            speed={5000} 
-            loop={true} 
-            modules={[Autoplay]} // Make sure Autoplay is correctly imported and passed
-            className={styles.slider}
-            breakpoints={{
-                400: { slidesPerView: 2 }, // Mobile
-                700: { slidesPerView: 3 }, // Tablet
-                1024: { slidesPerView: 4 }, // Laptop/Desktop
-            }}
-        >
-            {images.map((image, index) => (
-                <SwiperSlide key={index} className={styles.imageWrapper}>
-                    <Image
-                        src={image}
-                        alt={`Image ${index + 1}`}
-                        style={{ objectFit: "cover" }}
-                        width={400}
-                        height={400}
-                        className={styles.image}
-                        loading={index < 4 ? "eager" : "lazy"}
-                        placeholder="blur"
-                        blurDataURL="/path-to-blur-placeholder.jpg"
-                    />
-                </SwiperSlide>
-            ))}
-        </Swiper>
-    );
+  return (
+    <Swiper
+      slidesPerView={3} // Show more images at once
+      spaceBetween={15} // Small gap between images
+      autoplay={{
+        delay: 0,
+        disableOnInteraction: false,
+        reverseDirection: reverse,
+      }}
+      speed={5000}
+      loop={true}
+      modules={[Autoplay]}
+      className="w-full !px-0"
+      breakpoints={{
+        400: { slidesPerView: 3 }, // Mobile
+        700: { slidesPerView: 5 }, // Tablet
+        1024: { slidesPerView: 6 }, // Desktop
+      }}
+    >
+      {images.map((image, index) => (
+        <SwiperSlide key={index} className="w-full flex justify-center">
+          <Image
+            src={image}
+            alt={`Image ${index + 1}`}
+            width={350} // Keep previous image size
+            height={350}
+            className="object-cover rounded-xl border border-white shadow-lg"
+            loading={index < 4 ? "eager" : "lazy"}
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  );
 };
 
 const pirataOne = Pirata_One({
-    weight: '400',
-    subsets: ['latin'],
-    display: 'swap',
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 const DualSlider = () => {
-    const imagePaths = Object.values(data).map((imagePath) => imagePath);
-    const row1Images = imagePaths.slice(0, 9);
-    const row2Images = imagePaths.slice(9, 18);
+  const imagePaths = Object.values(data).map((imagePath) => imagePath);
+  const row1Images = imagePaths.slice(0, 9);
+  const row2Images = imagePaths.slice(9, 18);
 
-    return (
-        <div className={`${styles.dualSlider}`}>
-            <h1 
-            style={{
-                textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
-            }}
-            className={`${pirataOne.className} text-[50px] sm:text-[70px] md:text-[4.5rem] text-center text-white mb-0`}>
-                Glimpses of Last Electrothon
-            </h1>
-            {/* First row: Left-scrolling */}
-            <Slider images={row1Images} reverse={false} />
-            {/* Second row: Right-scrolling */}
-            <Slider images={row2Images} reverse={true} />
-        </div>
-    );
+  return (
+    <div className="w-full overflow-hidden">
+      {/* Title Animation */}
+      <motion.h1
+        className={`${pirataOne.className} text-[50px] sm:text-[70px] md:text-[4.5rem] text-center text-white mb-4`}
+        style={{ textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)" }}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        Glimpses of Last Electrothon
+      </motion.h1>
+
+      {/* First Slider (Left Scroll) */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        <Slider images={row1Images} reverse={false} />
+      </motion.div>
+
+      {/* Second Slider (Right Scroll) with added gap */}
+      <motion.div
+        className="mt-10" // Added margin-top to create gap
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+        viewport={{ once: true }}
+      >
+        <Slider images={row2Images} reverse={true} />
+      </motion.div>
+    </div>
+  );
 };
 
 export default DualSlider;

@@ -257,4 +257,24 @@ img.lazy.loaded {
   .animate-scrollX-reverse {
     animation: scrollXReverse var(--duration) linear infinite;
   }
-}  
+}
+
+
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Track color */
+  border-radius: 30px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff; /* Scrollbar handle color */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #BC8741; /* Color on hover */
+}

@@ -218,83 +218,135 @@
 // export default VideoCards;
 
 
-import ReactPlayer from 'react-player';
-import Gold3 from '../../assets/Prizes/Gold3.mp4';
-import Silver2 from'../../assets/Prizes/Silver2.mp4';
-import Bronze2 from '../../assets/Prizes/Bronze2.mp4';
-import './style.css';
+import React from "react";
+import { motion } from "framer-motion";
+import ReactPlayer from "react-player";
+import Gold3 from "../../assets/Prizes/Gold3.mp4";
+import Silver2 from "../../assets/Prizes/Silver2.mp4";
+import Bronze2 from "../../assets/Prizes/Bronze2.mp4";
+import "./style.css";
+
+// Heading animation (Bottom to Top)
+const fadeInFromBottom = {
+  hidden: { opacity: 0, y: 50 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
+// Card animation (Fade + Slight Upward Motion)
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut", delay: 0.2 } },
+};
+
+// Video animation (Slight Scale Up)
+const videoVariants = {
+  hidden: { scale: 0.9, opacity: 0 },
+  show: { scale: 1, opacity: 1, transition: { duration: 0.8, ease: "easeOut", delay: 0.4 } },
+};
+
+// Final text animation (Fade In)
+const fadeInText = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 1, delay: 0.6 } },
+};
+
 const Prizes = () => {
+  return (
+    <div id="prizes" className="w-full h-auto items-center justify-center flex flex-col bg-transparent">
+      {/* Heading Animation */}
+      <motion.h1
+        variants={fadeInFromBottom}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        style={{ textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)" }}
+        className="text-white text-[20px] md:text-[70px] sm:text-[60px] custom:text-[40px] xs:text-[40px] lg:text-[4.5rem] pirata-one-regular mb-8"
+      >
+        Prizes
+      </motion.h1>
 
-
-
-    return(
-        <div id = "prizes" className="w-full h-auto items-center justify-center flex flex-col bg-transparent">
-            <h1
-                style={{
-                    textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
-                }}
-                className="text-white text-[20px] md:text-[70px] sm:text-[60px] custom:text-[40px] xs:text-[40px] lg:text-[4.5rem] pirata-one-regular mb-8">
-                Prizes
+      {/* Prizes Cards Section */}
+      <div className="flex gap-10 custom:gap-5 items-center justify-center h-auto">
+        {/* First Runner Up */}
+        <motion.div
+          variants={cardVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="card-wrapper2 h-[50vh] lg:h-[40vh] xl:h-[50.3vh] md:h-[35vh] w-[20vw] custom:w-[25vw] xs:w-[25vw] md:w-[25vw] sm:w-[25vw] sm:h-[30.2vh] custom:h-[22.3vh] xs:h-[20.2vh]"
+        >
+          <div className="..."></div>
+          <div className="card-content2 flex flex-col items-center text-center justify-center text-xs">
+            <motion.div variants={videoVariants} initial="hidden" whileInView="show" viewport={{ once: true }}>
+              <ReactPlayer url={Silver2} playing muted width="100%" height="auto" controls={false} loop />
+            </motion.div>
+            <h1 className="font-sans font-bold text-[#dadada] text-5xl md:text-3xl sm:text-2xl custom:text-xl xs:text-base">
+              25K INR
             </h1>
-            <div className="flex gap-10 custom:gap-5 items-center justify-center h-auto">
-                <div className="card-wrapper2 h-[50vh] lg:h-[40vh] xl:h-[50.3vh] md:h-[35vh] w-[20vw] custom:w-[25vw] xs:w-[25vw] md:w-[25vw] sm:w-[25vw] sm:h-[30.2vh] custom:h-[22.3vh] xs:h-[20.2vh] ">
-                    <div className='...'></div>
-                    <div className="card-content2 flex flex-col items-center text-center justify-center text-xs ">
-                    <ReactPlayer
-                             url={Silver2}
-                             playing={true}
-                             muted
-                             width="100%"
-                             height="auto"
-                             controls={false}
-                             loop={true}
-                    />
-                    <h1 className='font-sans font-bold text-[#dadada] text-5xl md:text-3xl sm:text-2xl custom:text-xl xs:text-base'>25K INR</h1>
-                    <h1 className='font-sans font-medium text-[#dadada] text-xl md:text-lg sm:text-base xs:text-xs custom:text-xs'>First Runner Up</h1>
-                    </div>
-                </div>
-                <div className="card-wrapper h-[50vh] lg:h-[40vh] xl:h-[50.3vh] md:h-[35vh] w-[20vw] custom:w-[25vw] xs:w-[25vw] md:w-[25vw] sm:w-[25vw] sm:h-[30.2vh] custom:h-[22.3vh] xs:h-[20.2vh] ">
-                    <div className='...'></div>
-                    <div className="card-content flex flex-col items-center text-center justify-center text-xs ">
-                    <ReactPlayer
-                             url={Gold3}
-                             playing={true}
-                             muted
-                             width="100%"
-                             height="auto"
-                             controls={false}
-                             loop={true}
-                    />
-                    <h1 className='font-sans font-bold text-[#ffea2b] text-5xl md:text-3xl sm:text-2xl custom:text-xl xs:text-base'>35K INR</h1>
-                    <h1 className='font-sans font-medium text-[#ffea2b] text-xl md:text-lg sm:text-base xs:text-xs custom:text-xs'>Winner</h1>
-                    </div>
-                </div>
-                <div className="card-wrapper3 h-[50vh] lg:h-[40vh] xl:h-[50.3vh] md:h-[35vh] w-[20vw] custom:w-[25vw] xs:w-[25vw] md:w-[25vw] sm:w-[25vw] sm:h-[30.2vh] custom:h-[22.3vh]  xs:h-[20.2vh] ">
-                    <div className='...'></div>
-                    <div className="card-content3 flex flex-col items-center text-center justify-center ">
-                    <ReactPlayer
-                             url={Bronze2}
-                             playing={true}
-                             muted
-                             width="100%"
-                             height="auto"
-                             controls={false}
-                             loop={true}
-                    />
-                    <h1 className='font-sans items-center justify-center font-bold text-[#eb9029] text-5xl md:text-3xl sm:text-2xl custom:text-xl xs:text-base'>15K INR</h1>
-                    <h1 className='font-sans font-medium text-[#eb9029] text-xl md:text-lg sm:text-base xs:text-xs custom:text-xs '>Second Runner Up</h1>
-                    </div>
-                </div>
-            </div>
-            <h1
-                style={{
-                    textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
-                }}
-                className="text-white text-[10px] md:text-[1.5rem] sm:text-[1.5rem] custom:text-[1.5rem] xs:text-[1.5rem] lg:text-[1.5rem] font-sans font-semibold mt-5 mb-8">
-                Includes prizes worth 5k
+            <h1 className="font-sans font-medium text-[#dadada] text-xl md:text-lg sm:text-base xs:text-xs custom:text-xs">
+              First Runner Up
             </h1>
-        </div>
-    );
+          </div>
+        </motion.div>
+
+        {/* Winner */}
+        <motion.div
+          variants={cardVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="card-wrapper h-[50vh] lg:h-[40vh] xl:h-[50.3vh] md:h-[35vh] w-[20vw] custom:w-[25vw] xs:w-[25vw] md:w-[25vw] sm:w-[25vw] sm:h-[30.2vh] custom:h-[22.3vh] xs:h-[20.2vh]"
+        >
+          <div className="..."></div>
+          <div className="card-content flex flex-col items-center text-center justify-center text-xs">
+            <motion.div variants={videoVariants} initial="hidden" whileInView="show" viewport={{ once: true }}>
+              <ReactPlayer url={Gold3} playing muted width="100%" height="auto" controls={false} loop />
+            </motion.div>
+            <h1 className="font-sans font-bold text-[#ffea2b] text-5xl md:text-3xl sm:text-2xl custom:text-xl xs:text-base">
+              35K INR
+            </h1>
+            <h1 className="font-sans font-medium text-[#ffea2b] text-xl md:text-lg sm:text-base xs:text-xs custom:text-xs">
+              Winner
+            </h1>
+          </div>
+        </motion.div>
+
+        {/* Second Runner Up */}
+        <motion.div
+          variants={cardVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="card-wrapper3 h-[50vh] lg:h-[40vh] xl:h-[50.3vh] md:h-[35vh] w-[20vw] custom:w-[25vw] xs:w-[25vw] md:w-[25vw] sm:w-[25vw] sm:h-[30.2vh] custom:h-[22.3vh] xs:h-[20.2vh]"
+        >
+          <div className="..."></div>
+          <div className="card-content3 flex flex-col items-center text-center justify-center">
+            <motion.div variants={videoVariants} initial="hidden" whileInView="show" viewport={{ once: true }}>
+              <ReactPlayer url={Bronze2} playing muted width="100%" height="auto" controls={false} loop />
+            </motion.div>
+            <h1 className="font-sans items-center justify-center font-bold text-[#eb9029] text-5xl md:text-3xl sm:text-2xl custom:text-xl xs:text-base">
+              15K INR
+            </h1>
+            <h1 className="font-sans font-medium text-[#eb9029] text-xl md:text-lg sm:text-base xs:text-xs custom:text-xs">
+              Second Runner Up
+            </h1>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Final Text Animation */}
+      <motion.h1
+        variants={fadeInText}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        style={{ textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)" }}
+        className="text-white text-[10px] md:text-[1.5rem] sm:text-[1.5rem] custom:text-[1.5rem] xs:text-[1.5rem] lg:text-[1.5rem] font-sans font-semibold mt-5 mb-8"
+      >
+        Includes prizes worth 5K
+      </motion.h1>
+    </div>
+  );
 };
 
 export default Prizes;
