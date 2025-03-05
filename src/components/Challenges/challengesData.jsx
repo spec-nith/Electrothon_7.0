@@ -5,7 +5,7 @@ import mongo from "../../assets/images/MongoDB_White.png"
 import streamLit from "../../assets/images/streamlit-logo-primary.png"
 import cloudflare from "../../assets/images/CF_logo_horizontal_whitetype.png"
 import midnight from "../../assets/images/midnight.png"
-import gemini from "../../assets/images/GeminiAi.png"
+import gemini from "../../assets/images/Genai.png"
 export const challengesData = [
   {
     desc: [
@@ -89,7 +89,7 @@ export const challengesData = [
       "Best Use of Gemini : Assorted Prizes",
       "1 Prize",
     ],
-    img: gemini,
+    img: genai,
     link: "https://ai.google.dev/gemini-api/docs/quickstart?lang=rest",
     prize: [],
     list: "px-3",
