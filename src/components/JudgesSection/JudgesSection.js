@@ -18,14 +18,14 @@ const pirataOne = Pirata_One({
 
 const LeftArrowIcon = () => (
   <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
- <path d="M12 8L8 12M8 12L12 16M8 12H16M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
- </svg>
+    <path d="M12 8L8 12M8 12L12 16M8 12H16M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
 );
 
 const RightArrowIcon = () => (
   <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
- <path d="M12 16L16 12M16 12L12 8M16 12H8M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
- </svg>
+    <path d="M12 16L16 12M16 12L12 8M16 12H8M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
 );
 
 
@@ -70,9 +70,10 @@ export default function JudgesSection() {
 
           <div
             ref={scrollRef}
-            className="flex overflow-x-auto scrollbar-hide w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-6xl space-x-6 sm:space-x-10 md:space-x-16 px-4 sm:px-6 md:px-8"
+            className="flex overflow-x-auto scrollbar-hide w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-6xl space-x-3 sm:space-x-5 md:space-x-8 px-2 sm:px-4 md:px-6"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
+
             {judges.map((judge) => (
               <JudgeCard key={judge.id} judge={judge} />
             ))}
