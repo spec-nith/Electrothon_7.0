@@ -27,7 +27,7 @@ import bg7 from '../assets/backgroundimg7.jpg';
 import bg8 from '../assets/backgroundimg8.jpg';
 import bg9 from '../assets/backgroundimg9.jpg';
 import bg10 from '../assets/backgroundimg10.jpg';
-
+import RunofShow from '@/components/RunofShow/ScrollingTextShow.jsx';
 import Loader from '@/components/Loader/Loader.js';
 import Challenges from '@/components/Challenges/Challenges.jsx';
 import Prizes from '@/components/Prizes/Prizes';
@@ -46,7 +46,7 @@ export default function Home() {
     }, []);
 
     return (
-    <div className="relative h-screen overflow-hidden">
+    <div className="relative h-screen ">
     {loading ? (
         <Loader /> // Show loader while loading                
     ) : (    
@@ -62,6 +62,7 @@ export default function Home() {
         <Prizes />
         <Challenges />
         <Timeline />
+        <RunofShow />
         <Sponsors1 />
         <Sponsors2 />
         <SliderT />

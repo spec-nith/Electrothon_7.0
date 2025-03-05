@@ -47,7 +47,7 @@ const Challenges = () => {
             challengesData.map((challenge, index) => (
               <div
                 className="flex md:flex-row flex-col justify-between items-center rounded-xl shadow-2xl p-4 text-white"
-                key={challenge.key || index}
+                key={index || challenge.key}
               >
                 <div className="float-left p-5 mr-auto h-[200px] flex justify-center w-full items-center ">
                   <picture>

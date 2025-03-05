@@ -2,7 +2,9 @@
 
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper";
+import { Autoplay } from "swiper/modules"; // Update this import
+import "swiper/css";
+import "swiper/css/autoplay"; // If you want additional autoplay styles
 import Image from "next/image";
 import "swiper/css";
 import styles from "./slider.module.css";
@@ -21,7 +23,7 @@ const Slider = ({ images, reverse }) => {
             }}
             speed={5000} 
             loop={true} 
-            modules={[Autoplay]}
+            modules={[Autoplay]} // Make sure Autoplay is correctly imported and passed
             className={styles.slider}
             breakpoints={{
                 400: { slidesPerView: 2 }, // Mobile

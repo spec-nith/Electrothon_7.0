@@ -136,6 +136,11 @@
   font-style: normal;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+}
+
 .abhaya-libre-regular {
   font-family: "Abhaya Libre", serif;
   font-weight: 900;
