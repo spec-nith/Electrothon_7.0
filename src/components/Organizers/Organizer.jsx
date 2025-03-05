@@ -27,7 +27,7 @@ export default function Organizers() {
             key={index}
             src={leader.image}
             alt={leader.name}
-            className="rounded-sm w-[80%] sm:w-[60%] md:w-auto max-w-[250px] sm:max-w-[300px] md:max-w-[350px] h-auto object-cover"
+            className="rounded-sm w-[80%] sm:w-[60%] md:w-auto max-w-[250px] sm:max-w-[285px] md:max-w-[335px] h-auto object-cover"
             loading="lazy"
           />
         ))}
