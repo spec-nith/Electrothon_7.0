@@ -50,33 +50,34 @@ function LogoWall({
         onMouseLeave={() => pauseOnHover && setIsPaused(false)}
       >
         <div
-          className={[
-            "flex-shrink-0",
-            "flex",
-            "items-center",
-            "justify-around",
-            "gap-[calc(var(--size)/14)]",
-            "min-w-full",
-            "flex-nowrap",
-            "animate-scrollX",
-            direction === "vertical" && "flex-col min-h-full animate-scrollY"
-          ]
-            .filter(Boolean)
-            .join(" ")}
-          style={{
-            animationDirection: reverse ? "reverse" : "normal", // Corrects the reverse issue
-            animationPlayState: isPaused ? "paused" : "running" // Ensures hover pause works
-          }}
-        >
-          {[...items, ...items, ...items, ...items, ...items, ...items, ...items, ...items, ...items].map((item, idx) => (
-            <Image
-              key={idx}
-              src={item.imgUrl}
-              alt={item.altText}
-              className="bg-[var(--color-bg-accent)] rounded-md object-contain aspect-video h-72 w-72 p-0"
-            />
-          ))}
-        </div>
+  className={[
+    "flex-shrink-0",
+    "flex",
+    "items-center",
+    "justify-around",
+    "gap-[calc(var(--size)/14)]",
+    "min-w-full",
+    "flex-nowrap",
+    "animate-scrollX",
+    direction === "vertical" && "flex-col min-h-full animate-scrollY"
+  ]
+    .filter(Boolean)
+    .join(" ")}
+  style={{
+    animationDirection: reverse ? "reverse" : "normal",
+    animationPlayState: isPaused ? "paused" : "running"
+  }}
+>
+  {items.concat(items).map((item, idx) => (
+    <Image
+      key={idx}
+      src={item.imgUrl}
+      alt={item.altText}
+      className="bg-[var(--color-bg-accent)] rounded-md object-contain aspect-video h-72 w-72 p-0"
+    />
+  ))}
+</div>
+
       </div>
     </article>
   );
@@ -118,7 +119,7 @@ export default function OrganizersLogoWall() {
       direction="horizontal"
       pauseOnHover={true}
       size="clamp(5rem, 1rem + 1vmin, 50rem)"
-      duration="180s"
+      duration="60s"
       bgColor="transparent"
       bgAccentColor="transparent"
     />
@@ -127,7 +128,7 @@ export default function OrganizersLogoWall() {
       direction="horizontal"
       pauseOnHover={true}
       size="clamp(5rem, 30rem + 15vmin, 50rem)"
-      duration="300s"
+      duration="100s"
       bgColor="transparent"
       bgAccentColor="transparent"
     />
