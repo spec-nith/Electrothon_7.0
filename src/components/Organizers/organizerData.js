@@ -10,7 +10,7 @@ import khushbu from "../../assets/organisers/thirdYear/khushbu.webp";
 import kunal from "../../assets/organisers/thirdYear/Kunal Singh.webp";
 import nikita from "../../assets/organisers/thirdYear/Nikita Silu.webp";
 import nitin from "../../assets/organisers/thirdYear/nitin.webp";
-import prakriti from "../../assets/organisers/thirdYear/PrakritiN.webp";
+import prakriti from "../../assets/organisers/thirdYear/Prakriti Pal.png";
 import priya from "../../assets/organisers/thirdYear/priya.webp";
 import rahul from "../../assets/organisers/thirdYear/rahul.webp";
 import utkarshM from "../../assets/organisers/thirdYear/Utkarsh_Maurya.webp";

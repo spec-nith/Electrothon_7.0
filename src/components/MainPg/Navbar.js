@@ -242,7 +242,7 @@ const Navbar = () => {
       <div className="fixed z-50">
         <div
           ref={navRef}
-          className=" h-[57px] w-[800px] lg:flex hidden max-xl:scale-90 bg-[#37393bd3] xl:w-[1000px] rounded-[40px] shadow-sm shadow-white items-center justify-around relative Mordred"
+          className=" h-[57px] w-[900px] lg:flex hidden max-xl:scale-90 bg-[#37393bd3] xl:w-[1200px] rounded-[40px] shadow-sm shadow-white items-center justify-around relative Mordred"
           onMouseLeave={handleLeave} // Hide when leaving navbar
         >
           {/* Sliding Background */}
@@ -259,11 +259,9 @@ const Navbar = () => {
             <Link
               key={index}
               href={link.href}
-              className={`text-[18px] px-4 py-2 relative z-10 transition-all duration-300  ${
-                hoverStyle.activeIndex === index
-                  ? "text-black"
-                  : "text-white"
-              } `}
+              className={`text-[18px] px-4 py-2 relative z-10 transition-all duration-300 whitespace-nowrap inline-flex items-center justify-center ${
+                hoverStyle.activeIndex === index ? "text-black" : "text-white"
+              }`}           
               ref={(el) => (linksRef.current[index] = el)}
               onMouseEnter={() => handleHover(index)}
             >
