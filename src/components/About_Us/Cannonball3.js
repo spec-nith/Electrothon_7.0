@@ -1,7 +1,7 @@
 "use client"; // Ensure this is a client component
 
 import React from 'react';
-import CountUp from './CountUp';
+import CountUp from './CountUp.jsx';
 
 const Cannonball = () => {
     return (
