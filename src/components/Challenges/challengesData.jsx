@@ -5,7 +5,7 @@ import mongo from "../../assets/images/MongoDB_White.png"
 import streamLit from "../../assets/images/streamlit-logo-primary.png"
 import cloudflare from "../../assets/images/CF_logo_horizontal_whitetype.png"
 import midnight from "../../assets/images/midnight.png"
-import gemini from "../../assets/images/Genai.png"
+import genai from "../../assets/images/Genai.png"
 export const challengesData = [
   {
     desc: [
@@ -86,7 +86,7 @@ export const challengesData = [
   },
   {
     desc: [
-      "Best Use of Gemini : Assorted Prizes",
+      "Best Use of Genai : Assorted Prizes",
       "1 Prize",
     ],
     img: genai,
