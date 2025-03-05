@@ -22,7 +22,7 @@ export default function Faqs() {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         position: "relative", // Required for overlay
-        textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
+        textShadow: "-5px 8px 4px rgb(0, 0, 0)",
       }}
     >
       {/* FAQ Heading */}

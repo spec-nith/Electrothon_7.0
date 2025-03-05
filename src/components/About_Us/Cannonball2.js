@@ -1,6 +1,7 @@
 "use client"; // Ensure this is a client component
 
 import React from 'react';
+import CountUp from './Countup.jsx';
 
 const Cannonball = () => {
     return (
@@ -10,7 +11,16 @@ const Cannonball = () => {
             
             {/* Text Container */}
             <div className="relative z-10 text-center text-white">
-                <div className="text-lg md:text-2xl font-bold">25+</div>
+                <div className="text-lg md:text-2xl font-bold">
+                    <CountUp
+                        from={0}
+                        to={25}
+                        separator=","
+                        direction="up"
+                        duration={1}
+                        className="count-up-text"
+                    />+
+                </div>
                 <div className="text-xs md:text-lg">Software Projects</div>
             </div>
         </div>

@@ -18,19 +18,10 @@ import Image from "next/image";
 import ThemeSection from "@/components/ThemeSection/ThemeSection";
 import Theme from "@/components/Tracks_new/Track";
 import bg from "../assets/backgroundimg.webp";
-//import bg2 from '../assets/backgroundimg2.jpg';
-//import bg3 from '../assets/backgroundimg3.jpg';
-//import bg4 from '../assets/backgroundimg4.jpg';
-//import bg5 from '../assets/backgroundimg5.jpg';
-//import bg6 from '../assets/backgroundimg6.jpg';
-//import bg7 from '../assets/backgroundimg7.jpg';
-//import bg8 from '../assets/backgroundimg8.jpg';
-//import bg9 from '../assets/backgroundimg9.jpg';
-//import bg10 from '../assets/backgroundimg10.jpg';
-
 import Loader from "@/components/Loader/Loader.js";
 import Challenges from "@/components/Challenges/Challenges.jsx";
 import Prizes from "@/components/Prizes/Prizes";
+import RunofShow from "@/components/RunofShow/ScrollingTextShow.jsx";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -62,6 +53,7 @@ export default function Home() {
           <Prizes />
           <Challenges />
           <Timeline />
+          <RunofShow />
           <Sponsors1 />
           <Sponsors2 />
           <SliderT />

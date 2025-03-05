@@ -24,7 +24,7 @@ const Explore = () => {
             color: "#FFFFFF", // White color for the heading text
             textTransform: "uppercase",
             letterSpacing: "2px",
-            textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
+            textShadow: "-5px 8px 4px rgb(0, 0, 0)",
           }}>
           Themes
         </div>
