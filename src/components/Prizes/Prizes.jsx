@@ -228,7 +228,7 @@ const Prizes = () => {
 
 
     return(
-        <div className="w-full h-auto items-center justify-center flex flex-col bg-transparent">
+        <div id = "prizes" className="w-full h-auto items-center justify-center flex flex-col bg-transparent">
             <h1
                 style={{
                     textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)",
