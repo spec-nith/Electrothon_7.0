@@ -11,7 +11,6 @@ import EMTlogo from "../../assets/EMT.png";
 import EMTwhite from "../../assets/EMT_White.png";
 import DevdockLogo from "../../assets/Devdock.png";
 import ethindia from "../../assets/ethindia.png";
-import fold from "../../assets/fold.png";
 import polygon from "../../assets/polygon.png";
 import Chamberlainv from "./Chamberlianv";
 import Chamberlainh from "./Chamberlianh";
@@ -28,6 +27,7 @@ import SolidityScan from "../../assets/Sponsor/SolidityScan.png";
 import CredShields from "../../assets/Sponsor/CredShields.png";
 import Aptos from "../../assets/Sponsor/Aptos.png";
 import langdb from "@/assets/Sponsor/langdb.svg";
+import dominos from "@/assets/dominos3.png";
 import loftWhite from "../../assets/Loft_White.png"
 import mongo from "../../assets/images/MongoDB_White.png"
 import midnight from "../../assets/images/midnight.png"
@@ -51,10 +51,6 @@ const Sponsors2 = () => {
               size={{ width: "60vw", height: "10vh" }}
             />
             <Treasurer
-              companyLogos={[{ logo: fold }]}
-              size={{ width: "60vw", height: "10vh" }}
-            />
-            <Treasurer
               companyLogos={[{ logo: Aptos }]}
               size={{ width: "60vw", height: "10vh" }}
             />
@@ -74,7 +70,6 @@ const Sponsors2 = () => {
               companyLogos={[{ logo: cf }]}
               size={{ width: "60vw", height: "10vh" }}
             />
-            
           </div>
         </div>
       </div>
@@ -152,6 +147,11 @@ const Sponsors2 = () => {
             <InkindSpon
               companyLogos={[{ logo: langdb }]}
               size={{ width: "60vw", height: "23vh" }}
+              className="p-5 "
+            />
+            <InkindSpon
+              companyLogos={[{ logo: dominos }]}
+              size={{ width: "60vw", height: "18vh" }}
               className="p-5 "
             />
           </div>
