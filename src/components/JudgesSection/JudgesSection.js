@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { Pirata_One } from "next/font/google";
-import judge1Image from "../../assets/judges/megha.jpeg";
-import judge2Image from "../../assets/judges/sachin.jpeg";
-import judge3Image from "../../assets/judges/shekhar.jpeg";
-import judge4Image from "../../assets/judges/himank.jpeg";
-import judge5Image from "../../assets/judges/devansh.jpeg";
-import judge6Image from "../../assets/judges/dhiraj.jpeg";
-import judge7Image from "../../assets/judges/vikrant.jpeg";
-import judge8Image from "../../assets/judges/aman.jpeg";
+import judge1Image from "../../assets/judges/megha.webp";
+import judge2Image from "../../assets/judges/sachin.webp";
+import judge3Image from "../../assets/judges/shekhar.webp";
+import judge4Image from "../../assets/judges/himank.webp";
+import judge5Image from "../../assets/judges/devansh.webp";
+import judge6Image from "../../assets/judges/dhiraj.webp";
+import judge7Image from "../../assets/judges/vikrant.webp";
+import judge8Image from "../../assets/judges/aman.webp";
 import { useRef } from "react";
 
 const pirataOne = Pirata_One({
