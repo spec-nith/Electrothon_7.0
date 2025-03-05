@@ -1,7 +1,7 @@
 // File path: src/app/page.js
-'use client'; // Ensure this is marked as a client component if using hooks
+"use client"; // Ensure this is marked as a client component if using hooks
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import MainPg from "@/components/MainPg/MainPg.js";
 import AboutUs from "@/components/About_Us/AboutUs.js";
 import Faqs from "@/components/Faq/faq";
@@ -17,60 +17,51 @@ import Organizers from "@/components/Organizers/Organizer";
 import Image from "next/image";
 import ThemeSection from "@/components/ThemeSection/ThemeSection";
 import Theme from "@/components/Tracks_new/Track";
-import bg from '../assets/backgroundimg.webp';
-import bg2 from '../assets/backgroundimg2.jpg';
-import bg3 from '../assets/backgroundimg3.jpg';
-import bg4 from '../assets/backgroundimg4.jpg';
-import bg5 from '../assets/backgroundimg5.jpg';
-import bg6 from '../assets/backgroundimg6.jpg';
-import bg7 from '../assets/backgroundimg7.jpg';
-import bg8 from '../assets/backgroundimg8.jpg';
-import bg9 from '../assets/backgroundimg9.jpg';
-import bg10 from '../assets/backgroundimg10.jpg';
-import RunofShow from '@/components/RunofShow/ScrollingTextShow.jsx';
-import Loader from '@/components/Loader/Loader.js';
-import Challenges from '@/components/Challenges/Challenges.jsx';
-import Prizes from '@/components/Prizes/Prizes';
+import bg from "../assets/backgroundimg.webp";
+import Loader from "@/components/Loader/Loader.js";
+import Challenges from "@/components/Challenges/Challenges.jsx";
+import Prizes from "@/components/Prizes/Prizes";
+import RunofShow from "@/components/RunofShow/ScrollingTextShow.jsx";
 
 export default function Home() {
-    const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            // Simulate a delay (e.g., fetching data)
-            await new Promise(resolve => setTimeout(resolve, 2000)); // Adjust the timeout as needed
-            setLoading(false); // Set loading to false after data is fetched
-        };
+  useEffect(() => {
+    const fetchData = async () => {
+      // Simulate a delay (e.g., fetching data)
+      await new Promise((resolve) => setTimeout(resolve, 2000)); // Adjust the timeout as needed
+      setLoading(false); // Set loading to false after data is fetched
+    };
 
-        fetchData();
-    }, []);
+    fetchData();
+  }, []);
 
-    return (
-    <div className="relative h-screen ">
-    {loading ? (
-        <Loader /> // Show loader while loading                
-    ) : (    
+  return (
+    <div className="relative h-screen overflow-hidden">
+      {loading ? (
+        <Loader /> // Show loader while loading
+      ) : (
         <div
-        className="relative scroll-smooth bg-cover bg-center bg-fixed h-full overflow-y-auto space-y-20"
-        style={{ backgroundImage: `url(${bg.src})` }}
+          className="relative scroll-smooth bg-cover bg-center bg-fixed h-full overflow-y-auto space-y-20"
+          style={{ backgroundImage: `url(${bg.src})` }}
         >
-        <MainPg />
-        <AboutUs />
-        <Slider />
-        <JudgesSection />
-        <Theme />
-        <Prizes />
-        <Challenges />
-        <Timeline />
-        <RunofShow />
-        <Sponsors1 />
-        <Sponsors2 />
-        <SliderT />
-        <Organizers />
-        <Faqs />
-        <Footer />
+          <MainPg />
+          <AboutUs />
+          <Slider />
+          <JudgesSection />
+          <Theme />
+          <Prizes />
+          <Challenges />
+          <Timeline />
+          <RunofShow />
+          <Sponsors1 />
+          <Sponsors2 />
+          <SliderT />
+          <Organizers />
+          <Faqs />
+          <Footer />
         </div>
-        )}
+      )}
     </div>
   );
 }
