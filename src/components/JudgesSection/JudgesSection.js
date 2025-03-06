@@ -10,6 +10,7 @@ import judge5Image from "../../assets/judges/judge5.webp";
 import judge6Image from "../../assets/judges/judge6.webp";
 import judge7Image from "../../assets/judges/judge7.webp";
 import judge8Image from "../../assets/judges/judge8.webp";
+import judge9Image from "../../assets/judge9.png";
 
 import mentor1Image from "../../assets/judges/abhishek.png";
 import mentor2Image from "../../assets/judges/Gauri.png";
@@ -37,15 +38,66 @@ const RightArrowIcon = () => (
 );
 
 const judges = [
-  { id: 9, name: "Avishrant Sharma", image: mentor6Image, linkedin: "https://www.linkedin.com/in/avishrantsh/" },
-  { id: 1, name: "Megha Arora", image: judge1Image, linkedin: "https://www.linkedin.com/in/devrelmegha/" },
-  { id: 2, name: "Sachin Jha", image: judge2Image, linkedin: "https://www.linkedin.com/in/sachin-jha-/" },
-  { id: 3, name: "Shekhar Patel", image: judge3Image, linkedin: "https://www.linkedin.com/in/shekhar-patel-149bb0224" },
-  { id: 4, name: "Himank Varshney", image: judge4Image, linkedin: "https://www.linkedin.com/in/varhimank/" },
-  { id: 5, name: "Devansh Sood", image: judge5Image, linkedin: "https://www.linkedin.com/in/sood2105/" },
-  { id: 6, name: "Dhiraj Kumar", image: judge6Image, linkedin: "https://www.linkedin.com/in/dhiraj-kumar-71620b45/" },
-  { id: 7, name: "Vikrant Khedkar", image: judge7Image, linkedin: "https://www.linkedin.com/in/vikrant-khedkar/" },
-  { id: 8, name: "Aman Kr. Poddar", image: judge8Image, linkedin: "https://www.linkedin.com/in/amanpoddar10/" },
+  {
+    id: 10,
+    name: "Siddharth Shivkumar",
+    image: judge9Image,
+    linkedin: "https://www.linkedin.com/in/siddharth-shivkumar/",
+  },
+  {
+    id: 9,
+    name: "Avishrant Sharma",
+    image: mentor6Image,
+    linkedin: "https://www.linkedin.com/in/avishrantsh/",
+  },
+  {
+    id: 1,
+    name: "Megha Arora",
+    image: judge1Image,
+    linkedin: "https://www.linkedin.com/in/devrelmegha/",
+  },
+  {
+    id: 2,
+    name: "Sachin Jha",
+    image: judge2Image,
+    linkedin: "https://www.linkedin.com/in/sachin-jha-/",
+  },
+  {
+    id: 3,
+    name: "Shekhar Patel",
+    image: judge3Image,
+    linkedin: "https://www.linkedin.com/in/shekhar-patel-149bb0224",
+  },
+  {
+    id: 4,
+    name: "Himank Varshney",
+    image: judge4Image,
+    linkedin: "https://www.linkedin.com/in/varhimank/",
+  },
+  {
+    id: 5,
+    name: "Devansh Sood",
+    image: judge5Image,
+    linkedin: "https://www.linkedin.com/in/sood2105/",
+  },
+  {
+    id: 6,
+    name: "Dhiraj Kumar",
+    image: judge6Image,
+    linkedin: "https://www.linkedin.com/in/dhiraj-kumar-71620b45/",
+  },
+  {
+    id: 7,
+    name: "Vikrant Khedkar",
+    image: judge7Image,
+    linkedin: "https://www.linkedin.com/in/vikrant-khedkar/",
+  },
+  {
+    id: 8,
+    name: "Aman Kr. Poddar",
+    image: judge8Image,
+    linkedin: "https://www.linkedin.com/in/amanpoddar10/",
+  },
 ];
 
 const mentors = [
