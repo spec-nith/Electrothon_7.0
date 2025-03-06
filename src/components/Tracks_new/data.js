@@ -56,56 +56,55 @@ export const tabData = [
     id: "world-1",
     heading: "Travel and Tourism",
     content:
-      "To preserve, to distribute, to cultivate, to grow Many are the problems when it comes to food. Why don't you try your spells to solve the problem",
-    img1: foodtech,
+      "Across vast kingdoms and treacherous seas, the movement of people and goods faces many challenges. Knights and merchants alike seek safer passages and better accommodations. Enter the Colosseum to forge innovations that will revolutionize the way our realm travels.",
+    img1: foodtech, // Consider updating this variable name to match content
     prize_amt: "To be announced",
   },
 
   {
+    id: "world-2", // Added missing ID
     heading: "Climate Emergency",
     content:
-      "Alas! Techno-mage from burning fuel to even running the platform for your magic needs energy. This has created adverse effects on the climate! Use your magic and do your best.        ",
+      "Our kingdom faces droughts, floods, and changing seasons unlike any in remembered history. The royal scribes warn of dire consequences if action is not taken. Enter the arena and battle with solutions that can help our realm adapt to these changing times and protect our lands.",
     img1: climate,
     prize_amt: "To be announced",
   },
 
   {
     id: "world-3",
-    heading: "Healthcare        ",
+    heading: "Healthcare",
     content:
-      "The medical mages are pivotal for the society, so to help them they seek the power of technology. Could you help them by solving a problem with the power of algorithm?        ",
+      "The royal physicians and healers work tirelessly, yet plagues and ailments continue to afflict our people. The Colosseum calls for brave warriors of code to develop tools and remedies that can aid our healers in diagnosing illness, tracking outbreaks, and improving the health of all citizens.",
     img1: health,
     prize_amt: "To be announced",
   },
 
   {
     id: "world-4",
-    heading: " Cyber Security and Blockchain ",
+    heading: "Cyber Security and Blockchain",
     content:
-      "The defence systems of high levels of tech are in dire need of help. Blockchain is a new fruit in the world of techno-magic. Use it to help the defence systems!        ",
+      "Our realm's treasuries and secret communications face threats from unseen enemies. The royal cryptographers seek new methods to protect our valuable information and assets. Step into the Colosseum to forge impenetrable shields and unbreakable codes that will safeguard our kingdom.",
     img1: blockchain,
     prize_amt: "To be announced",
   },
 
   {
     id: "world-5",
-    heading: " EdTech      ",
+    heading: "EdTech",
     content:
-      "Education is something the ones with magic and without magic deserve. Take up this challenge to impart the best of education to the masses.       ",
+      "Knowledge is power, and it must reach all corners of our kingdom—from the highest towers to the humblest villages. The royal scholars seek new ways to spread wisdom efficiently. Enter the Colosseum to create tools that will enlighten our people and prepare the next generation of champions.",
     img1: Edtech,
     prize_amt: "To be announced",
   },
 
   {
     id: "world-6",
-    heading: " Open Innovation       ",
+    heading: "Open Innovation",
     content:
-      " Have a spell to solve a problem? Then Open Innovation is for you.        ",
+      "Do you possess unique skills that don't fit the traditional arenas? The Colosseum welcomes all warriors with innovative solutions to the kingdom's challenges. Bring forth your most creative weapons and prove your worth in this open battlefield of ideas.",
     img1: open_innov,
     prize_amt: "To be announced",
   },
-
-  // Add more sets for additional tabs as needed
 ];
 
 export const startingFeatures = ["Event 1", "Event 2", "Event 3"];
