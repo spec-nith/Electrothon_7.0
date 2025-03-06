@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Navbar = () => {
+  // SVG icons remain unchanged
   const ContactIcon = () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -190,11 +191,11 @@ const Navbar = () => {
   });
   const navRef = useRef(null);
   const linksRef = useRef([]);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     // Reset refs on render
     linksRef.current = linksRef.current.slice(0, links.length);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleHover = (index) => {
@@ -216,18 +217,19 @@ const Navbar = () => {
     setHoverStyle((prev) => ({ ...prev, opacity: 0, activeIndex: null })); // Hide background
   };
 
+  // Shortened and optimized menu items for better horizontal fit
   const links = [
-    { name: "Home", href: "#home" },
-    { name: "About Us", href: "#about" },
+    { name: "Home", href: "#home", icon: homeIcon },
+    { name: "About Us", href: "#about", icon: aboutIcon },
     { name: "Judges", href: "#judges" },
-    { name: "Prizes", href: "#prizes" },
+    { name: "Prizes", href: "#prizes", icon: prizeIcon },
     { name: "Challenges", href: "#challenges" },
-    { name: "Timeline", href: "#timeline" },
-    { name: "Sponsors", href: "#sponsors" },
-    { name: "Testimonials", href: "#testimonials" },
+    { name: "Timeline", href: "#timeline", icon: scheduleIcon },
+    { name: "Sponsors", href: "#sponsors", icon: sponsorIcon },
+    { name: "Teams", href: "#testimonials" },
     { name: "Organizers", href: "#Organizers" },
-    { name: "FAQs", href: "#faq" },
-    { name: "Contact Us", href: "#contact" },
+    { name: "FAQ", href: "#faq", icon: faqIcon },
+    { name: "Contact Us", href: "#contact", icon: ContactIcon },
   ];
 
   return (
@@ -240,10 +242,11 @@ const Navbar = () => {
         alt=""
       />
       <div className="fixed z-50">
+        {/* Desktop Navigation - Compact version */}
         <div
           ref={navRef}
-          className=" h-[57px] w-[900px] lg:flex hidden max-xl:scale-90 bg-[#37393bd3] xl:w-[1200px] rounded-[40px] shadow-sm shadow-white items-center justify-around relative Mordred"
-          onMouseLeave={handleLeave} // Hide when leaving navbar
+          className="h-[57px] w-[780px] lg:flex hidden max-xl:scale-90 bg-[#37393bd3] xl:w-[980px] rounded-[40px] shadow-sm shadow-white items-center justify-center relative Mordred"
+          onMouseLeave={handleLeave}
         >
           {/* Sliding Background */}
           <div
@@ -255,21 +258,51 @@ const Navbar = () => {
             }}
           />
 
-          {links.map((link, index) => (
-            <Link
-              key={index}
-              href={link.href}
-              className={`text-[18px] px-4 py-2 relative z-10 transition-all duration-300 whitespace-nowrap inline-flex items-center justify-center ${
-                hoverStyle.activeIndex === index ? "text-black" : "text-white"
-              }`}           
-              ref={(el) => (linksRef.current[index] = el)}
-              onMouseEnter={() => handleHover(index)}
-            >
-              {link.name}
-            </Link>
-          ))}
+          <div className="flex justify-between items-center w-full px-2">
+            {links.map((link, index) => (
+              <Link
+                key={index}
+                href={link.href}
+                className={`text-[16px] px-2 py-2 relative z-10 transition-all duration-300 whitespace-nowrap inline-flex items-center justify-center ${
+                  hoverStyle.activeIndex === index ? "text-black" : "text-white"
+                }`}
+                ref={(el) => (linksRef.current[index] = el)}
+                onMouseEnter={() => handleHover(index)}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Mobile menu button - could add if needed */}
+        <div className="lg:hidden fixed top-4 right-4 z-50">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-white p-2 rounded-full bg-[#37393bd3]"
+          >
+            {isMenuOpen ? "✕" : "☰"}
+          </button>
+
+          {/* Mobile dropdown menu - alternative to bottom navigation */}
+          {isMenuOpen && (
+            <div className="absolute right-0 mt-2 w-48 py-2 bg-[#37393bd3] rounded-lg shadow-xl">
+              {links.map((link, index) => (
+                <Link
+                  key={index}
+                  href={link.href}
+                  className="block px-4 py-2 text-white hover:bg-gray-700"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </div>
+
+      {/* Bottom Mobile Navigation Bar */}
       <div className="py-3 lg:hidden fixed bottom-2 z-50 bg-[#2b3846] w-[98%] rounded-2xl flex items-center justify-around">
         <Link href="#home" className="text-[20px]">
           {homeIcon()}
@@ -283,7 +316,6 @@ const Navbar = () => {
         <Link href="#sponsors" className="text-[20px]">
           {sponsorIcon()}
         </Link>
-        {/* <Link href='#theme' className='text-[20px]'>{themeIcon()}</Link> */}
         <Link href="#faq" className="text-[20px]">
           {faqIcon()}
         </Link>
@@ -291,6 +323,8 @@ const Navbar = () => {
           {ContactIcon()}
         </Link>
       </div>
+
+      {/* MLH Badge */}
       <Link
         className="z-50 block lg:w-[100px] sm:w-[60px] w-[40px] "
         id="mlh-trust-badge"
