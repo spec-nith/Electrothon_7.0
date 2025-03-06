@@ -37,6 +37,7 @@ const RightArrowIcon = () => (
 );
 
 const judges = [
+  { id: 9, name: "Avishrant Sharma", image: mentor6Image, linkedin: "https://www.linkedin.com/in/avishrantsh/" },
   { id: 1, name: "Megha Arora", image: judge1Image, linkedin: "https://www.linkedin.com/in/devrelmegha/" },
   { id: 2, name: "Sachin Jha", image: judge2Image, linkedin: "https://www.linkedin.com/in/sachin-jha-/" },
   { id: 3, name: "Shekhar Patel", image: judge3Image, linkedin: "https://www.linkedin.com/in/shekhar-patel-149bb0224" },
@@ -53,7 +54,6 @@ const mentors = [
   { id: 3, name: "Adhishraya Sharma", image: mentor3Image, linkedin: "https://www.linkedin.com/in/adhishraya-sharma-55000b229/" },
   { id: 4, name: "Gurkirat Kaur Gill ", image: mentor4Image, linkedin: "https://www.linkedin.com/in/gurkirat-kaur-gill/" },
   { id: 5, name: "Aryan Prasher", image: mentor5Image, linkedin: "https://www.linkedin.com/in/aryan-prasher/" },
-  { id: 6, name: "Avishrant Sharma", image: mentor6Image, linkedin: "https://www.linkedin.com/in/avishrantsh/" },
 ];
 
 export default function JudgesSection() {
