@@ -11,6 +11,13 @@ import judge6Image from "../../assets/judges/judge6.webp";
 import judge7Image from "../../assets/judges/judge7.webp";
 import judge8Image from "../../assets/judges/judge8.webp";
 
+import mentor1Image from "../../assets/judges/abhishek.png";
+import mentor2Image from "../../assets/judges/Gauri.png";
+import mentor3Image from "../../assets/judges/Adhishraya.png";
+import mentor4Image from "../../assets/judges/Gurkirat.png";
+import mentor5Image from "../../assets/judges/Aryan.png";
+import mentor6Image from "../../assets/judges/Avishrant.png";
+
 const pirataOne = Pirata_One({
   weight: "400",
   subsets: ["latin"],
@@ -40,20 +47,31 @@ const judges = [
   { id: 8, name: "Aman Kr. Poddar", image: judge8Image, linkedin: "https://www.linkedin.com/in/amanpoddar10/" },
 ];
 
+const mentors = [
+  { id: 1, name: "Abhishek Nautiyal", image: mentor1Image, linkedin: "https://www.linkedin.com/in/abhinauti/" },
+  { id: 2, name: "Gauri Kaushal", image: mentor2Image, linkedin: "https://www.linkedin.com/in/gauri-kaushal-61b588229/" },
+  { id: 3, name: "Adhishraya Sharma", image: mentor3Image, linkedin: "https://www.linkedin.com/in/adhishraya-sharma-55000b229/" },
+  { id: 4, name: "Gurkirat Kaur Gill ", image: mentor4Image, linkedin: "https://www.linkedin.com/in/gurkirat-kaur-gill/" },
+  { id: 5, name: "Aryan Prasher", image: mentor5Image, linkedin: "https://www.linkedin.com/in/aryan-prasher/" },
+  { id: 6, name: "Avishrant Sharma", image: mentor6Image, linkedin: "https://www.linkedin.com/in/avishrantsh/" },
+];
+
 export default function JudgesSection() {
-  const scrollRef = useRef(null);
+  const judgesScrollRef = useRef(null);
+  const mentorsScrollRef = useRef(null);
   const [scrollAmount, setScrollAmount] = useState(250); // Default
 
   useEffect(() => {
-    if (scrollRef.current) {
-      const card = scrollRef.current.querySelector(".judge-card");
+    if (judgesScrollRef.current) {
+      const card = judgesScrollRef.current.querySelector(".judge-card");
       if (card) {
         setScrollAmount(card.offsetWidth + 16); // Ensure smooth scroll distance
       }
     }
   }, []);
 
-  const scroll = (direction) => {
+  const scroll = (direction, type) => {
+    const scrollRef = type === 'judges' ? judgesScrollRef : mentorsScrollRef;
     if (scrollRef.current) {
       const container = scrollRef.current;
       const card = container.querySelector(".judge-card"); // Get one card
@@ -88,7 +106,7 @@ export default function JudgesSection() {
           transition={{ duration: 1.2, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          Our Judges and Mentors
+          Our Judges and Speakers
         </motion.h2>
 
         <div className="relative w-full flex items-center justify-center">
@@ -96,7 +114,7 @@ export default function JudgesSection() {
           {/* Left Button */}
           <motion.button
             className="absolute left-2 sm:left-5 md:left-8 bg-transparent text-white z-10 opacity-50 hover:opacity-100"
-            onClick={() => scroll("left")}
+            onClick={() => scroll("left", "judges")}
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -105,7 +123,7 @@ export default function JudgesSection() {
 
           {/* Judges Scrollable List */}
           <motion.div
-            ref={scrollRef}
+            ref={judgesScrollRef}
             className="flex overflow-x-auto scrollbar-hide w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-6xl space-x-6 px-4 sm:px-6 md:px-8"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             initial={{ opacity: 0 }}
@@ -122,7 +140,62 @@ export default function JudgesSection() {
           {/* Right Button */}
           <motion.button
             className="absolute right-2 sm:right-5 md:right-8 bg-transparent text-white z-10 opacity-50 hover:opacity-100"
-            onClick={() => scroll("right")}
+            onClick={() => scroll("right", "judges")}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <RightArrowIcon />
+          </motion.button>
+
+        </div>
+      </div>
+
+      <div className="relative w-full flex flex-col items-center justify-start">
+        
+        {/* Animated Title */}
+        <motion.h2
+          className={`${pirataOne.className} text-[40px] sm:text-[60px] md:text-[4.5rem] text-center text-white mt-3 mb-6 sm:mb-8 md:mb-10`}
+          style={{ textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)" }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          Our Mentors
+        </motion.h2>
+
+        <div className="relative w-full flex items-center justify-center">
+          
+          {/* Left Button */}
+          <motion.button
+            className="absolute left-2 sm:left-5 md:left-8 bg-transparent text-white z-10 opacity-50 hover:opacity-100"
+            onClick={() => scroll("left", "mentors")}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <LeftArrowIcon />
+          </motion.button>
+
+          {/* Mentors Scrollable List */}
+          <motion.div
+            ref={mentorsScrollRef}
+            className="flex overflow-x-auto scrollbar-hide w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-6xl space-x-6 px-4 sm:px-6 md:px-8"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
+            {mentors.map((mentor, index) => (
+              <JudgeCard key={mentor.id} judge={mentor} index={index} />
+            ))}
+          </motion.div>
+
+
+          {/* Right Button */}
+          <motion.button
+            className="absolute right-2 sm:right-5 md:right-8 bg-transparent text-white z-10 opacity-50 hover:opacity-100"
+            onClick={() => scroll("right", "mentors")}
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -132,7 +205,7 @@ export default function JudgesSection() {
         </div>
       </div>
     </section>
-  );
+ );
 }
 
 function JudgeCard({ judge, index }) {
