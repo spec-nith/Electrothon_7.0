@@ -20,7 +20,11 @@ const cardVariants = {
 
 const imageVariants = {
   hidden: { scale: 0.9, opacity: 0 },
-  show: { scale: 1, opacity: 1, transition: { duration: 0.8, ease: "easeOut" } },
+  show: {
+    scale: 1,
+    opacity: 1,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
 };
 
 const Challenges = () => {
@@ -78,8 +82,22 @@ const Challenges = () => {
                   <picture>
                     <Image
                       src={challenge.img}
-                      className={`object-cover ${challenge.key === "Aptos" ? "w-[150px]" : "w-[300px]"} ${
-                        challenge.key === "polygon" ? "invert-0" : "invert"
+                      className={`object-cover ${
+                        challenge.key === "Aptos" ? "w-[150px]" : "w-[300px]"
+                      } ${
+                        challenge.key === "polygon" ||
+                        ["beginnersHack", "allGirls", "hardware"].includes(
+                          challenge.key
+                        )
+                          ? "invert-0"
+                          : "invert"
+                      }
+                      ${
+                        ["beginnersHack", "allGirls", "hardware"].includes(
+                          challenge.key
+                        )
+                          ? "w-[150px] h-[150px]"
+                          : ""
                       }`}
                       alt={challenge.key + "-challenge"}
                     />
@@ -121,7 +139,9 @@ const Challenges = () => {
               </motion.div>
             ))
           ) : (
-            <p className="text-center text-gray-400">No challenges available.</p>
+            <p className="text-center text-gray-400">
+              No challenges available.
+            </p>
           )}
         </div>
       </section>
