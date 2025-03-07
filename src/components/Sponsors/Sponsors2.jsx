@@ -33,6 +33,7 @@ import loftWhite from "../../assets/Loft_White.png";
 import mongo from "../../assets/images/MongoDB_White.png";
 import midnight from "../../assets/images/midnight.png";
 import streamlit from "../../assets/images/streamlit-logo-primary.png";
+import gemini from "../../assets/gemini.webp"; 
 import cf from "../../assets/images/CF_logo_horizontal_whitetype.png";
 
 const fadeIn = {
@@ -60,7 +61,7 @@ const Sponsors2 = () => {
         <SubHeading>Treasurer Sponsors</SubHeading>
         <div className="mt-9">
           <div className="flex flex-wrap justify-center flex-row gap-14">
-            {[polygon, ethindia, Aptos, mongo, midnight, streamlit, cf].map((logo, index) => (
+            {[polygon, ethindia, Aptos, mongo, midnight, streamlit, cf , gemini].map((logo, index) => (
               <motion.div key={index} variants={fadeIn}>
                 <Treasurer companyLogos={[{ logo }]} size={{ width: "60vw", height: "10vh" }} />
               </motion.div>

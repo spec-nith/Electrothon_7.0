@@ -86,7 +86,7 @@ const Challenges = () => {
                         challenge.key === "Aptos" ? "w-[150px]" : "w-[300px]"
                       } ${
                         challenge.key === "polygon" ||
-                        ["beginnersHack", "allGirls", "hardware"].includes(
+                        ["beginnersHack", "allGirls", "hardware","Devdock"].includes(
                           challenge.key
                         )
                           ? "invert-0"

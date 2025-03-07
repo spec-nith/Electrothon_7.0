@@ -1,14 +1,15 @@
 import polygon from "../../assets/images/polygon.png";
 import ethereum from "../../assets/images/ethereum.png";
 import aptos from "../../assets/images/Aptos.png";
-import mongo from "../../assets/images/MongoDB_White.png"
-import streamLit from "../../assets/images/streamlit-logo-primary.png"
-import cloudflare from "../../assets/images/CF_logo_horizontal_whitetype.png"
-import midnight from "../../assets/images/midnight.png"
-import genai from "../../assets/gemini.webp"
+import mongo from "../../assets/images/MongoDB_White.png";
+import streamLit from "../../assets/images/streamlit-logo-primary.png";
+import cloudflare from "../../assets/images/CF_logo_horizontal_whitetype.png";
+import midnight from "../../assets/images/midnight.png";
+import genai from "../../assets/gemini.webp";
 import allGirls from "../../assets/allGirls.png";
 import beginnersHack from "../../assets/beginnersHack.png";
 import hardware from "../../assets/hardware.avif";
+import Devdock from "../../assets/Devdock.png";
 export const challengesData = [
   {
     desc: ["$200 for the best hack built on Polygon", "1 Prize"],
@@ -33,6 +34,14 @@ export const challengesData = [
     prize: ["$ 250"],
     list: "px-3",
     key: "Aptos",
+  },
+  {
+    desc: ["Submit Your Project on Devdock", "1 Prize"],
+    img: Devdock,
+    link: "https://electrothon-7.devfolio.co/prizes",
+    prize: [],
+    list: "px-3",
+    key: "Devdock",
   },
   {
     desc: ["Best Use of MongoDB Atlas : M5GO IoT Starter Kit", "1 Prize"],
