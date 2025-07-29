@@ -83,6 +83,7 @@ const DualSlider = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
         viewport={{ once: true }}
+        
       >
         Glimpses of Last Electrothon
       </motion.h1>
