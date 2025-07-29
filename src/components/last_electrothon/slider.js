@@ -11,6 +11,12 @@ import data from "@/assets/last_electrothon_data/images";
 import { Pirata_One } from "next/font/google";
 
 const Slider = ({ images, reverse }) => {
+  // Return early if images is not a valid array
+  if (!images || !Array.isArray(images) || images.length === 0) {
+    console.error("Invalid or empty images array:", images);
+    return <div>No images available</div>;
+  }
+
   return (
     <Swiper
       slidesPerView={3} // Show more images at once
@@ -53,7 +59,17 @@ const pirataOne = Pirata_One({
 });
 
 const DualSlider = () => {
+  // Add debugging for data
+  
+  
+  // Check if data exists and is an object
+  if (!data || typeof data !== 'object') {
+    console.error("Invalid data import:", data);
+    return <div className="text-white text-center p-8">Error loading images data</div>;
+  }
+  
   const imagePaths = Object.values(data).map((imagePath) => imagePath);
+  
   const row1Images = imagePaths.slice(0, 9);
   const row2Images = imagePaths.slice(9, 18);
 

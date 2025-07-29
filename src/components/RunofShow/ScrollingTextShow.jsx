@@ -65,7 +65,7 @@ const ScrollingTextShow = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}
-      className="flex flex-col space-y-3 min-h-full w-[300px]"
+      className="flex flex-col space-y-3 w-[300px]"
     >
       {events.map((item, index) => (
         <motion.li
@@ -86,7 +86,7 @@ const ScrollingTextShow = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}
-      className="w-[300px] flex-shrink-0 flex flex-col items-center snap-start"
+      className="w-[300px] flex-shrink-0 flex flex-col items-center snap-start overflow-visible"
     >
       <h2 className="text-white text-lg md:text-[40px] font-bold mt-5 mb-5">{day}</h2>
       {children}
@@ -108,13 +108,13 @@ const ScrollingTextShow = () => {
 
       {/* Horizontal Scrollable Container */}
       <div
-  ref={scrollContainerRef}
-  className="w-full overflow-x-auto flex items-start justify-start lg:justify-center scrollbar-hide scroll-smooth snap-x snap-mandatory"
->
-
-        <div className="flex space-x-10 scrollbar-hide px-5 min-h-screen max-w-max">
+        ref={scrollContainerRef}
+        className="w-full overflow-x-auto flex items-start justify-start lg:justify-center scrollbar-hide scroll-smooth snap-x snap-mandatory"
+        style={{ overflow: 'auto hidden' }}
+      >
+        <div className="flex space-x-10 px-5 max-w-max">
           {Object.keys(dayData).map((day) => (
-            <div key={day} className="overflow-y-visible scrollbar-hide flex items-start justify-center">
+            <div key={day} className="flex items-start justify-center">
               <SliderItem day={day}>{createScrollingContainer(dayData[day])}</SliderItem>
             </div>
           ))}

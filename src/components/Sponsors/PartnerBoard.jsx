@@ -8,8 +8,8 @@ const PartnerBox = () => {
         <Image
           src={partnerlogo}
           alt="Partner Logo"
-          layout="fill"
-          objectFit="contain"
+          fill
+          style={{ objectFit: "contain" }}
           className="rounded-lg"
         />
       </div>

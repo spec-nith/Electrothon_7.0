@@ -273,7 +273,7 @@ function JudgeCard({ judge, index }) {
       <a href={judge.linkedin} target="_blank" rel="noopener noreferrer">
         <div className="relative w-40 min-h-40 sm:w-48 sm:min-h-48 md:w-56 md:min-h-56 lg:w-64 lg:min-h-64">
           {judge.image && (
-            <Image src={judge.image} fill className="object-contain" />
+            <Image src={judge.image} fill className="object-contain" alt={`Judge - ${judge.name || 'Judge profile'}`} />
           )}
         </div>
       </a>

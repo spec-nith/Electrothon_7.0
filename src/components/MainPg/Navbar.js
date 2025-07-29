@@ -239,7 +239,8 @@ const Navbar = () => {
         width={150}
         height={119}
         src={logo}
-        alt=""
+        alt="SPEC Logo"
+        style={{ height: "auto" }}
       />
       <div className="fixed z-50">
         {/* Desktop Navigation - Compact version */}
@@ -342,7 +343,7 @@ const Navbar = () => {
           width={100}
           height={100}
           alt="Major League Hacking 2025 Hackathon Season"
-          style={{ width: "100%" }}
+          style={{ width: "100%", height: "auto" }}
         />
       </Link>
     </div>

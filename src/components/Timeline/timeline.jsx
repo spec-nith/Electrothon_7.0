@@ -45,26 +45,6 @@ const Timeline = () => {
       }, 100); // Detect scroll stop after 100ms of no scrolling
     };
 
-    const animateLogo = () => {
-      setSmoothPosition((prev) => {
-        const diff = logoPosition - prev;
-        // If we're very close to the target and not scrolling, stop at exact position
-        if (Math.abs(diff) < 0.01 && !isScrolling) {
-          return logoPosition;
-        }
-        // Much slower animation speed
-        return prev + diff * 0.001;
-      });
-
-      // Only continue animation if we're scrolling or not at target position
-      if (isScrolling || Math.abs(logoPosition - smoothPosition) > 0.01) {
-        animationFrameId.current = requestAnimationFrame(animateLogo);
-      }
-    };
-
-    // Start animation
-    animateLogo();
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -94,7 +74,35 @@ const Timeline = () => {
         clearTimeout(scrollTimeoutRef.current);
       }
     };
-  }, [logoPosition, isScrolling, smoothPosition]);
+  }, []); // Remove dependencies to avoid re-creating this effect
+
+  // Separate useEffect for smooth animation
+  useEffect(() => {
+    const animateLogo = () => {
+      setSmoothPosition((prev) => {
+        const diff = logoPosition - prev;
+        // If we're very close to the target and not scrolling, stop at exact position
+        if (Math.abs(diff) < 0.01 && !isScrolling) {
+          return logoPosition;
+        }
+        // Much slower animation speed
+        return prev + diff * 0.05; // Increase speed slightly for smoother animation
+      });
+
+      // Continue animation
+      animationFrameId.current = requestAnimationFrame(animateLogo);
+    };
+
+    // Start animation
+    animationFrameId.current = requestAnimationFrame(animateLogo);
+
+    // Clean up
+    return () => {
+      if (animationFrameId.current) {
+        cancelAnimationFrame(animationFrameId.current);
+      }
+    };
+  }, [logoPosition, isScrolling]); // Only depend on logoPosition and isScrolling
 
   return (
     <div id="timeline" className="relative bg-cover bg-center min-h-screen flex flex-col items-center justify-start text-white px-4 sm:px-6 md:px-8">

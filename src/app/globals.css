@@ -4,6 +4,21 @@
 @import url(https://db.onlinewebfonts.com/c/f70b18e78f0c256d3aa0ecb00daf64c9?family=Linotype+Humanistika+W01);
 @import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Italianno&display=swap");
 
+/* Global optimization styles */
+.reduce-animation * {
+  animation-duration: 0.001s !important;
+  transition-duration: 0.001s !important;
+  animation-delay: 0s !important;
+  transition-delay: 0s !important;
+}
+
+/* Optimization for LCP */
+span.inkwell {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 150px;
+}
+
+/* Core styles */
 * {
   box-sizing: border-box;
 }
@@ -26,42 +41,42 @@
 
 @font-face {
   font-family: "font";
-  src: url("/src/app/fonts/navfont.ttf") format("truetype");
+  src: url("/fonts/navfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Italianno";
-  src: url("/src/app/fonts/Italianno-Regular.ttf");
+  src: url("/fonts/Italianno-Regular.ttf");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Mordred";
-  src: url("/app/fonts/Mordred.ttf");
+  src: url("/fonts/Mordred.ttf");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "strandall";
-  src: url("/app/fonts/strandall.ttf");
+  src: url("/fonts/strandall.ttf");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Gatterys";
-  src: url("/app/fonts/Gatterys.ttf");
+  src: url("/fonts/Gatterys.ttf");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "inkwell";
-  src: url("/app/fonts/inkwell-scribe.otf");
+  src: url("/fonts/inkwell-scribe.otf");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -69,7 +84,7 @@
 
 @font-face {
   font-family: 'Eleanora';
-  src: url('./fonts/Eleanora.woff2') format('woff2');
+  src: url('/fonts/Eleanora.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }

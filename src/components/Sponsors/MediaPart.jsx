@@ -54,10 +54,9 @@ const MediaPart = ({ companyLogos, size }) => {
           <Image
             src={company.logo}
             alt={`${company.name} Logo`}
-            layout="intrinsic"
             width={size.width}
             height={size.height}
-            objectFit="contain"
+            style={{ objectFit: "contain" }}
             className="rounded-lg"
           />
         </div>

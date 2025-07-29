@@ -99,7 +99,8 @@ const MainPg = () => {
             ref={subtitleRef}
             className="text-[20px] md:text-[40px] sm:text-[30px] lg:text-[60px] inkwell lg:leading-none text-center text-white opacity-0"
             style={{
-              textShadow: "0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ffffff",
+              textShadow: "0 0 10px #ffffff, 0 0 10px #ffffff, 0 0 0px #ffffff",
+              padding: "0 20px",
             }}
           >
             Colosseum of Code
