@@ -7,8 +7,6 @@ import Image from "next/image";
 import bg from "../assets/backgroundimg.webp";
 import Loader from "@/components/Loader/Loader.js";
 import PreloadResources from "./components/PreloadResources";
-import styles from './page.module.css';
-import { useMessageChannelErrorSuppression } from "@/utils/errorHandling";
 
 // Conditionally import WDYR only in development
 if (process.env.NODE_ENV === 'development') {
@@ -54,6 +52,22 @@ const Footer = dynamic(() => import("@/components/contact_us/Footer"), {
   loading: () => <div className="h-[200px] bg-black" />
 });
 
+// Add display names to all dynamic components to fix ESLint errors
+AboutUs.displayName = 'DynamicAboutUs';
+Theme.displayName = 'DynamicTheme';
+Faqs.displayName = 'DynamicFaqs';
+Slider.displayName = 'DynamicSlider';
+Timeline.displayName = 'DynamicTimeline';
+Sponsors1.displayName = 'DynamicSponsors1';
+Sponsors2.displayName = 'DynamicSponsors2';
+SliderT.displayName = 'DynamicSliderT';
+JudgesSection.displayName = 'DynamicJudgesSection';
+Organizers.displayName = 'DynamicOrganizers';
+Challenges.displayName = 'DynamicChallenges';
+Prizes.displayName = 'DynamicPrizes';
+RunofShow.displayName = 'DynamicRunofShow';
+Footer.displayName = 'DynamicFooter';
+
 // Define section names outside the component to avoid recreation on each render
 const SECTION_NAMES = [
   'aboutUs', 'slider', 'judges', 'theme', 'prizes', 'challenges',
@@ -65,25 +79,9 @@ const SECTION_NAMES = [
 const Placeholder = React.memo(({ height = 400 }) => (
   <div className="bg-black bg-opacity-30" style={{ height: `${height}px` }} />
 ));
-
-// Global error handling for message channel errors
-if (typeof window !== 'undefined') {
-  const originalError = console.error;
-  console.error = function(...args) {
-    // Filter out message channel errors
-    if (args[0] && typeof args[0] === 'string' && 
-        (args[0].includes('message channel closed') || 
-         args[0].includes('asynchronous response'))) {
-      return;
-    }
-    return originalError.apply(this, args);
-  };
-}
+Placeholder.displayName = 'Placeholder';
 
 function Home() {
-  // Apply message channel error suppression
-  useMessageChannelErrorSuppression();
-  
   const [loading, setLoading] = useState(true);
   
   // Use reducer instead of multiple state updates to reduce rendering cycles
@@ -188,7 +186,7 @@ function Home() {
       ) : (
         <div
           className="relative scroll-smooth bg-cover bg-center bg-fixed h-full overflow-y-auto space-y-20"
-          style={{ ...backgroundStyle, overscrollBehavior: 'contain' }}
+          style={backgroundStyle}
         >
           {/* MainPg is critical, so always render it */}
           <Suspense fallback={<Placeholder height={600} />}>
@@ -203,9 +201,7 @@ function Home() {
           {renderSection('prizes', Prizes)}
           {renderSection('challenges', Challenges)}
           {renderSection('timeline', Timeline)}
-          <div className={styles["run-of-show-container"]}>
-            {renderSection('runOfShow', RunofShow)}
-          </div>
+          {renderSection('runOfShow', RunofShow)}
           {renderSection('sponsors1', Sponsors1)}
           {renderSection('sponsors2', Sponsors2)}
           {renderSection('sliderT', SliderT)}

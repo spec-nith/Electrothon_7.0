@@ -196,7 +196,7 @@ const Navbar = () => {
   useEffect(() => {
     // Reset refs on render
     linksRef.current = linksRef.current.slice(0, links.length);
-  }, []);
+  }, [links.length]);
 
   const handleHover = (index) => {
     if (linksRef.current[index] && navRef.current) {

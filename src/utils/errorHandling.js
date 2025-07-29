@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect } from 'react';
+
 /**
  * Utility to suppress common message channel errors
  * These errors typically occur with browser extensions or embedded content
@@ -59,10 +61,8 @@ export function suppressMessageChannelErrors() {
  * Use this in components with iframes or third-party embeds that might cause message channel errors
  */
 export function useMessageChannelErrorSuppression() {
-  if (typeof React !== 'undefined' && React.useEffect) {
-    React.useEffect(() => {
-      const { cleanup } = suppressMessageChannelErrors();
-      return cleanup;
-    }, []);
-  }
+  useEffect(() => {
+    const { cleanup } = suppressMessageChannelErrors();
+    return cleanup;
+  }, []);
 }
