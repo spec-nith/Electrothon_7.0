@@ -183,6 +183,21 @@ const Navbar = () => {
     </svg>
   );
 
+  // Shortened and optimized menu items for better horizontal fit
+  const links = [
+    { name: "Home", href: "#home", icon: homeIcon },
+    { name: "About Us", href: "#about", icon: aboutIcon },
+    { name: "Judges", href: "#judges" },
+    { name: "Prizes", href: "#prizes", icon: prizeIcon },
+    { name: "Challenges", href: "#challenges" },
+    { name: "Timeline", href: "#timeline", icon: scheduleIcon },
+    { name: "Sponsors", href: "#sponsors", icon: sponsorIcon },
+    { name: "Teams", href: "#testimonials" },
+    { name: "Organizers", href: "#Organizers" },
+    { name: "FAQ", href: "#faq", icon: faqIcon },
+    { name: "Contact Us", href: "#contact", icon: ContactIcon },
+  ];
+  
   const [hoverStyle, setHoverStyle] = useState({
     left: 0,
     width: 0,
@@ -216,21 +231,6 @@ const Navbar = () => {
   const handleLeave = () => {
     setHoverStyle((prev) => ({ ...prev, opacity: 0, activeIndex: null })); // Hide background
   };
-
-  // Shortened and optimized menu items for better horizontal fit
-  const links = [
-    { name: "Home", href: "#home", icon: homeIcon },
-    { name: "About Us", href: "#about", icon: aboutIcon },
-    { name: "Judges", href: "#judges" },
-    { name: "Prizes", href: "#prizes", icon: prizeIcon },
-    { name: "Challenges", href: "#challenges" },
-    { name: "Timeline", href: "#timeline", icon: scheduleIcon },
-    { name: "Sponsors", href: "#sponsors", icon: sponsorIcon },
-    { name: "Teams", href: "#testimonials" },
-    { name: "Organizers", href: "#Organizers" },
-    { name: "FAQ", href: "#faq", icon: faqIcon },
-    { name: "Contact Us", href: "#contact", icon: ContactIcon },
-  ];
 
   return (
     <div className="flex justify-center h-[80px] items-center">
