@@ -262,7 +262,7 @@ const Prizes = () => {
         style={{ textShadow: "-5px 8px 4px rgba(0, 0, 0, 0.5)" }}
         className="text-white text-[20px] md:text-[70px] sm:text-[60px] custom:text-[40px] xs:text-[40px] lg:text-[4.5rem] pirata-one-regular mb-8"
       >
-        Prizes
+        Winners
       </motion.h1>
 
       {/* Prizes Cards Section */}
@@ -277,14 +277,18 @@ const Prizes = () => {
         >
           <div className="..."></div>
           <div className="card-content2 flex flex-col items-center text-center justify-center text-xs">
-            <motion.div variants={videoVariants} initial="hidden" whileInView="show" viewport={{ once: true }}>
+            {/* <motion.div variants={videoVariants} initial="hidden" whileInView="show" viewport={{ once: true }}>
               <ReactPlayer url={Silver2} playing muted width="100%" height="auto" controls={false} loop />
-            </motion.div>
+            </motion.div> */}
+            <img src="/asset/winners/runnerup.jpg" alt="runner up" className="object-cover rounded-xl border border-white shadow-lg mt-8"></img>
             <h1 className="font-sans font-bold text-[#dadada] text-5xl md:text-3xl sm:text-2xl custom:text-xl xs:text-base">
               25K INR
             </h1>
             <h1 className="font-sans font-medium text-[#dadada] text-xl md:text-lg sm:text-base xs:text-xs custom:text-xs">
               First Runner Up
+            </h1>
+             <h1 className="font-sans font-medium text-[#dadada] text-xl md:text-lg sm:text-base xs:text-xs custom:text-xs">
+              Team La Casa De Code
             </h1>
           </div>
         </motion.div>
@@ -299,14 +303,18 @@ const Prizes = () => {
         >
           <div className="..."></div>
           <div className="card-content flex flex-col items-center text-center justify-center text-xs">
-            <motion.div variants={videoVariants} initial="hidden" whileInView="show" viewport={{ once: true }}>
+            {/* <motion.div variants={videoVariants} initial="hidden" whileInView="show" viewport={{ once: true }}>
               <ReactPlayer url={Gold3} playing muted width="100%" height="auto" controls={false} loop />
-            </motion.div>
+            </motion.div> */}
+            <img src="/asset/winners/winner.jpg" alt="Winner" className="object-cover rounded-xl border border-white shadow-lg"></img>
             <h1 className="font-sans font-bold text-[#ffea2b] text-5xl md:text-3xl sm:text-2xl custom:text-xl xs:text-base">
               35K INR
             </h1>
             <h1 className="font-sans font-medium text-[#ffea2b] text-xl md:text-lg sm:text-base xs:text-xs custom:text-xs">
               Winner
+            </h1>
+            <h1 className="font-sans font-medium text-[#ffea2b] text-xl md:text-lg sm:text-base xs:text-xs custom:text-xs">
+              Team GCC
             </h1>
           </div>
         </motion.div>
@@ -321,20 +329,24 @@ const Prizes = () => {
         >
           <div className="..."></div>
           <div className="card-content3 flex flex-col items-center text-center justify-center">
-            <motion.div variants={videoVariants} initial="hidden" whileInView="show" viewport={{ once: true }}>
+            {/* <motion.div variants={videoVariants} initial="hidden" whileInView="show" viewport={{ once: true }}>
               <ReactPlayer url={Bronze2} playing muted width="100%" height="auto" controls={false} loop />
-            </motion.div>
-            <h1 className="font-sans items-center justify-center font-bold text-[#eb9029] text-5xl md:text-3xl sm:text-2xl custom:text-xl xs:text-base">
+            </motion.div> */}
+            <img src="/asset/winners/runnerup2.png" alt="Winner" className="object-cover rounded-xl border border-white shadow-lg mt-8"></img>
+            <h1 className="font-sans items-center justify-center font-bold text-[#eb9029] text-5xl md:text-3xl sm:text-2xl custom:text-xl xs:text-base ">
               15K INR
             </h1>
             <h1 className="font-sans font-medium text-[#eb9029] text-xl md:text-lg sm:text-base xs:text-xs custom:text-xs">
               Second Runner Up
             </h1>
+            <h1 className="font-sans font-medium text-[#eb9029] text-xl md:text-lg sm:text-base xs:text-xs custom:text-xs">
+              Team Innovation Station
+            </h1>
           </div>
         </motion.div>
       </div>
 
-      {/* Final Text Animation */}
+      {/* Final Text Animation
       <motion.h1
         variants={fadeInText}
         initial="hidden"
@@ -344,7 +356,7 @@ const Prizes = () => {
         className="text-white text-[10px] md:text-[1.5rem] sm:text-[1.5rem] custom:text-[1.5rem] xs:text-[1.5rem] lg:text-[1.5rem] font-sans font-semibold mt-5 mb-8"
       >
         Includes prizes worth 5K
-      </motion.h1>
+      </motion.h1> */}
     </div>
   );
 };
