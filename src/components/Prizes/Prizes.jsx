@@ -232,6 +232,12 @@ const fadeInFromBottom = {
   show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
 };
 
+//Framer's motion fadeInScale
+const fadeInScale = {
+  hidden: { opacity: 0, scale: 0.9 },
+  show: { opacity: 1, scale: 1, transition: { duration: 1, delay: 0.3 } },
+};
+
 // Card animation (Fade + Slight Upward Motion)
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -252,6 +258,7 @@ const fadeInText = {
 
 const Prizes = () => {
   return (
+     
     <div id="prizes" className="w-full h-auto items-center justify-center flex flex-col bg-transparent">
       {/* Heading Animation */}
       <motion.h1
@@ -266,6 +273,10 @@ const Prizes = () => {
       </motion.h1>
 
       {/* Prizes Cards Section */}
+      <motion.div
+              variants={fadeInScale}
+              className="relative w-full max-w-[95vw] sm:max-w-[70vw] bg-[#03294F] opacity-80 rounded-[30px] sm:rounded-[50px] z-0 pt-[6vh] pb-[2vh] px-[4vh] mx-auto border"
+            >
       <div className="flex gap-10 custom:gap-5 items-center justify-center h-auto">
         {/* First Runner Up */}
         <motion.div
@@ -345,6 +356,7 @@ const Prizes = () => {
           </div>
         </motion.div>
       </div>
+       </motion.div>
 
       {/* Final Text Animation
       <motion.h1
@@ -358,6 +370,7 @@ const Prizes = () => {
         Includes prizes worth 5K
       </motion.h1> */}
     </div>
+   
   );
 };
 
