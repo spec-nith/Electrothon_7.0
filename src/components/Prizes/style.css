@@ -119,17 +119,31 @@ block > div:hover::before {
   animation: glowAnimation 3s infinite linear;
 } */
 
+
+.card-wrapper,
+.card-wrapper2,
+.card-wrapper3 {
+  background: transparent !important; /* remove bg-gradient */
+}
+
+.card-wrapper::before,
+.card-wrapper2::before,
+.card-wrapper3::before {
+  display: none !important; /* remove gradient overlay */
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/*
 @layer utilities{
-  /* Act as border */
+  
   .card-wrapper{
     @apply relative bg-gradient-to-b from-slate-700 to-slate-800 rounded-2xl overflow-hidden;
   }
 
-  /* Gradient */
   .card-wrapper::before{
     background: conic-gradient(
       rgb(254, 170, 49) 0deg,
@@ -140,18 +154,14 @@ block > div:hover::before {
     @apply absolute h-[150%] w-[150%] left-[-25%] top-[-25%] content-[''] lg:h-[100vh] md:h-[50vh] animate-borderSpin;
   }
 
-  /* Body */
   .card-content{
     @apply absolute w-[calc(100%-2px)] h-[calc(100%-2px)] top-[1px] bg-deepblue lg:h-[40vh] xl:h-[50vh] md:h-[35vh] sm:h-[30vh] custom:h-[22vh] xs:h-[20vh] rounded-2xl;
   }
-
-
 
   .card-wrapper2{
     @apply relative bg-gradient-to-b from-slate-700 to-slate-800 rounded-2xl overflow-hidden;
   }
 
-  /* Gradient */
   .card-wrapper2::before{
     background: conic-gradient(
       rgb(238, 237, 237) 0deg,
@@ -162,31 +172,17 @@ block > div:hover::before {
     @apply absolute h-[150%] w-[150%] left-[-25%] top-[-25%] content-[''] lg:h-[100vh] md:h-[50vh] animate-borderSpin;
   }
 
-  /* Body */
   .card-content2{
     @apply absolute w-[calc(100%-2px)] h-[calc(100%-2px)] top-[1px] bg-deepblue lg:h-[40vh] xl:h-[50vh] md:h-[35vh] sm:h-[30vh] custom:h-[22vh] xs:h-[20vh] rounded-2xl;
   }
-  
-
-
 
   .card-wrapper3{
     @apply relative bg-gradient-to-b from-slate-700 to-slate-800  rounded-2xl overflow-hidden;
   }
 
-  /* Gradient */
   .card-wrapper3::before{
     background: conic-gradient(
       rgb(235, 144, 41) 0deg,
       rgb(235, 114, 41) 0deg,
       transparent 100deg
-    );
-
-    @apply absolute h-[150%] w-[150%] left-[-25%] top-[-25%] content-[''] lg:h-[100vh] md:h-[50vh] animate-borderSpin;
-  }
-
-  /* Body */
-  .card-content3{
-    @apply absolute w-[calc(100%-2px)] h-[calc(100%-2px)] top-[1px] bg-deepblue lg:h-[40vh] xl:h-[50vh] md:h-[35vh] sm:h-[30vh] custom:h-[22vh] xs:h-[20vh] rounded-2xl;
-  }
-}
+*/
