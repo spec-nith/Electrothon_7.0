@@ -14,7 +14,7 @@ const Cannonball = () => {
                 <div className="text-lg md:text-2xl font-bold">
                 <CountUp
                     from={0}
-                    to={1500}
+                    to={2500}
                     separator=","
                     direction="up"
                     duration={1}
