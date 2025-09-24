@@ -35,7 +35,7 @@ const Faqs = dynamic(() => import("@/components/Faq/faq"), {
 });
 
 // Third priority - content components below the fold
-const Slider = dynamic(() => import("@/components/last_electrothon/slider.js"), { ssr: false });
+const Slider = dynamic(() => import("@/components/events_gallery/slider.js"), { ssr: false });
 const Timeline = dynamic(() => import("@/components/Timeline/timeline"), { ssr: false });
 const Sponsors1 = dynamic(() => import("@/components/Sponsors/Sponsers1"), { ssr: false });
 const Sponsors2 = dynamic(() => import("@/components/Sponsors/Sponsors2"), { ssr: false });

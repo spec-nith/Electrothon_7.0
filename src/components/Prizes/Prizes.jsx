@@ -277,21 +277,21 @@ const Prizes = () => {
               variants={fadeInScale}
               className="relative w-full max-w-[95vw] sm:max-w-[70vw] bg-[#03294F] opacity-80 rounded-[30px] sm:rounded-[50px] z-0 pt-[6vh] pb-[2vh] px-[4vh] mx-auto border"
             >
-      <div className="flex gap-10 custom:gap-5 items-center justify-center h-auto">
+      <div className="flex lg:flex-row flex-col gap-10 custom:gap-5 items-center justify-center h-auto">
         {/* First Runner Up */}
         <motion.div
           variants={cardVariants}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="card-wrapper2 h-[50vh] lg:h-[40vh] xl:h-[50.3vh] md:h-[35vh] w-[20vw] custom:w-[25vw] xs:w-[25vw] md:w-[25vw] sm:w-[25vw] sm:h-[30.2vh] custom:h-[22.3vh] xs:h-[20.2vh]"
+          className="card-wrapper2 h-[34vh] lg:h-[28vh] xl:h-[32vh] md:h-[30vh] w-full lg:w-[20vw] sm:h-[28vh] custom:h-[24vh] xs:h-[22vh]"
         >
           <div className="..."></div>
           <div className="card-content2 flex flex-col items-center text-center justify-center text-xs">
             {/* <motion.div variants={videoVariants} initial="hidden" whileInView="show" viewport={{ once: true }}>
               <ReactPlayer url={Silver2} playing muted width="100%" height="auto" controls={false} loop />
             </motion.div> */}
-            <img src="/asset/winners/runnerup.jpg" alt="runner up" className="object-cover rounded-xl border border-white shadow-lg mt-8"></img>
+            <img src="/asset/winners/runnerup.jpg" alt="runner up" className="w-40 md:w-48 lg:w-56 h-auto object-cover rounded-xl border border-white shadow-lg mt-4"></img>
             <h1 className="font-sans font-bold text-[#dadada] text-5xl md:text-3xl sm:text-2xl custom:text-xl xs:text-base">
               25K INR
             </h1>
@@ -310,14 +310,14 @@ const Prizes = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="card-wrapper h-[50vh] lg:h-[40vh] xl:h-[50.3vh] md:h-[35vh] w-[20vw] custom:w-[25vw] xs:w-[25vw] md:w-[25vw] sm:w-[25vw] sm:h-[30.2vh] custom:h-[22.3vh] xs:h-[20.2vh]"
+          className="card-wrapper h-[34vh] lg:h-[28vh] xl:h-[32vh] md:h-[30vh] w-full lg:w-[20vw] sm:h-[28vh] custom:h-[24vh] xs:h-[22vh]"
         >
           <div className="..."></div>
           <div className="card-content flex flex-col items-center text-center justify-center text-xs">
             {/* <motion.div variants={videoVariants} initial="hidden" whileInView="show" viewport={{ once: true }}>
               <ReactPlayer url={Gold3} playing muted width="100%" height="auto" controls={false} loop />
             </motion.div> */}
-            <img src="/asset/winners/winner.jpg" alt="Winner" className="object-cover rounded-xl border border-white shadow-lg"></img>
+            <img src="/asset/winners/winner.jpg" alt="Winner" className="w-40 md:w-48 lg:w-56 h-auto object-cover rounded-xl border border-white shadow-lg"></img>
             <h1 className="font-sans font-bold text-[#ffea2b] text-5xl md:text-3xl sm:text-2xl custom:text-xl xs:text-base">
               35K INR
             </h1>
@@ -336,14 +336,14 @@ const Prizes = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="card-wrapper3 h-[50vh] lg:h-[40vh] xl:h-[50.3vh] md:h-[35vh] w-[20vw] custom:w-[25vw] xs:w-[25vw] md:w-[25vw] sm:w-[25vw] sm:h-[30.2vh] custom:h-[22.3vh] xs:h-[20.2vh]"
+          className="card-wrapper3 h-[34vh] lg:h-[28vh] xl:h-[32vh] md:h-[30vh] w-full lg:w-[20vw] sm:h-[28vh] custom:h-[24vh] xs:h-[22vh]"
         >
           <div className="..."></div>
           <div className="card-content3 flex flex-col items-center text-center justify-center">
             {/* <motion.div variants={videoVariants} initial="hidden" whileInView="show" viewport={{ once: true }}>
               <ReactPlayer url={Bronze2} playing muted width="100%" height="auto" controls={false} loop />
             </motion.div> */}
-            <img src="/asset/winners/runnerup2.png" alt="Winner" className="object-cover rounded-xl border border-white shadow-lg mt-8"></img>
+            <img src="/asset/winners/runnerup2.png" alt="Winner" className="w-40 md:w-48 lg:w-56 h-auto object-cover rounded-xl border border-white shadow-lg mt-4"></img>
             <h1 className="font-sans items-center justify-center font-bold text-[#eb9029] text-5xl md:text-3xl sm:text-2xl custom:text-xl xs:text-base ">
               15K INR
             </h1>
