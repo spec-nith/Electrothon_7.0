@@ -21,7 +21,7 @@ const Cannonball = () => {
                         className="count-up-text"
                     />+
                 </div>
-                <div className="text-xs md:text-lg">Software Projects</div>
+                <div className="text-xs md:text-lg">Hardware Projects</div>
             </div>
         </div>
     );
