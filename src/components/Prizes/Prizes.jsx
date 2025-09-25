@@ -275,7 +275,7 @@ const Prizes = () => {
       {/* Prizes Cards Section */}
       <motion.div
               variants={fadeInScale}
-              className="relative w-full max-w-[95vw] sm:max-w-[70vw] bg-[#03294F] opacity-80 rounded-[30px] sm:rounded-[50px] z-0 pt-[6vh] pb-[2vh] px-[4vh] mx-auto border"
+              className="relative w-full max-w-[95vw] sm:max-w-[70vw] bg-[#03294F] opacity-80 rounded-[30px] sm:rounded-[50px] z-0 pt-[6vh] pb-[4vh] px-[4vh] mx-auto border"
             >
       <div className="flex lg:flex-row flex-col gap-10 custom:gap-5 items-center justify-center h-auto">
         {/* First Runner Up */}
