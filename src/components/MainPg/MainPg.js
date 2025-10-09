@@ -110,19 +110,19 @@ const MainPg = () => {
         <Devfolio_Button />
 
         {/* Countdown Timer */}
-        <div className="flex justify-center items-center w-full">
+        {/* <div className="flex justify-center items-center w-full">
           <div className="flex items-center rounded-lg justify-center">
-            <div className="relative w-[330px] h-[130px] sm:w-[400px] sm:h-[170px] md:w-[500px] md:h-[200px]">
+            <div className="relative w-[330px] h-[130px] sm:w-[400px] sm:h-[170px] md:w-[500px] md:h-[200px]"> */}
               {/* <PixelCard
                 className="absolute inset-0 w-full h-full z-10 rounded-lg opacity-50"
                 variant="default"
               /> */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-transparent backdrop-blur-md border-[#7777771c] border-[10px] rounded-lg z-0">
+              {/* <div className="absolute inset-0 flex flex-col items-center justify-center bg-transparent backdrop-blur-md border-[#7777771c] border-[10px] rounded-lg z-0">
                 <div className="md:text-[53px] sm:text-[40px] text-[30px] strandall sm:tracking-widest tracking-wider text-white leading-none sm:leading-[35px] text-center">
                   See you next time!!
                 </div>
-                {/* <div className="abhaya-libre-regular sm:leading-[55px] leading-[40px] md:scale-100 sm:scale-90 scale-75 lg:leading-[75px] flex w-full justify-center items-center">
-                  <div className="flex items-center justify-center text-[50px] text-[#c7aa73] font-light space-x-1">
+                {/* <div className="abhaya-libre-regular sm:leading-[55px] leading-[40px] md:scale-100 sm:scale-90 scale-75 lg:leading-[75px] flex w-full justify-center items-center"> */}
+                  {/* <div className="flex items-center justify-center text-[50px] text-[#c7aa73] font-light space-x-1">
                     <span className="flex w-[90px] flex-col items-center justify-center">
                       <span className="md:text-6xl sm:text-5xl text-4xl">{timeLeft.days}</span>
                       <span className="border-[1px] border-[#c7aa73] w-[90%]"></span>
@@ -146,12 +146,12 @@ const MainPg = () => {
                       <span className="border-[1px] border-[#c7aa73] w-[90%]"></span>
                       <span className="text-lg">Seconds</span>
                     </span>
-                  </div>
-                </div> */}
+                  </div> */}
+                {/* </div> 
               </div>
-            </div>
-          </div>
-        </div>
+            </div> */}
+          {/* </div>
+        </div> */}
       </div>  
     </div>
   );
