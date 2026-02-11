@@ -7,9 +7,17 @@ const Devfolio_Button = () => {
     script.src = "https://apply.devfolio.co/v2/sdk.js";
     script.async = true;
     script.defer = true;
-    document.body.appendChild(script);
+
+    // Add a slight delay to ensure the div is rendered before the script runs
+    setTimeout(() => {
+      document.body.appendChild(script);
+    }, 100);
+
     return () => {
-      document.body.removeChild(script);
+      // Ensure the script exists before attempting to remove it
+      if (script.parentNode) {
+        document.body.removeChild(script);
+      }
     };
   }, []);
   return (
